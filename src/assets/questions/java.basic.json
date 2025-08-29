@@ -1,0 +1,25 @@
+[
+  {
+    "id": "java-b-001",
+    "topic": "java",
+    "difficulty": "basic",
+    "prompt": "What is the main difference between '==' and '.equals()' in Java?",
+    "options": [
+      "'==' compares references; '.equals()' compares content by default.",
+      "Both always compare content.",
+      "'==' compares content; '.equals()' compares references.",
+      "They are interchangeable."
+    ],
+    "answerIndex": 0,
+    "explanation": "'==' compares primitive values or object references; '.equals()' (usually overridden) compares logical equality/content."
+  },
+  {
+    "id": "java-b-002",
+    "topic": "java",
+    "difficulty": "basic",
+    "prompt": "Which keyword is used for inheritance in Java?",
+    "options": ["extends", "implements", "inherits", "derive"],
+    "answerIndex": 0,
+    "explanation": "Use 'extends' for class inheritance; 'implements' is for interfaces."
+  }
+]

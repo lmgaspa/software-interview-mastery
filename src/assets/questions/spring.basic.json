@@ -1,0 +1,25 @@
+[
+  {
+    "id": "spring-b-001",
+    "topic": "spring",
+    "difficulty": "basic",
+    "prompt": "What does @Autowired do in Spring?",
+    "options": [
+      "Injects dependencies into beans.",
+      "Starts the Spring Boot application.",
+      "Configures database migrations.",
+      "Compiles the project."
+    ],
+    "answerIndex": 0,
+    "explanation": "@Autowired enables dependency injection for components in the Spring context."
+  },
+  {
+    "id": "spring-b-002",
+    "topic": "spring",
+    "difficulty": "basic",
+    "prompt": "Which annotation marks a class as a REST controller?",
+    "options": ["@RestController", "@Service", "@Repository", "@ControllerAdvice"],
+    "answerIndex": 0,
+    "explanation": "@RestController combines @Controller and @ResponseBody for REST endpoints."
+  }
+]
