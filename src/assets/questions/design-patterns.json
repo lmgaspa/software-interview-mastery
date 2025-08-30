@@ -1,0 +1,2306 @@
+[
+  {
+    "id": "dp-001",
+    "topic": "design-patterns",
+    "difficulty": "intermediate",
+    "prompt": "What problem does the Strategy pattern primarily solve?",
+    "options": [
+      "Avoid subclassing by delegating algorithms at runtime",
+      "Provide a global point of access to an object",
+      "Ensure a class has only one instance",
+      "Encapsulate object construction steps"
+    ],
+    "answerIndex": 0,
+    "explanation": "Strategy encapsulates interchangeable algorithms behind a common interface, selected at runtime."
+  },
+  {
+    "id": "dp-002",
+    "topic": "design-patterns",
+    "difficulty": "intermediate",
+    "prompt": "Which pattern hides complex subsystem interactions behind a simplified interface?",
+    "options": [
+      "Mediator",
+      "Facade",
+      "Adapter",
+      "Composite"
+    ],
+    "answerIndex": 1,
+    "explanation": "Facade offers a simpler API over a complex subsystem."
+  },
+  {
+    "id": "dp-003",
+    "topic": "design-patterns",
+    "difficulty": "intermediate",
+    "prompt": "Adapter vs Decorator: which statement is correct?",
+    "options": [
+      "Both change the object's interface",
+      "Adapter changes interface; Decorator adds behavior without changing interface",
+      "Decorator changes interface; Adapter adds behavior",
+      "Both require inheritance"
+    ],
+    "answerIndex": 1,
+    "explanation": "Adapter converts interfaces; Decorator preserves interface and adds responsibilities."
+  },
+  {
+    "id": "dp-004",
+    "topic": "design-patterns",
+    "difficulty": "intermediate",
+    "prompt": "Which pattern composes objects into tree structures to represent part-whole hierarchies?",
+    "options": [
+      "Bridge",
+      "Composite",
+      "Proxy",
+      "Flyweight"
+    ],
+    "answerIndex": 1,
+    "explanation": "Composite treats individual objects and compositions uniformly."
+  },
+  {
+    "id": "dp-005",
+    "topic": "design-patterns",
+    "difficulty": "intermediate",
+    "prompt": "In the Observer pattern, what triggers updates?",
+    "options": [
+      "Subject state changes notifying subscribed observers",
+      "Manual polling from observers",
+      "Factory method invocation",
+      "Mediator broadcast via message queues only"
+    ],
+    "answerIndex": 0,
+    "explanation": "Observers subscribe to the Subject and are notified on state changes."
+  },
+  {
+    "id": "dp-006",
+    "topic": "design-patterns",
+    "difficulty": "intermediate",
+    "prompt": "Which pattern separates abstraction from implementation so they can vary independently?",
+    "options": [
+      "Bridge",
+      "Proxy",
+      "Builder",
+      "Command"
+    ],
+    "answerIndex": 0,
+    "explanation": "Bridge decouples abstraction and implementation through composition."
+  },
+  {
+    "id": "dp-007",
+    "topic": "design-patterns",
+    "difficulty": "intermediate",
+    "prompt": "Factory Method vs Abstract Factory: choose the best distinction.",
+    "options": [
+      "Factory Method creates families; Abstract Factory creates single objects",
+      "Both create families of related objects",
+      "Factory Method creates one product; Abstract Factory creates families of related products",
+      "Neither involves interfaces"
+    ],
+    "answerIndex": 2,
+    "explanation": "Abstract Factory produces families of related objects; Factory Method creates a single product type."
+  },
+  {
+    "id": "dp-008",
+    "topic": "design-patterns",
+    "difficulty": "intermediate",
+    "prompt": "Builder pattern is most useful when:",
+    "options": [
+      "An object has many optional parameters or stepwise construction",
+      "You need to limit instances to one",
+      "You want to switch algorithms at runtime",
+      "You need to cache heavy objects"
+    ],
+    "answerIndex": 0,
+    "explanation": "Builder assembles complex objects step-by-step and supports optional parts."
+  },
+  {
+    "id": "dp-009",
+    "topic": "design-patterns",
+    "difficulty": "intermediate",
+    "prompt": "Which pattern provides a surrogate or placeholder to control access to an object?",
+    "options": [
+      "Decorator",
+      "Proxy",
+      "Flyweight",
+      "Prototype"
+    ],
+    "answerIndex": 1,
+    "explanation": "Proxy controls access (remote proxy, virtual proxy, protection proxy)."
+  },
+  {
+    "id": "dp-010",
+    "topic": "design-patterns",
+    "difficulty": "intermediate",
+    "prompt": "Flyweight is primarily used to:",
+    "options": [
+      "Reduce memory by sharing intrinsic state",
+      "Create families of related objects",
+      "Notify observers about changes",
+      "Build objects step-by-step"
+    ],
+    "answerIndex": 0,
+    "explanation": "Flyweight shares common state across many fine-grained objects to save memory."
+  },
+  {
+    "id": "dp-011",
+    "topic": "design-patterns",
+    "difficulty": "intermediate",
+    "prompt": "Command pattern helps with:",
+    "options": [
+      "Batching, queuing, undo/redo of actions",
+      "Converting interfaces",
+      "Separating abstraction from implementation",
+      "Ensuring a single instance exists"
+    ],
+    "answerIndex": 0,
+    "explanation": "Commands encapsulate requests, enabling queues, logs, undo operations."
+  },
+  {
+    "id": "dp-012",
+    "topic": "design-patterns",
+    "difficulty": "intermediate",
+    "prompt": "Memento pattern stores:",
+    "options": [
+      "Only object references",
+      "Object's internal state snapshots for restore",
+      "Observers list",
+      "Algorithm strategies"
+    ],
+    "answerIndex": 1,
+    "explanation": "Memento captures and externalizes an object's internal state."
+  },
+  {
+    "id": "dp-013",
+    "topic": "design-patterns",
+    "difficulty": "intermediate",
+    "prompt": "Mediator reduces:",
+    "options": [
+      "Inheritance depth",
+      "Direct coupling between many peers by centralizing communication",
+      "Memory footprint",
+      "Network latency"
+    ],
+    "answerIndex": 1,
+    "explanation": "Mediator centralizes complex communications, reducing peer-to-peer coupling."
+  },
+  {
+    "id": "dp-014",
+    "topic": "design-patterns",
+    "difficulty": "intermediate",
+    "prompt": "Which is TRUE about Prototype?",
+    "options": [
+      "Creates new objects by cloning existing ones",
+      "Forces single instance in app",
+      "Delegates to bridge implementation",
+      "Registers observers automatically"
+    ],
+    "answerIndex": 0,
+    "explanation": "Prototype clones a prototypical instance to create new objects."
+  },
+  {
+    "id": "dp-015",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "Saga pattern addresses what in microservices?",
+    "options": [
+      "Schema migrations",
+      "Distributed transactions via sequence of local transactions with compensations",
+      "Service discovery",
+      "Container orchestration"
+    ],
+    "answerIndex": 1,
+    "explanation": "Saga coordinates distributed workflows using local transactions and compensating actions."
+  },
+  {
+    "id": "dp-016",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "Saga orchestration vs choreography: which is correct?",
+    "options": [
+      "Orchestration uses a central coordinator; choreography is event-driven without a central brain",
+      "Choreography uses a central coordinator; orchestration is event-only",
+      "Both require 2PC",
+      "Both forbid compensating actions"
+    ],
+    "answerIndex": 0,
+    "explanation": "Orchestrator drives the flow; choreography relies on events among services."
+  },
+  {
+    "id": "dp-017",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "CQRS stands for:",
+    "options": [
+      "Command Query Read Split",
+      "Command Query Responsibility Segregation",
+      "Concurrent Query and Replica Synchronization",
+      "Command Queue Replication Service"
+    ],
+    "answerIndex": 1,
+    "explanation": "CQRS separates write (commands) and read (queries) models."
+  },
+  {
+    "id": "dp-018",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "Event Sourcing stores:",
+    "options": [
+      "Only the latest state",
+      "A log of domain events to rebuild state",
+      "Database snapshots only",
+      "Materialized views only"
+    ],
+    "answerIndex": 1,
+    "explanation": "State is derived by replaying the event stream."
+  },
+  {
+    "id": "dp-019",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "Which pattern helps gracefully migrate from a legacy system to a new one?",
+    "options": [
+      "Circuit Breaker",
+      "Bulkhead",
+      "Strangler Fig",
+      "Sidecar"
+    ],
+    "answerIndex": 2,
+    "explanation": "Strangler Fig incrementally replaces functionality behind routing."
+  },
+  {
+    "id": "dp-020",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "Circuit Breaker is used to:",
+    "options": [
+      "Throttle message rates",
+      "Stop calls to a failing dependency to avoid cascading failures",
+      "Distribute load evenly",
+      "Encrypt traffic at rest"
+    ],
+    "answerIndex": 1,
+    "explanation": "Circuit Breaker opens on failures to prevent system overload."
+  },
+  {
+    "id": "dp-021",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "Bulkhead pattern mainly aims to:",
+    "options": [
+      "Reduce code duplication",
+      "Isolate resources so one failure doesn’t sink the whole system",
+      "Avoid retries",
+      "Replace message queues"
+    ],
+    "answerIndex": 1,
+    "explanation": "Bulkheads partition resources (threads, pools) per component/workload."
+  },
+  {
+    "id": "dp-022",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "Backoff + Jitter with retries is used to:",
+    "options": [
+      "Speed up failing requests",
+      "Avoid thundering herds and reduce contention",
+      "Guarantee delivery order",
+      "Provide exactly-once semantics"
+    ],
+    "answerIndex": 1,
+    "explanation": "Randomized exponential backoff spreads retries, reducing spikes."
+  },
+  {
+    "id": "dp-023",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "In Hexagonal Architecture (Ports & Adapters), a 'Port' is:",
+    "options": [
+      "A database socket",
+      "An interface that defines how the domain communicates with the outside",
+      "A container image",
+      "A load balancer rule"
+    ],
+    "answerIndex": 1,
+    "explanation": "Ports are domain-facing abstractions; adapters implement them."
+  },
+  {
+    "id": "dp-024",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "Clean Architecture emphasizes:",
+    "options": [
+      "Framework-first design",
+      "Domain/business rules independent of frameworks and UI",
+      "Database-driven entities",
+      "Layerless monoliths only"
+    ],
+    "answerIndex": 1,
+    "explanation": "Business rules at the center; dependencies point inward."
+  },
+  {
+    "id": "dp-025",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "Package-by-Feature compared to Package-by-Layer:",
+    "options": [
+      "Groups code by technical layers across the app",
+      "Groups related functionality (controllers/services/repos) by feature verticals",
+      "Forces microservices",
+      "Prevents modularization"
+    ],
+    "answerIndex": 1,
+    "explanation": "Package-by-Feature keeps code for a feature together, improving cohesion."
+  },
+  {
+    "id": "dp-026",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "Repository pattern aims to:",
+    "options": [
+      "Replace the database",
+      "Provide a collection-like abstraction over persistence",
+      "Handle circuit breaking",
+      "Generate SQL automatically via reflection only"
+    ],
+    "answerIndex": 1,
+    "explanation": "Repository hides data access details behind domain-friendly methods."
+  },
+  {
+    "id": "dp-027",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "Unit of Work pattern tracks:",
+    "options": [
+      "Memory fragmentation",
+      "Changes to aggregates and coordinates atomic writes",
+      "Thread priorities",
+      "API rate limits"
+    ],
+    "answerIndex": 1,
+    "explanation": "Unit of Work batches and commits changes as a single transaction."
+  },
+  {
+    "id": "dp-028",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "Domain Events are useful to:",
+    "options": [
+      "Hide domain logic in infrastructure",
+      "Decouple side effects from aggregate changes",
+      "Replace transactions",
+      "Enforce two-phase commit"
+    ],
+    "answerIndex": 1,
+    "explanation": "Domain events notify other parts asynchronously without tight coupling."
+  },
+  {
+    "id": "dp-029",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "Which statement about Idempotency is correct?",
+    "options": [
+      "Idempotent operations produce the same result if executed multiple times",
+      "Idempotency requires distributed locks",
+      "It is incompatible with retries",
+      "It applies only to GET requests"
+    ],
+    "answerIndex": 0,
+    "explanation": "Idempotency enables safe retries, key in distributed systems."
+  },
+  {
+    "id": "dp-030",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "Outbox pattern helps to:",
+    "options": [
+      "Avoid schema drift",
+      "Ensure reliable event publication with the database transaction",
+      "Shard messages by key",
+      "Scale read models only"
+    ],
+    "answerIndex": 1,
+    "explanation": "Outbox writes event records in the same transaction, later published by a relay."
+  },
+  {
+    "id": "dp-031",
+    "topic": "design-patterns",
+    "difficulty": "intermediate",
+    "prompt": "Which pattern lets you traverse elements of an aggregate without exposing its representation?",
+    "options": [
+      "Iterator",
+      "Visitor",
+      "Interpreter",
+      "Composite"
+    ],
+    "answerIndex": 0,
+    "explanation": "Iterator provides sequential access to aggregate elements."
+  },
+  {
+    "id": "dp-032",
+    "topic": "design-patterns",
+    "difficulty": "intermediate",
+    "prompt": "Visitor pattern is best when:",
+    "options": [
+      "You frequently add new element types",
+      "You frequently add new operations over a stable element hierarchy",
+      "You need dynamic dispatch on algorithms only",
+      "You want to reduce coupling via mediator"
+    ],
+    "answerIndex": 1,
+    "explanation": "Visitor adds new operations without modifying element classes."
+  },
+  {
+    "id": "dp-033",
+    "topic": "design-patterns",
+    "difficulty": "intermediate",
+    "prompt": "State pattern differs from Strategy mainly because:",
+    "options": [
+      "State changes automatically with context; Strategy is chosen by clients",
+      "State requires inheritance",
+      "Strategy stores history internally",
+      "State cannot be swapped at runtime"
+    ],
+    "answerIndex": 0,
+    "explanation": "State models transitions as internal behavior changes of the context."
+  },
+  {
+    "id": "dp-034",
+    "topic": "design-patterns",
+    "difficulty": "intermediate",
+    "prompt": "Template Method enables:",
+    "options": [
+      "Subclassing to override steps in an algorithm skeleton",
+      "Runtime composition of algorithms",
+      "Interface adaptation",
+      "Graph traversal optimization"
+    ],
+    "answerIndex": 0,
+    "explanation": "Superclass defines skeleton; subclasses override specific steps."
+  },
+  {
+    "id": "dp-035",
+    "topic": "design-patterns",
+    "difficulty": "intermediate",
+    "prompt": "Double-checked locking is commonly used to implement:",
+    "options": [
+      "Strategy",
+      "Singleton initialization with lazy loading",
+      "Command queues",
+      "Observer registration"
+    ],
+    "answerIndex": 1,
+    "explanation": "It reduces synchronization overhead in lazy singletons (ensure correct memory semantics!)."
+  },
+  {
+    "id": "dp-036",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "API Gateway pattern responsibilities include:",
+    "options": [
+      "Direct database access",
+      "Aggregation, authentication, routing, rate limiting",
+      "Replacing service discovery",
+      "Orchestrating distributed transactions only"
+    ],
+    "answerIndex": 1,
+    "explanation": "API Gateway fronts microservices and centralizes cross-cutting concerns."
+  },
+  {
+    "id": "dp-037",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "Sidecar pattern is typically used to:",
+    "options": [
+      "Deploy UI separately",
+      "Offload cross-cutting concerns (logging, metrics, TLS) to a co-located process",
+      "Shard databases",
+      "Implement CQRS reads"
+    ],
+    "answerIndex": 1,
+    "explanation": "Sidecar runs alongside the app container to provide platform features."
+  },
+  {
+    "id": "dp-038",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "Blue-Green Deployment aims to:",
+    "options": [
+      "Autoscale stateful sets",
+      "Reduce downtime by switching traffic between two identical environments",
+      "Guarantee zero bugs",
+      "Replace feature flags"
+    ],
+    "answerIndex": 1,
+    "explanation": "Blue and Green environments allow instant cutover/rollback."
+  },
+  {
+    "id": "dp-039",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "Which statement best describes 'Eventually Consistent Read Model' in CQRS?",
+    "options": [
+      "Reads and writes share the same transaction",
+      "Read model lags behind write model but converges via events",
+      "Reads are strongly consistent by design",
+      "It requires two-phase commit"
+    ],
+    "answerIndex": 1,
+    "explanation": "Read models are updated asynchronously by consuming domain events."
+  },
+  {
+    "id": "dp-040",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "Idempotency keys are often implemented via:",
+    "options": [
+      "Random delays only",
+      "Client-generated unique token stored on the server to dedupe retries",
+      "Database locks per row",
+      "HTTP 500 responses"
+    ],
+    "answerIndex": 1,
+    "explanation": "Server stores tokens to avoid processing the same request twice."
+  },
+  {
+    "id": "dp-041",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "Which is a drawback of choreography-based Sagas?",
+    "options": [
+      "Single point of failure",
+      "Centralized bottleneck",
+      "Harder to visualize/trace flow when many services emit/consume events",
+      "Requires XA transactions"
+    ],
+    "answerIndex": 2,
+    "explanation": "Event chains can become hard to trace as the system grows."
+  },
+  {
+    "id": "dp-042",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "Compensating transactions in Sagas are used to:",
+    "options": [
+      "Improve query speed",
+      "Semantically undo prior local transactions on failure",
+      "Lock global resources",
+      "Guarantee strong consistency"
+    ],
+    "answerIndex": 1,
+    "explanation": "Compensation semantically reverses previous successful steps."
+  },
+  {
+    "id": "dp-043",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "A good aggregate design in DDD should:",
+    "options": [
+      "Allow cross-aggregate invariants",
+      "Keep invariants inside the aggregate boundaries and minimize external references",
+      "Expose setters for all fields",
+      "Depend on UI frameworks"
+    ],
+    "answerIndex": 1,
+    "explanation": "Aggregate enforces invariants internally; interactions are via IDs/domain events."
+  },
+  {
+    "id": "dp-044",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "Anti-Corruption Layer (ACL) is used to:",
+    "options": [
+      "Migrate databases",
+      "Translate between bounded contexts to avoid leaking domain concepts",
+      "Encrypt microservice traffic",
+      "Implement feature toggles"
+    ],
+    "answerIndex": 1,
+    "explanation": "ACL isolates domains by translating models and protocols."
+  },
+  {
+    "id": "dp-045",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "Package-by-Feature helps primarily with:",
+    "options": [
+      "Reducing the number of packages",
+      "Team ownership and modularity around vertical slices",
+      "Avoiding unit tests",
+      "Removing interfaces"
+    ],
+    "answerIndex": 1,
+    "explanation": "Features become natural modules for teams and deployment."
+  },
+  {
+    "id": "dp-046",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "Eventual consistency typically requires:",
+    "options": [
+      "Synchronous RPC between services",
+      "Asynchronous messaging and retries",
+      "Shared database between services",
+      "Two-phase commit"
+    ],
+    "answerIndex": 1,
+    "explanation": "Asynchronous events and retries allow eventual convergence."
+  },
+  {
+    "id": "dp-047",
+    "topic": "design-patterns",
+    "difficulty": "intermediate",
+    "prompt": "Which pattern lets you add responsibilities to objects dynamically?",
+    "options": [
+      "Decorator",
+      "Adapter",
+      "Visitor",
+      "Interpreter"
+    ],
+    "answerIndex": 0,
+    "explanation": "Decorator wraps objects to add behavior without subclassing."
+  },
+  {
+    "id": "dp-048",
+    "topic": "design-patterns",
+    "difficulty": "intermediate",
+    "prompt": "Interpreter pattern is suitable for:",
+    "options": [
+      "Heavy binary protocols",
+      "Defining and evaluating a simple grammar/DSL",
+      "Network timeouts",
+      "UI layout"
+    ],
+    "answerIndex": 1,
+    "explanation": "Interpreter represents grammar rules as classes to interpret sentences."
+  },
+  {
+    "id": "dp-049",
+    "topic": "design-patterns",
+    "difficulty": "intermediate",
+    "prompt": "Which is a common pitfall of Singleton?",
+    "options": [
+      "Thread-safety is guaranteed by default",
+      "Hidden global state makes testing harder",
+      "It cannot be lazy",
+      "It forces distributed locks"
+    ],
+    "answerIndex": 1,
+    "explanation": "Singletons can introduce implicit coupling and testability issues."
+  },
+  {
+    "id": "dp-050",
+    "topic": "architecture",
+    "difficulty": "intermediate",
+    "prompt": "Which combination is most common for resilience in microservices?",
+    "options": [
+      "Circuit Breaker + Retry with backoff + Timeouts + Bulkhead",
+      "2PC + XA transactions only",
+      "Global locks + Shared DB",
+      "Synchronous chains without timeouts"
+    ],
+    "answerIndex": 0,
+    "explanation": "These patterns together avoid cascading failures and improve stability."
+  },
+  {
+    "id": "dp-e-001",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "What is the main goal of the Strategy pattern?",
+    "options": [
+      "Select interchangeable algorithms at runtime",
+      "Guarantee a single instance across the app",
+      "Share common state across many objects",
+      "Convert one interface into another"
+    ],
+    "answerIndex": 0,
+    "explanation": "Strategy encapsulates families of algorithms behind a common interface for runtime selection."
+  },
+  {
+    "id": "dp-e-002",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "Which pattern provides a simplified interface to a complex subsystem?",
+    "options": ["Adapter", "Facade", "Proxy", "Bridge"],
+    "answerIndex": 1,
+    "explanation": "Facade exposes a higher-level, simpler interface for a complex subsystem."
+  },
+  {
+    "id": "dp-e-003",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "Which pattern ensures a class has only one instance and provides a global access point?",
+    "options": ["Singleton", "Prototype", "Builder", "Mediator"],
+    "answerIndex": 0,
+    "explanation": "Singleton controls instantiation and exposes a single shared instance."
+  },
+  {
+    "id": "dp-e-004",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "Adapter vs Decorator: pick the correct statement.",
+    "options": [
+      "Both change public interface",
+      "Adapter changes interface; Decorator adds behavior without changing interface",
+      "Decorator changes interface; Adapter adds behavior only",
+      "Both require inheritance only"
+    ],
+    "answerIndex": 1,
+    "explanation": "Adapter converts interfaces; Decorator preserves the interface and adds responsibilities."
+  },
+  {
+    "id": "dp-e-005",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "Which pattern composes objects into tree structures to represent part–whole hierarchies?",
+    "options": ["Composite", "Observer", "Command", "Iterator"],
+    "answerIndex": 0,
+    "explanation": "Composite treats individual objects and compositions uniformly."
+  },
+  {
+    "id": "dp-e-006",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "What does the Observer pattern enable?",
+    "options": [
+      "A subject notifying subscribed observers on state changes",
+      "Cloning objects efficiently",
+      "Switching implementations at runtime",
+      "Abstracting object creation"
+    ],
+    "answerIndex": 0,
+    "explanation": "Observers subscribe to the subject and are notified when state changes."
+  },
+  {
+    "id": "dp-e-007",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "Which pattern separates abstraction from implementation so both can vary independently?",
+    "options": ["Bridge", "Proxy", "Template Method", "Flyweight"],
+    "answerIndex": 0,
+    "explanation": "Bridge uses composition to decouple abstractions from implementations."
+  },
+  {
+    "id": "dp-e-008",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "Factory Method vs Abstract Factory: which is true?",
+    "options": [
+      "Factory Method creates families of products",
+      "Abstract Factory creates a single product",
+      "Factory Method creates one product; Abstract Factory creates families of related products",
+      "They are identical"
+    ],
+    "answerIndex": 2,
+    "explanation": "Abstract Factory produces families; Factory Method creates a single product type."
+  },
+  {
+    "id": "dp-e-009",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "When do you typically use the Builder pattern?",
+    "options": [
+      "When an object has many optional parameters",
+      "When sharing state across thousands of objects",
+      "When converting incompatible interfaces",
+      "When enforcing a single instance"
+    ],
+    "answerIndex": 0,
+    "explanation": "Builder helps assemble complex objects step-by-step with optional parts."
+  },
+  {
+    "id": "dp-e-010",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "Which pattern provides a surrogate to control access to another object?",
+    "options": ["Decorator", "Flyweight", "Proxy", "Interpreter"],
+    "answerIndex": 2,
+    "explanation": "Proxy controls access (remote, virtual, or protection proxies)."
+  },
+  {
+    "id": "dp-e-011",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "Flyweight is primarily used to:",
+    "options": [
+      "Minimize memory usage by sharing intrinsic state",
+      "Create families of objects",
+      "Notify subscribers",
+      "Batch commands"
+    ],
+    "answerIndex": 0,
+    "explanation": "Flyweight shares common state to reduce memory footprint."
+  },
+  {
+    "id": "dp-e-012",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "Command pattern is a good fit for:",
+    "options": [
+      "Undo/redo, queuing, and logging actions",
+      "Parsing grammars",
+      "Cross-aggregate transactions",
+      "State caching"
+    ],
+    "answerIndex": 0,
+    "explanation": "Command encapsulates a request, enabling queues and undo/redo."
+  },
+  {
+    "id": "dp-e-013",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "What does the Memento pattern store?",
+    "options": [
+      "Only object references",
+      "Snapshots of an object's internal state for later restoration",
+      "Observer subscriptions",
+      "Algorithm strategies"
+    ],
+    "answerIndex": 1,
+    "explanation": "Memento captures internal state to restore later."
+  },
+  {
+    "id": "dp-e-014",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "Which pattern centralizes complex communication to reduce peer coupling?",
+    "options": ["Mediator", "Facade", "Adapter", "Prototype"],
+    "answerIndex": 0,
+    "explanation": "Mediator coordinates interactions among many colleagues."
+  },
+  {
+    "id": "dp-e-015",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "Prototype pattern creates objects by:",
+    "options": [
+      "Cloning a prototypical instance",
+      "Using static factories",
+      "Invoking a builder",
+      "External configuration only"
+    ],
+    "answerIndex": 0,
+    "explanation": "Prototype copies existing instances to create new ones."
+  },
+  {
+    "id": "dp-e-016",
+    "topic": "architecture",
+    "difficulty": "basic",
+    "prompt": "What problem does the Circuit Breaker pattern address?",
+    "options": [
+      "UI responsiveness",
+      "Preventing cascading failures when a dependency is unhealthy",
+      "Schema versioning",
+      "Compiling configuration files"
+    ],
+    "answerIndex": 1,
+    "explanation": "Circuit Breaker opens on repeated failures to protect the system."
+  },
+  {
+    "id": "dp-e-017",
+    "topic": "architecture",
+    "difficulty": "basic",
+    "prompt": "The Bulkhead pattern aims to:",
+    "options": [
+      "Increase coupling",
+      "Isolate resources so one failure doesn’t sink the whole system",
+      "Speed up all queries",
+      "Remove the need for retries"
+    ],
+    "answerIndex": 1,
+    "explanation": "Bulkhead partitions resources to contain failures."
+  },
+  {
+    "id": "dp-e-018",
+    "topic": "architecture",
+    "difficulty": "basic",
+    "prompt": "Which pattern helps incrementally replace a legacy system?",
+    "options": ["Saga", "Strangler Fig", "Sidecar", "Repository"],
+    "answerIndex": 1,
+    "explanation": "Strangler Fig routes traffic gradually to the new implementation."
+  },
+  {
+    "id": "dp-e-019",
+    "topic": "architecture",
+    "difficulty": "basic",
+    "prompt": "CQRS stands for:",
+    "options": [
+      "Command Query Responsibility Segregation",
+      "Concurrent Queue Replication Service",
+      "Command Queue Reliable System",
+      "Core Query Result Set"
+    ],
+    "answerIndex": 0,
+    "explanation": "CQRS separates write (commands) and read (queries) models."
+  },
+  {
+    "id": "dp-e-020",
+    "topic": "architecture",
+    "difficulty": "basic",
+    "prompt": "Event Sourcing stores:",
+    "options": [
+      "Only the latest state",
+      "A log of domain events to rebuild state",
+      "Materialized views only",
+      "Database diffs only"
+    ],
+    "answerIndex": 1,
+    "explanation": "State is reconstituted by replaying events."
+  },
+  {
+    "id": "dp-e-021",
+    "topic": "architecture",
+    "difficulty": "basic",
+    "prompt": "What is a key responsibility of an API Gateway?",
+    "options": [
+      "Direct DB writes",
+      "Routing, aggregation, auth, and rate limiting",
+      "Replacing service discovery",
+      "Compiling front-end assets"
+    ],
+    "answerIndex": 1,
+    "explanation": "API Gateways centralize cross-cutting concerns in front of microservices."
+  },
+  {
+    "id": "dp-e-022",
+    "topic": "architecture",
+    "difficulty": "basic",
+    "prompt": "In agonal (Ports & Adapters) Architecture, a Port is:",
+    "options": [
+      "A TCP port",
+      "A domain-facing interface boundary",
+      "A UI widget",
+      "A DB connection"
+    ],
+    "answerIndex": 1,
+    "explanation": "Ports define how the domain talks to outside; adapters implement them."
+  },
+  {
+    "id": "dp-e-023",
+    "topic": "architecture",
+    "difficulty": "basic",
+    "prompt": "Package-by-Feature means:",
+    "options": [
+      "Group classes by technical layers",
+      "Group code by vertical features (controller/service/repo together per feature)",
+      "Put all services in one package",
+      "Split by team only"
+    ],
+    "answerIndex": 1,
+    "explanation": "It improves cohesion by packaging end-to-end feature slices."
+  },
+  {
+    "id": "dp-e-024",
+    "topic": "architecture",
+    "difficulty": "basic",
+    "prompt": "Repository pattern provides:",
+    "options": [
+      "Direct SQL strings everywhere",
+      "A collection-like abstraction over persistence",
+      "Event broadcasting",
+      "Global state sharing"
+    ],
+    "answerIndex": 1,
+    "explanation": "Repository hides data-access details behind domain-friendly methods."
+  },
+  {
+    "id": "dp-e-025",
+    "topic": "architecture",
+    "difficulty": "basic",
+    "prompt": "Unit of Work coordinates:",
+    "options": [
+      "Threads and pools",
+      "Atomic persistence of tracked changes",
+      "REST endpoints",
+      "Container lifecycle"
+    ],
+    "answerIndex": 1,
+    "explanation": "It tracks changes and commits them in a single transaction."
+  },
+  {
+    "id": "dp-e-026",
+    "topic": "architecture",
+    "difficulty": "basic",
+    "prompt": "Saga pattern handles:",
+    "options": [
+      "Distributed workflows via local transactions and compensations",
+      "Only UI navigation",
+      "Static configuration",
+      "Test data generation"
+    ],
+    "answerIndex": 0,
+    "explanation": "Saga coordinates steps and compensations across services."
+  },
+  {
+    "id": "dp-e-027",
+    "topic": "architecture",
+    "difficulty": "basic",
+    "prompt": "A common benefit of Idempotency is:",
+    "options": [
+      "It forbids retries",
+      "Same effect on multiple executions, enabling safe retries",
+      "Exclusive to GET requests",
+      "Requires XA transactions"
+    ],
+    "answerIndex": 1,
+    "explanation": "Idempotent operations tolerate duplicates from retries."
+  },
+  {
+    "id": "dp-e-028",
+    "topic": "architecture",
+    "difficulty": "basic",
+    "prompt": "Anti-Corruption Layer (ACL) is used to:",
+    "options": [
+      "Translate between bounded contexts",
+      "Encrypt all traffic",
+      "Autoscale services",
+      "Replace caching"
+    ],
+    "answerIndex": 0,
+    "explanation": "ACL prevents model leakage between contexts."
+  },
+  {
+    "id": "dp-e-029",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "Which pattern lets you add responsibilities to objects dynamically?",
+    "options": ["Decorator", "Interpreter", "Visitor", "Iterator"],
+    "answerIndex": 0,
+    "explanation": "Decorator wraps an object to extend behavior without subclassing."
+  },
+  {
+    "id": "dp-e-030",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "Template Method allows:",
+    "options": [
+      "Subclasses to override steps of an algorithm skeleton",
+      "Run-time selection of algorithms",
+      "Building objects step-by-step",
+      "Cloning existing objects"
+    ],
+    "answerIndex": 0,
+    "explanation": "Superclass defines the template; subclasses customize steps."
+  },
+
+  {
+    "id": "dp-a-001",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Which drawback is common in choreography-based Sagas?",
+    "options": [
+      "Single point of failure",
+      "Harder to trace flows as services grow",
+      "Requires XA/2PC for every step",
+      "No compensation possible"
+    ],
+    "answerIndex": 1,
+    "explanation": "Event chains can be difficult to visualize/trace in large meshes."
+  },
+  {
+    "id": "dp-a-002",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Outbox pattern primarily solves:",
+    "options": [
+      "Schema evolution",
+      "Reliable event publication tied to DB transactions",
+      "Cross-region latency",
+      "Write amplification in logs"
+    ],
+    "answerIndex": 1,
+    "explanation": "Outbox persists events within the same transaction then a relay publishes them."
+  },
+  {
+    "id": "dp-a-003",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Best combo for resilience in microservices:",
+    "options": [
+      "2PC + XA only",
+      "Circuit Breaker + Timeouts + Retry with backoff + Bulkhead",
+      "Global locks + Shared DB",
+      "Synchronous chains without timeouts"
+    ],
+    "answerIndex": 1,
+    "explanation": "The combination mitigates cascading failures and resource exhaustion."
+  },
+  {
+    "id": "dp-a-004",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "In CQRS with Event Sourcing, which is TRUE?",
+    "options": [
+      "Reads and writes share the same transaction",
+      "Read models are eventually consistent and updated by consuming events",
+      "Event store cannot be replayed",
+      "Strong consistency is mandatory for reads"
+    ],
+    "answerIndex": 1,
+    "explanation": "Read models lag but converge by handling domain events."
+  },
+  {
+    "id": "dp-a-005",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Clean Architecture dependency rule states:",
+    "options": [
+      "Dependencies may point outward",
+      "Outer layers depend on inner layers; not the opposite",
+      "Entities depend on frameworks",
+      "UI dictates domain models"
+    ],
+    "answerIndex": 1,
+    "explanation": "Business rules at the center; policies depend inward only."
+  },
+  {
+    "id": "dp-a-006",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Designing aggregates in DDD, pick the best guideline:",
+    "options": [
+      "Allow invariants across aggregates",
+      "Keep invariants internal; reference other aggregates by ID or events",
+      "Expose setters for all fields",
+      "Model aggregates as large as possible"
+    ],
+    "answerIndex": 1,
+    "explanation": "Aggregates enforce invariants internally; communicate via IDs/events."
+  },
+  {
+    "id": "dp-a-007",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Idempotency keys are typically implemented by:",
+    "options": [
+      "Random delays only",
+      "Client-supplied unique key persisted server-side to deduplicate retries",
+      "Global DB locks",
+      "TLS mutual auth"
+    ],
+    "answerIndex": 1,
+    "explanation": "The server stores keys and drops duplicates deterministically."
+  },
+  {
+    "id": "dp-a-008",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Which is a trade-off of package-by-feature in a large monolith?",
+    "options": [
+      "Lower cohesion",
+      "Potential duplication of cross-cutting util code across features",
+      "Harder to assign ownership",
+      "Strict layer boundaries enforced by the compiler"
+    ],
+    "answerIndex": 1,
+    "explanation": "Vertical slices can duplicate some utilities; mitigate with internal modules."
+  },
+  {
+    "id": "dp-a-009",
+    "topic": "design-patterns",
+    "difficulty": "advanced",
+    "prompt": "State vs Strategy: nuanced distinction?",
+    "options": [
+      "State requires inheritance",
+      "State transitions are driven by context; Strategy is selected by clients",
+      "Strategy cannot be swapped at runtime",
+      "State forbids composition"
+    ],
+    "answerIndex": 1,
+    "explanation": "State models internal transitions; Strategy is externally chosen."
+  },
+  {
+    "id": "dp-a-010",
+    "topic": "design-patterns",
+    "difficulty": "advanced",
+    "prompt": "Double-checked locking for lazy singletons requires:",
+    "options": [
+      "No special care",
+      "Proper memory barriers/volatile to avoid reordering issues",
+      "Using only synchronized blocks",
+      "Immutable fields only"
+    ],
+    "answerIndex": 1,
+    "explanation": "Declare the instance volatile to ensure safe publication."
+  },
+  {
+    "id": "dp-a-011",
+    "topic": "design-patterns",
+    "difficulty": "advanced",
+    "prompt": "A pitfall of the Service Locator pattern is:",
+    "options": [
+      "It improves testability",
+      "It hides dependencies and increases coupling to a global registry",
+      "It enforces compile-time wiring",
+      "It reduces global state"
+    ],
+    "answerIndex": 1,
+    "explanation": "Hidden dependencies hurt readability and unit testing."
+  },
+  {
+    "id": "dp-a-012",
+    "topic": "design-patterns",
+    "difficulty": "advanced",
+    "prompt": "Visitor works best when:",
+    "options": [
+      "Element hierarchy changes frequently",
+      "You add new operations over a stable element hierarchy",
+      "You need runtime algorithm switches only",
+      "You want to reduce all coupling via mediator"
+    ],
+    "answerIndex": 1,
+    "explanation": "Visitor favors adding new operations but resists adding new element types."
+  },
+  {
+    "id": "dp-a-013",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Sagas with external side effects should:",
+    "options": [
+      "Avoid compensation",
+      "Use compensating actions that semantically reverse prior steps",
+      "Use 2PC",
+      "Rely only on idempotency"
+    ],
+    "answerIndex": 1,
+    "explanation": "Compensation is the core mechanism to handle partial failures."
+  },
+  {
+    "id": "dp-a-014",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Best practice for retries to avoid thundering herds:",
+    "options": [
+      "Constant interval",
+      "Exponential backoff with jitter",
+      "Infinite immediate retries",
+      "Random sleep without bounds"
+    ],
+    "answerIndex": 1,
+    "explanation": "Backoff + jitter spreads load and reduces synchronized retries."
+  },
+  {
+    "id": "dp-a-015",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Sidecar pattern is typically leveraged to:",
+    "options": [
+      "Run DB migrations",
+      "Offload cross-cutting concerns (TLS, metrics, logging) to a co-located process",
+      "Replace gateways",
+      "Ensure strong consistency"
+    ],
+    "answerIndex": 1,
+    "explanation": "The sidecar provides platform capabilities beside the main app."
+  },
+  {
+    "id": "dp-a-016",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "In hexagonal architecture, which is TRUE?",
+    "options": [
+      "Adapters depend on domain; domain depends on adapters",
+      "Domain depends on adapters",
+      "Adapters implement ports and depend inward on domain",
+      "Ports depend on infrastructure"
+    ],
+    "answerIndex": 2,
+    "explanation": "Dependencies point inward; adapters implement ports."
+  },
+  {
+    "id": "dp-a-017",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "A drawback of synchronous request/response chains across many services is:",
+    "options": [
+      "Reduced observability",
+      "Increased tail latency and higher blast radius on failures",
+      "Guaranteed global ordering",
+      "No need for timeouts"
+    ],
+    "answerIndex": 1,
+    "explanation": "Long chains amplify latency and failure propagation."
+  },
+  {
+    "id": "dp-a-018",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Materialized views in CQRS should be:",
+    "options": [
+      "Strongly consistent with writes",
+      "Eventually consistent and rebuilt from events if needed",
+      "Updated via 2PC",
+      "Owned by the write model"
+    ],
+    "answerIndex": 1,
+    "explanation": "They are projections updated asynchronously; can be rebuilt."
+  },
+  {
+    "id": "dp-a-019",
+    "topic": "design-patterns",
+    "difficulty": "advanced",
+    "prompt": "Bridge vs Adapter nuanced difference:",
+    "options": [
+      "Bridge is for new designs; Adapter retrofits incompatible interfaces",
+      "Both are for legacy code only",
+      "Adapter is compile-time only",
+      "Bridge cannot use composition"
+    ],
+    "answerIndex": 0,
+    "explanation": "Bridge decouples abstraction/implementation; Adapter makes existing interfaces compatible."
+  },
+  {
+    "id": "dp-a-020",
+    "topic": "design-patterns",
+    "difficulty": "advanced",
+    "prompt": "When does Flyweight backfire?",
+    "options": [
+      "When intrinsic state dominates and extrinsic state is cheap to pass",
+      "When extrinsic state is heavy and frequently recomputed",
+      "When objects are large",
+      "When memory is abundant"
+    ],
+    "answerIndex": 1,
+    "explanation": "Passing heavy extrinsic state can negate Flyweight benefits."
+  },
+  {
+    "id": "dp-a-021",
+    "topic": "design-patterns",
+    "difficulty": "advanced",
+    "prompt": "A common testing issue with Singleton is:",
+    "options": [
+      "Too easy to replace",
+      "Hidden global state coupling makes isolation harder",
+      "Forces constructor injection",
+      "Cannot be used in DI containers"
+    ],
+    "answerIndex": 1,
+    "explanation": "Global singletons introduce hidden dependencies and shared state in tests."
+  },
+  {
+    "id": "dp-a-022",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Which is a GOOD reason to choose package-by-layer?",
+    "options": [
+      "Feature ownership",
+      "Simpler cross-cutting refactors across the whole codebase",
+      "Fewer code reviews",
+      "Better runtime performance"
+    ],
+    "answerIndex": 1,
+    "explanation": "Layered packaging eases broad refactors but can hurt feature cohesion."
+  },
+  {
+    "id": "dp-a-023",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Anti-pattern for microservices data management:",
+    "options": [
+      "Service owns its database",
+      "Shared database across multiple services tightly coupled by schema",
+      "Polyglot persistence",
+      "Schema versioning per service"
+    ],
+    "answerIndex": 1,
+    "explanation": "A shared DB couples services and slows independent evolution."
+  },
+  {
+    "id": "dp-a-024",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Exactly-once delivery in distributed systems is generally:",
+    "options": [
+      "Guaranteed by TCP",
+      "Infeasible without trade-offs; prefer idempotency and dedup",
+      "Simple with retries",
+      "Always available with Kafka"
+    ],
+    "answerIndex": 1,
+    "explanation": "Use idempotency keys and deduplication to approximate exactly-once semantics."
+  },
+  {
+    "id": "dp-a-025",
+    "topic": "design-patterns",
+    "difficulty": "advanced",
+    "prompt": "Which pattern best encapsulates cross-cutting concerns like logging or metrics?",
+    "options": [
+      "Decorator or AOP proxies around components",
+      "Composite",
+      "Iterator",
+      "Interpreter"
+    ],
+    "answerIndex": 0,
+    "explanation": "Decorator/AOP can transparently add cross-cutting behavior."
+  },
+  {
+    "id": "dp-a-026",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "A blue–green deployment helps mainly with:",
+    "options": [
+      "Reducing downtime and enabling instant rollback",
+      "Achieving strong consistency",
+      "Avoiding tests",
+      "Scaling databases automatically"
+    ],
+    "answerIndex": 0,
+    "explanation": "Two identical environments allow quick cutover and rollback."
+  },
+  {
+    "id": "dp-a-027",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Which statement about domain events is MOST accurate?",
+    "options": [
+      "They must be synchronous",
+      "They decouple reactions to state changes from aggregates",
+      "They replace transactions",
+      "They should contain entire entity graphs"
+    ],
+    "answerIndex": 1,
+    "explanation": "Domain events enable decoupled side effects or projections."
+  },
+  {
+    "id": "dp-a-028",
+    "topic": "design-patterns",
+    "difficulty": "advanced",
+    "prompt": "Interpreter is suitable when:",
+    "options": [
+      "You have a simple, stable grammar/DSL",
+      "You need high-throughput binary parsing",
+      "You need runtime algorithm swaps",
+      "You require strong coupling to UI"
+    ],
+    "answerIndex": 0,
+    "explanation": "Interpreter represents grammar rules as classes for small DSLs."
+  },
+  {
+    "id": "dp-a-029",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "A safe evolution path from monolith to microservices is:",
+    "options": [
+      "Big-bang split",
+      "Strangler Fig with seams and routing + contract tests",
+      "Shared DB first",
+      "Turn off tests to move faster"
+    ],
+    "answerIndex": 1,
+    "explanation": "Expose seams, route traffic gradually, and validate with tests."
+  },
+  {
+    "id": "dp-a-030",
+    "topic": "design-patterns",
+    "difficulty": "advanced",
+    "prompt": "A nuanced misuse of Mediator is:",
+    "options": [
+      "Centralizing complex interactions",
+      "Becoming a God object with too much domain logic",
+      "Decoupling peers",
+      "Improving modularity"
+    ],
+    "answerIndex": 1,
+    "explanation": "When Mediator accumulates domain logic, it turns into an anemic ‘God object’."
+  },
+  {
+    "id": "dp-e-001",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "What is the main goal of the Strategy pattern?",
+    "options": [
+      "Select interchangeable algorithms at runtime",
+      "Guarantee a single instance across the app",
+      "Share common state across many objects",
+      "Convert one interface into another"
+    ],
+    "answerIndex": 0,
+    "explanation": "Strategy encapsulates families of algorithms behind a common interface for runtime selection."
+  },
+  {
+    "id": "dp-e-002",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "Which pattern provides a simplified interface to a complex subsystem?",
+    "options": ["Adapter", "Facade", "Proxy", "Bridge"],
+    "answerIndex": 1,
+    "explanation": "Facade exposes a higher-level, simpler interface for a complex subsystem."
+  },
+  {
+    "id": "dp-e-003",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "Which pattern ensures a class has only one instance and provides a global access point?",
+    "options": ["Singleton", "Prototype", "Builder", "Mediator"],
+    "answerIndex": 0,
+    "explanation": "Singleton controls instantiation and exposes a single shared instance."
+  },
+  {
+    "id": "dp-e-004",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "Adapter vs Decorator: pick the correct statement.",
+    "options": [
+      "Both change public interface",
+      "Adapter changes interface; Decorator adds behavior without changing interface",
+      "Decorator changes interface; Adapter adds behavior only",
+      "Both require inheritance only"
+    ],
+    "answerIndex": 1,
+    "explanation": "Adapter converts interfaces; Decorator preserves the interface and adds responsibilities."
+  },
+  {
+    "id": "dp-e-005",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "Which pattern composes objects into tree structures to represent part–whole hierarchies?",
+    "options": ["Composite", "Observer", "Command", "Iterator"],
+    "answerIndex": 0,
+    "explanation": "Composite treats individual objects and compositions uniformly."
+  },
+  {
+    "id": "dp-e-006",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "What does the Observer pattern enable?",
+    "options": [
+      "A subject notifying subscribed observers on state changes",
+      "Cloning objects efficiently",
+      "Switching implementations at runtime",
+      "Abstracting object creation"
+    ],
+    "answerIndex": 0,
+    "explanation": "Observers subscribe to the subject and are notified when state changes."
+  },
+  {
+    "id": "dp-e-007",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "Which pattern separates abstraction from implementation so both can vary independently?",
+    "options": ["Bridge", "Proxy", "Template Method", "Flyweight"],
+    "answerIndex": 0,
+    "explanation": "Bridge uses composition to decouple abstractions from implementations."
+  },
+  {
+    "id": "dp-e-008",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "Factory Method vs Abstract Factory: which is true?",
+    "options": [
+      "Factory Method creates families of products",
+      "Abstract Factory creates a single product",
+      "Factory Method creates one product; Abstract Factory creates families of related products",
+      "They are identical"
+    ],
+    "answerIndex": 2,
+    "explanation": "Abstract Factory produces families; Factory Method creates a single product type."
+  },
+  {
+    "id": "dp-e-009",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "When do you typically use the Builder pattern?",
+    "options": [
+      "When an object has many optional parameters",
+      "When sharing state across thousands of objects",
+      "When converting incompatible interfaces",
+      "When enforcing a single instance"
+    ],
+    "answerIndex": 0,
+    "explanation": "Builder helps assemble complex objects step-by-step with optional parts."
+  },
+  {
+    "id": "dp-e-010",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "Which pattern provides a surrogate to control access to another object?",
+    "options": ["Decorator", "Flyweight", "Proxy", "Interpreter"],
+    "answerIndex": 2,
+    "explanation": "Proxy controls access (remote, virtual, or protection proxies)."
+  },
+  {
+    "id": "dp-e-011",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "Flyweight is primarily used to:",
+    "options": [
+      "Minimize memory usage by sharing intrinsic state",
+      "Create families of objects",
+      "Notify subscribers",
+      "Batch commands"
+    ],
+    "answerIndex": 0,
+    "explanation": "Flyweight shares common state to reduce memory footprint."
+  },
+  {
+    "id": "dp-e-012",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "Command pattern is a good fit for:",
+    "options": [
+      "Undo/redo, queuing, and logging actions",
+      "Parsing grammars",
+      "Cross-aggregate transactions",
+      "State caching"
+    ],
+    "answerIndex": 0,
+    "explanation": "Command encapsulates a request, enabling queues and undo/redo."
+  },
+  {
+    "id": "dp-e-013",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "What does the Memento pattern store?",
+    "options": [
+      "Only object references",
+      "Snapshots of an object's internal state for later restoration",
+      "Observer subscriptions",
+      "Algorithm strategies"
+    ],
+    "answerIndex": 1,
+    "explanation": "Memento captures internal state to restore later."
+  },
+  {
+    "id": "dp-e-014",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "Which pattern centralizes complex communication to reduce peer coupling?",
+    "options": ["Mediator", "Facade", "Adapter", "Prototype"],
+    "answerIndex": 0,
+    "explanation": "Mediator coordinates interactions among many colleagues."
+  },
+  {
+    "id": "dp-e-015",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "Prototype pattern creates objects by:",
+    "options": [
+      "Cloning a prototypical instance",
+      "Using static factories",
+      "Invoking a builder",
+      "External configuration only"
+    ],
+    "answerIndex": 0,
+    "explanation": "Prototype copies existing instances to create new ones."
+  },
+  {
+    "id": "dp-e-016",
+    "topic": "architecture",
+    "difficulty": "basic",
+    "prompt": "What problem does the Circuit Breaker pattern address?",
+    "options": [
+      "UI responsiveness",
+      "Preventing cascading failures when a dependency is unhealthy",
+      "Schema versioning",
+      "Compiling configuration files"
+    ],
+    "answerIndex": 1,
+    "explanation": "Circuit Breaker opens on repeated failures to protect the system."
+  },
+  {
+    "id": "dp-e-017",
+    "topic": "architecture",
+    "difficulty": "basic",
+    "prompt": "The Bulkhead pattern aims to:",
+    "options": [
+      "Increase coupling",
+      "Isolate resources so one failure doesn’t sink the whole system",
+      "Speed up all queries",
+      "Remove the need for retries"
+    ],
+    "answerIndex": 1,
+    "explanation": "Bulkhead partitions resources to contain failures."
+  },
+  {
+    "id": "dp-e-018",
+    "topic": "architecture",
+    "difficulty": "basic",
+    "prompt": "Which pattern helps incrementally replace a legacy system?",
+    "options": ["Saga", "Strangler Fig", "Sidecar", "Repository"],
+    "answerIndex": 1,
+    "explanation": "Strangler Fig routes traffic gradually to the new implementation."
+  },
+  {
+    "id": "dp-e-019",
+    "topic": "architecture",
+    "difficulty": "basic",
+    "prompt": "CQRS stands for:",
+    "options": [
+      "Command Query Responsibility Segregation",
+      "Concurrent Queue Replication Service",
+      "Command Queue Reliable System",
+      "Core Query Result Set"
+    ],
+    "answerIndex": 0,
+    "explanation": "CQRS separates write (commands) and read (queries) models."
+  },
+  {
+    "id": "dp-e-020",
+    "topic": "architecture",
+    "difficulty": "basic",
+    "prompt": "Event Sourcing stores:",
+    "options": [
+      "Only the latest state",
+      "A log of domain events to rebuild state",
+      "Materialized views only",
+      "Database diffs only"
+    ],
+    "answerIndex": 1,
+    "explanation": "State is reconstituted by replaying events."
+  },
+  {
+    "id": "dp-e-021",
+    "topic": "architecture",
+    "difficulty": "basic",
+    "prompt": "What is a key responsibility of an API Gateway?",
+    "options": [
+      "Direct DB writes",
+      "Routing, aggregation, auth, and rate limiting",
+      "Replacing service discovery",
+      "Compiling front-end assets"
+    ],
+    "answerIndex": 1,
+    "explanation": "API Gateways centralize cross-cutting concerns in front of microservices."
+  },
+  {
+    "id": "dp-e-022",
+    "topic": "architecture",
+    "difficulty": "basic",
+    "prompt": "In Hexagonal (Ports & Adapters) Architecture, a Port is:",
+    "options": [
+      "A TCP port",
+      "A domain-facing interface boundary",
+      "A UI widget",
+      "A DB connection"
+    ],
+    "answerIndex": 1,
+    "explanation": "Ports define how the domain talks to outside; adapters implement them."
+  },
+  {
+    "id": "dp-e-023",
+    "topic": "architecture",
+    "difficulty": "basic",
+    "prompt": "Package-by-Feature means:",
+    "options": [
+      "Group classes by technical layers",
+      "Group code by vertical features (controller/service/repo together per feature)",
+      "Put all services in one package",
+      "Split by team only"
+    ],
+    "answerIndex": 1,
+    "explanation": "It improves cohesion by packaging end-to-end feature slices."
+  },
+  {
+    "id": "dp-e-024",
+    "topic": "architecture",
+    "difficulty": "basic",
+    "prompt": "Repository pattern provides:",
+    "options": [
+      "Direct SQL strings everywhere",
+      "A collection-like abstraction over persistence",
+      "Event broadcasting",
+      "Global state sharing"
+    ],
+    "answerIndex": 1,
+    "explanation": "Repository hides data-access details behind domain-friendly methods."
+  },
+  {
+    "id": "dp-e-025",
+    "topic": "architecture",
+    "difficulty": "basic",
+    "prompt": "Unit of Work coordinates:",
+    "options": [
+      "Threads and pools",
+      "Atomic persistence of tracked changes",
+      "REST endpoints",
+      "Container lifecycle"
+    ],
+    "answerIndex": 1,
+    "explanation": "It tracks changes and commits them in a single transaction."
+  },
+  {
+    "id": "dp-e-026",
+    "topic": "architecture",
+    "difficulty": "basic",
+    "prompt": "Saga pattern handles:",
+    "options": [
+      "Distributed workflows via local transactions and compensations",
+      "Only UI navigation",
+      "Static configuration",
+      "Test data generation"
+    ],
+    "answerIndex": 0,
+    "explanation": "Saga coordinates steps and compensations across services."
+  },
+  {
+    "id": "dp-e-027",
+    "topic": "architecture",
+    "difficulty": "basic",
+    "prompt": "A common benefit of Idempotency is:",
+    "options": [
+      "It forbids retries",
+      "Same effect on multiple executions, enabling safe retries",
+      "Exclusive to GET requests",
+      "Requires XA transactions"
+    ],
+    "answerIndex": 1,
+    "explanation": "Idempotent operations tolerate duplicates from retries."
+  },
+  {
+    "id": "dp-e-028",
+    "topic": "architecture",
+    "difficulty": "basic",
+    "prompt": "Anti-Corruption Layer (ACL) is used to:",
+    "options": [
+      "Translate between bounded contexts",
+      "Encrypt all traffic",
+      "Autoscale services",
+      "Replace caching"
+    ],
+    "answerIndex": 0,
+    "explanation": "ACL prevents model leakage between contexts."
+  },
+  {
+    "id": "dp-e-029",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "Which pattern lets you add responsibilities to objects dynamically?",
+    "options": ["Decorator", "Interpreter", "Visitor", "Iterator"],
+    "answerIndex": 0,
+    "explanation": "Decorator wraps an object to extend behavior without subclassing."
+  },
+  {
+    "id": "dp-e-030",
+    "topic": "design-patterns",
+    "difficulty": "basic",
+    "prompt": "Template Method allows:",
+    "options": [
+      "Subclasses to override steps of an algorithm skeleton",
+      "Run-time selection of algorithms",
+      "Building objects step-by-step",
+      "Cloning existing objects"
+    ],
+    "answerIndex": 0,
+    "explanation": "Superclass defines the template; subclasses customize steps."
+  },
+
+  {
+    "id": "dp-a-001",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Which drawback is common in choreography-based Sagas?",
+    "options": [
+      "Single point of failure",
+      "Harder to trace flows as services grow",
+      "Requires XA/2PC for every step",
+      "No compensation possible"
+    ],
+    "answerIndex": 1,
+    "explanation": "Event chains can be difficult to visualize/trace in large meshes."
+  },
+  {
+    "id": "dp-a-002",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Outbox pattern primarily solves:",
+    "options": [
+      "Schema evolution",
+      "Reliable event publication tied to DB transactions",
+      "Cross-region latency",
+      "Write amplification in logs"
+    ],
+    "answerIndex": 1,
+    "explanation": "Outbox persists events within the same transaction then a relay publishes them."
+  },
+  {
+    "id": "dp-a-003",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Best combo for resilience in microservices:",
+    "options": [
+      "2PC + XA only",
+      "Circuit Breaker + Timeouts + Retry with backoff + Bulkhead",
+      "Global locks + Shared DB",
+      "Synchronous chains without timeouts"
+    ],
+    "answerIndex": 1,
+    "explanation": "The combination mitigates cascading failures and resource exhaustion."
+  },
+  {
+    "id": "dp-a-004",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "In CQRS with Event Sourcing, which is TRUE?",
+    "options": [
+      "Reads and writes share the same transaction",
+      "Read models are eventually consistent and updated by consuming events",
+      "Event store cannot be replayed",
+      "Strong consistency is mandatory for reads"
+    ],
+    "answerIndex": 1,
+    "explanation": "Read models lag but converge by handling domain events."
+  },
+  {
+    "id": "dp-a-005",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Clean Architecture dependency rule states:",
+    "options": [
+      "Dependencies may point outward",
+      "Outer layers depend on inner layers; not the opposite",
+      "Entities depend on frameworks",
+      "UI dictates domain models"
+    ],
+    "answerIndex": 1,
+    "explanation": "Business rules at the center; policies depend inward only."
+  },
+  {
+    "id": "dp-a-006",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Designing aggregates in DDD, pick the best guideline:",
+    "options": [
+      "Allow invariants across aggregates",
+      "Keep invariants internal; reference other aggregates by ID or events",
+      "Expose setters for all fields",
+      "Model aggregates as large as possible"
+    ],
+    "answerIndex": 1,
+    "explanation": "Aggregates enforce invariants internally; communicate via IDs/events."
+  },
+  {
+    "id": "dp-a-007",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Idempotency keys are typically implemented by:",
+    "options": [
+      "Random delays only",
+      "Client-supplied unique key persisted server-side to deduplicate retries",
+      "Global DB locks",
+      "TLS mutual auth"
+    ],
+    "answerIndex": 1,
+    "explanation": "The server stores keys and drops duplicates deterministically."
+  },
+  {
+    "id": "dp-a-008",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Which is a trade-off of package-by-feature in a large monolith?",
+    "options": [
+      "Lower cohesion",
+      "Potential duplication of cross-cutting util code across features",
+      "Harder to assign ownership",
+      "Strict layer boundaries enforced by the compiler"
+    ],
+    "answerIndex": 1,
+    "explanation": "Vertical slices can duplicate some utilities; mitigate with internal modules."
+  },
+  {
+    "id": "dp-a-009",
+    "topic": "design-patterns",
+    "difficulty": "advanced",
+    "prompt": "State vs Strategy: nuanced distinction?",
+    "options": [
+      "State requires inheritance",
+      "State transitions are driven by context; Strategy is selected by clients",
+      "Strategy cannot be swapped at runtime",
+      "State forbids composition"
+    ],
+    "answerIndex": 1,
+    "explanation": "State models internal transitions; Strategy is externally chosen."
+  },
+  {
+    "id": "dp-a-010",
+    "topic": "design-patterns",
+    "difficulty": "advanced",
+    "prompt": "Double-checked locking for lazy singletons requires:",
+    "options": [
+      "No special care",
+      "Proper memory barriers/volatile to avoid reordering issues",
+      "Using only synchronized blocks",
+      "Immutable fields only"
+    ],
+    "answerIndex": 1,
+    "explanation": "Declare the instance volatile to ensure safe publication."
+  },
+  {
+    "id": "dp-a-011",
+    "topic": "design-patterns",
+    "difficulty": "advanced",
+    "prompt": "A pitfall of the Service Locator pattern is:",
+    "options": [
+      "It improves testability",
+      "It hides dependencies and increases coupling to a global registry",
+      "It enforces compile-time wiring",
+      "It reduces global state"
+    ],
+    "answerIndex": 1,
+    "explanation": "Hidden dependencies hurt readability and unit testing."
+  },
+  {
+    "id": "dp-a-012",
+    "topic": "design-patterns",
+    "difficulty": "advanced",
+    "prompt": "Visitor works best when:",
+    "options": [
+      "Element hierarchy changes frequently",
+      "You add new operations over a stable element hierarchy",
+      "You need runtime algorithm switches only",
+      "You want to reduce all coupling via mediator"
+    ],
+    "answerIndex": 1,
+    "explanation": "Visitor favors adding new operations but resists adding new element types."
+  },
+  {
+    "id": "dp-a-013",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Sagas with external side effects should:",
+    "options": [
+      "Avoid compensation",
+      "Use compensating actions that semantically reverse prior steps",
+      "Use 2PC",
+      "Rely only on idempotency"
+    ],
+    "answerIndex": 1,
+    "explanation": "Compensation is the core mechanism to handle partial failures."
+  },
+  {
+    "id": "dp-a-014",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Best practice for retries to avoid thundering herds:",
+    "options": [
+      "Constant interval",
+      "Exponential backoff with jitter",
+      "Infinite immediate retries",
+      "Random sleep without bounds"
+    ],
+    "answerIndex": 1,
+    "explanation": "Backoff + jitter spreads load and reduces synchronized retries."
+  },
+  {
+    "id": "dp-a-015",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Sidecar pattern is typically leveraged to:",
+    "options": [
+      "Run DB migrations",
+      "Offload cross-cutting concerns (TLS, metrics, logging) to a co-located process",
+      "Replace gateways",
+      "Ensure strong consistency"
+    ],
+    "answerIndex": 1,
+    "explanation": "The sidecar provides platform capabilities beside the main app."
+  },
+  {
+    "id": "dp-a-016",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "In hexagonal architecture, which is TRUE?",
+    "options": [
+      "Adapters depend on domain; domain depends on adapters",
+      "Domain depends on adapters",
+      "Adapters implement ports and depend inward on domain",
+      "Ports depend on infrastructure"
+    ],
+    "answerIndex": 2,
+    "explanation": "Dependencies point inward; adapters implement ports."
+  },
+  {
+    "id": "dp-a-017",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "A drawback of synchronous request/response chains across many services is:",
+    "options": [
+      "Reduced observability",
+      "Increased tail latency and higher blast radius on failures",
+      "Guaranteed global ordering",
+      "No need for timeouts"
+    ],
+    "answerIndex": 1,
+    "explanation": "Long chains amplify latency and failure propagation."
+  },
+  {
+    "id": "dp-a-018",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Materialized views in CQRS should be:",
+    "options": [
+      "Strongly consistent with writes",
+      "Eventually consistent and rebuilt from events if needed",
+      "Updated via 2PC",
+      "Owned by the write model"
+    ],
+    "answerIndex": 1,
+    "explanation": "They are projections updated asynchronously; can be rebuilt."
+  },
+  {
+    "id": "dp-a-019",
+    "topic": "design-patterns",
+    "difficulty": "advanced",
+    "prompt": "Bridge vs Adapter nuanced difference:",
+    "options": [
+      "Bridge is for new designs; Adapter retrofits incompatible interfaces",
+      "Both are for legacy code only",
+      "Adapter is compile-time only",
+      "Bridge cannot use composition"
+    ],
+    "answerIndex": 0,
+    "explanation": "Bridge decouples abstraction/implementation; Adapter makes existing interfaces compatible."
+  },
+  {
+    "id": "dp-a-020",
+    "topic": "design-patterns",
+    "difficulty": "advanced",
+    "prompt": "When does Flyweight backfire?",
+    "options": [
+      "When intrinsic state dominates and extrinsic state is cheap to pass",
+      "When extrinsic state is heavy and frequently recomputed",
+      "When objects are large",
+      "When memory is abundant"
+    ],
+    "answerIndex": 1,
+    "explanation": "Passing heavy extrinsic state can negate Flyweight benefits."
+  },
+  {
+    "id": "dp-a-021",
+    "topic": "design-patterns",
+    "difficulty": "advanced",
+    "prompt": "A common testing issue with Singleton is:",
+    "options": [
+      "Too easy to replace",
+      "Hidden global state coupling makes isolation harder",
+      "Forces constructor injection",
+      "Cannot be used in DI containers"
+    ],
+    "answerIndex": 1,
+    "explanation": "Global singletons introduce hidden dependencies and shared state in tests."
+  },
+  {
+    "id": "dp-a-022",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Which is a GOOD reason to choose package-by-layer?",
+    "options": [
+      "Feature ownership",
+      "Simpler cross-cutting refactors across the whole codebase",
+      "Fewer code reviews",
+      "Better runtime performance"
+    ],
+    "answerIndex": 1,
+    "explanation": "Layered packaging eases broad refactors but can hurt feature cohesion."
+  },
+  {
+    "id": "dp-a-023",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Anti-pattern for microservices data management:",
+    "options": [
+      "Service owns its database",
+      "Shared database across multiple services tightly coupled by schema",
+      "Polyglot persistence",
+      "Schema versioning per service"
+    ],
+    "answerIndex": 1,
+    "explanation": "A shared DB couples services and slows independent evolution."
+  },
+  {
+    "id": "dp-a-024",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Exactly-once delivery in distributed systems is generally:",
+    "options": [
+      "Guaranteed by TCP",
+      "Infeasible without trade-offs; prefer idempotency and dedup",
+      "Simple with retries",
+      "Always available with Kafka"
+    ],
+    "answerIndex": 1,
+    "explanation": "Use idempotency keys and deduplication to approximate exactly-once semantics."
+  },
+  {
+    "id": "dp-a-025",
+    "topic": "design-patterns",
+    "difficulty": "advanced",
+    "prompt": "Which pattern best encapsulates cross-cutting concerns like logging or metrics?",
+    "options": [
+      "Decorator or AOP proxies around components",
+      "Composite",
+      "Iterator",
+      "Interpreter"
+    ],
+    "answerIndex": 0,
+    "explanation": "Decorator/AOP can transparently add cross-cutting behavior."
+  },
+  {
+    "id": "dp-a-026",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "A blue–green deployment helps mainly with:",
+    "options": [
+      "Reducing downtime and enabling instant rollback",
+      "Achieving strong consistency",
+      "Avoiding tests",
+      "Scaling databases automatically"
+    ],
+    "answerIndex": 0,
+    "explanation": "Two identical environments allow quick cutover and rollback."
+  },
+  {
+    "id": "dp-a-027",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "Which statement about domain events is MOST accurate?",
+    "options": [
+      "They must be synchronous",
+      "They decouple reactions to state changes from aggregates",
+      "They replace transactions",
+      "They should contain entire entity graphs"
+    ],
+    "answerIndex": 1,
+    "explanation": "Domain events enable decoupled side effects or projections."
+  },
+  {
+    "id": "dp-a-028",
+    "topic": "design-patterns",
+    "difficulty": "advanced",
+    "prompt": "Interpreter is suitable when:",
+    "options": [
+      "You have a simple, stable grammar/DSL",
+      "You need high-throughput binary parsing",
+      "You need runtime algorithm swaps",
+      "You require strong coupling to UI"
+    ],
+    "answerIndex": 0,
+    "explanation": "Interpreter represents grammar rules as classes for small DSLs."
+  },
+  {
+    "id": "dp-a-029",
+    "topic": "architecture",
+    "difficulty": "advanced",
+    "prompt": "A safe evolution path from monolith to microservices is:",
+    "options": [
+      "Big-bang split",
+      "Strangler Fig with seams and routing + contract tests",
+      "Shared DB first",
+      "Turn off tests to move faster"
+    ],
+    "answerIndex": 1,
+    "explanation": "Expose seams, route traffic gradually, and validate with tests."
+  },
+  {
+    "id": "dp-a-030",
+    "topic": "design-patterns",
+    "difficulty": "advanced",
+    "prompt": "A nuanced misuse of Mediator is:",
+    "options": [
+      "Centralizing complex interactions",
+      "Becoming a God object with too much domain logic",
+      "Decoupling peers",
+      "Improving modularity"
+    ],
+    "answerIndex": 1,
+    "explanation": "When Mediator accumulates domain logic, it turns into an anemic ‘God object’."
+  }
+]
+
+

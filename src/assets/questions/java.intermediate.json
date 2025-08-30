@@ -748,5 +748,280 @@
     ],
     "answerIndex": 1,
     "explanation": "The intrinsic lock ensures only one thread executes the synchronized block at a time."
+  },
+  {
+    "id": "java-i-051",
+    "version": "java-8",
+    "topic": "collections-mutable-keys",
+    "difficulty": "intermediate",
+    "prompt": "Why is it risky to use mutable objects as keys in a HashMap?",
+    "options": [
+      "It causes compile-time errors",
+      "Mutating a key can break hashCode/equals consistency and make entries unreachable",
+      "The JVM prevents such usage",
+      "Mutable keys are automatically copied"
+    ],
+    "answerIndex": 1,
+    "explanation": "If the key's state changes, its hash bucket may no longer match, breaking retrieval."
+  },
+  {
+    "id": "java-i-052",
+    "version": "java-8",
+    "topic": "streams-reduce",
+    "difficulty": "intermediate",
+    "prompt": "Which reduce form is best for parallel streams?",
+    "options": [
+      "reduce(identity, accumulator, combiner)",
+      "reduce(accumulator only)",
+      "reduce(identity, combiner only)",
+      "reduce without identity always"
+    ],
+    "answerIndex": 0,
+    "explanation": "Parallel reduction requires an identity, accumulator, and combiner to merge partial results."
+  },
+  {
+    "id": "java-i-053",
+    "version": "java-8",
+    "topic": "streams-collectors-joining",
+    "difficulty": "intermediate",
+    "prompt": "Which Collector concatenates strings with a delimiter?",
+    "options": [
+      "Collectors.toMap",
+      "Collectors.groupingBy",
+      "Collectors.joining",
+      "Collectors.mapping"
+    ],
+    "answerIndex": 2,
+    "explanation": "Collectors.joining(delimiter) concatenates stream elements into a single String."
+  },
+  {
+    "id": "java-i-054",
+    "version": "java-8",
+    "topic": "concurrency-deadlocks",
+    "difficulty": "intermediate",
+    "prompt": "Which condition is necessary for a deadlock?",
+    "options": [
+      "Cyclic wait among threads",
+      "Single-thread execution",
+      "No shared resources",
+      "All locks fair"
+    ],
+    "answerIndex": 0,
+    "explanation": "Deadlocks require circular waiting among multiple threads/resources."
+  },
+  {
+    "id": "java-i-055",
+    "version": "java-8",
+    "topic": "concurrency-threadlocal",
+    "difficulty": "intermediate",
+    "prompt": "ThreadLocal is typically used to:",
+    "options": [
+      "Share state across threads",
+      "Give each thread its own isolated copy of a variable",
+      "Improve garbage collection",
+      "Make variables volatile"
+    ],
+    "answerIndex": 1,
+    "explanation": "ThreadLocal provides per-thread storage, isolating state from other threads."
+  },
+  {
+    "id": "java-i-056",
+    "version": "java-8",
+    "topic": "executor-scheduled",
+    "difficulty": "intermediate",
+    "prompt": "Which class schedules periodic tasks?",
+    "options": [
+      "ExecutorService",
+      "ForkJoinPool",
+      "ScheduledExecutorService",
+      "Thread"
+    ],
+    "answerIndex": 2,
+    "explanation": "ScheduledExecutorService supports fixed-rate and fixed-delay scheduling."
+  },
+  {
+    "id": "java-i-057",
+    "version": "java-11",
+    "topic": "httpclient-push",
+    "difficulty": "intermediate",
+    "prompt": "Java 11 HttpClient supports HTTP/2 server push via:",
+    "options": [
+      "HttpRequest.push()",
+      "PushPromiseHandler",
+      "CompletableFuturePush",
+      "It is not supported"
+    ],
+    "answerIndex": 1,
+    "explanation": "PushPromiseHandler enables handling HTTP/2 server push promises."
+  },
+  {
+    "id": "java-i-058",
+    "version": "java-9",
+    "topic": "modules-services",
+    "difficulty": "intermediate",
+    "prompt": "Which keywords define service usage/provision in JPMS?",
+    "options": ["exports/provides", "uses/provides ... with ...", "requires/opens", "module/service"],
+    "answerIndex": 1,
+    "explanation": "A module 'uses' a service and another 'provides ... with ...'."
+  },
+  {
+    "id": "java-i-059",
+    "version": "java-8",
+    "topic": "nio2-watchservice",
+    "difficulty": "intermediate",
+    "prompt": "WatchService API is used for:",
+    "options": ["Monitoring file system events", "Async sockets", "JDBC queries", "JMX management"],
+    "answerIndex": 0,
+    "explanation": "WatchService detects file system events like create, modify, delete."
+  },
+  {
+    "id": "java-i-060",
+    "version": "java-8",
+    "topic": "reflection-performance",
+    "difficulty": "intermediate",
+    "prompt": "Why is reflection often slower than direct method calls?",
+    "options": [
+      "It uses JNI internally",
+      "It bypasses normal inlining and optimizations",
+      "It compiles to bytecode twice",
+      "It requires synchronized blocks"
+    ],
+    "answerIndex": 1,
+    "explanation": "Reflective calls inhibit many JIT optimizations like inlining."
+  },
+  {
+    "id": "java-i-061",
+    "version": "java-8",
+    "topic": "exceptions-checked-unchecked",
+    "difficulty": "intermediate",
+    "prompt": "What is a common guideline for checked vs unchecked exceptions?",
+    "options": [
+      "Checked for recoverable conditions, unchecked for programming errors",
+      "All exceptions should be checked",
+      "Unchecked only for I/O",
+      "Checked are deprecated"
+    ],
+    "answerIndex": 0,
+    "explanation": "Checked = expected/recoverable (like IOException); unchecked = runtime programming errors."
+  },
+  {
+    "id": "java-i-062",
+    "version": "java-8",
+    "topic": "jdbc-transactions",
+    "difficulty": "intermediate",
+    "prompt": "By default, JDBC Connections are in:",
+    "options": ["Manual commit mode", "Auto-commit mode", "Serializable isolation", "Closed state"],
+    "answerIndex": 1,
+    "explanation": "JDBC defaults to auto-commit after every statement."
+  },
+  {
+    "id": "java-i-063",
+    "version": "java-8",
+    "topic": "jdbc-batch",
+    "difficulty": "intermediate",
+    "prompt": "PreparedStatement addBatch()/executeBatch() are used to:",
+    "options": [
+      "Process ResultSet in parallel",
+      "Execute multiple updates efficiently",
+      "Cache queries in memory",
+      "Bind objects to JSON"
+    ],
+    "answerIndex": 1,
+    "explanation": "Batching reduces round-trips and executes many statements efficiently."
+  },
+  {
+    "id": "java-i-064",
+    "version": "java-8",
+    "topic": "annotations-custom",
+    "difficulty": "intermediate",
+    "prompt": "Which retention policy makes annotations available to tools at compile time but not at runtime?",
+    "options": ["SOURCE", "CLASS", "RUNTIME", "TRANSIENT"],
+    "answerIndex": 1,
+    "explanation": "CLASS annotations are retained in the class file but dropped by the JVM."
+  },
+  {
+    "id": "java-i-065",
+    "version": "java-11",
+    "topic": "files-readwrite",
+    "difficulty": "intermediate",
+    "prompt": "Which Files method reads all lines into a List<String>?",
+    "options": ["Files.lines()", "Files.readAllLines()", "Files.readLines()", "Files.toString()"],
+    "answerIndex": 1,
+    "explanation": "Files.readAllLines(Path) reads the entire file content into a list."
+  },
+  {
+    "id": "java-i-066",
+    "version": "java-17",
+    "topic": "randomgenerator",
+    "difficulty": "intermediate",
+    "prompt": "RandomGenerator API introduced in Java 17 provides:",
+    "options": [
+      "Unified access to multiple PRNG algorithms",
+      "GPU-based random numbers",
+      "Replaces SecureRandom",
+      "Removes Math.random"
+    ],
+    "answerIndex": 0,
+    "explanation": "RandomGenerator interface supports multiple pluggable PRNG algorithms."
+  },
+  {
+    "id": "java-i-067",
+    "version": "java-8",
+    "topic": "gc-basics",
+    "difficulty": "intermediate",
+    "prompt": "Which statement about GC in Java is TRUE?",
+    "options": [
+      "Developers must free memory explicitly",
+      "Objects with no reachable references are eligible for collection",
+      "GC guarantees immediate cleanup",
+      "System.gc() always forces GC instantly"
+    ],
+    "answerIndex": 1,
+    "explanation": "Unreachable objects are eligible for garbage collection, but timing is not guaranteed."
+  },
+  {
+    "id": "java-i-068",
+    "version": "java-8",
+    "topic": "finalizer-cleaner",
+    "difficulty": "intermediate",
+    "prompt": "Why are finalizers discouraged?",
+    "options": [
+      "They are always faster than try-with-resources",
+      "They are unpredictable and may cause security and performance issues",
+      "They are guaranteed to run immediately",
+      "They require JNI"
+    ],
+    "answerIndex": 1,
+    "explanation": "Finalizers have ordering and unpredictability issues; Cleaner/AutoCloseable is preferred."
+  },
+  {
+    "id": "java-i-069",
+    "version": "java-21",
+    "topic": "virtual-threads-usage",
+    "difficulty": "intermediate",
+    "prompt": "Virtual Threads are most useful for:",
+    "options": [
+      "CPU-bound parallel math",
+      "Massive numbers of blocking I/O tasks",
+      "GPU computations",
+      "Garbage collection tuning"
+    ],
+    "answerIndex": 1,
+    "explanation": "Virtual threads scale well for high concurrency with blocking I/O workloads."
+  },
+  {
+    "id": "java-i-070",
+    "version": "java-11",
+    "topic": "string-strip",
+    "difficulty": "intermediate",
+    "prompt": "Difference between String.trim() and strip() in Java 11?",
+    "options": [
+      "They are identical",
+      "strip() uses Unicode whitespace rules; trim() uses ASCII only",
+      "strip() removes digits too",
+      "trim() is slower"
+    ],
+    "answerIndex": 1,
+    "explanation": "strip() is Unicode-aware; trim() removes only ASCII spaces."
   }
 ]

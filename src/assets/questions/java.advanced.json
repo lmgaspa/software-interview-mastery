@@ -748,5 +748,305 @@
     ],
     "answerIndex": 1,
     "explanation": "Later releases refine semantics and performance of pattern switch."
+  },
+  {
+    "id": "java-a-051",
+    "version": "java-8",
+    "topic": "jmm-reordering",
+    "difficulty": "advanced",
+    "prompt": "Why can instruction reordering occur in Java without violating the JMM?",
+    "options": [
+      "Because the JVM ignores volatile",
+      "As long as the 'happens-before' relation is preserved, compilers and CPUs may reorder",
+      "Reordering is prohibited in Java",
+      "Only reflection causes reordering"
+    ],
+    "answerIndex": 1,
+    "explanation": "JMM allows reordering internally if the observable happens-before guarantees hold."
+  },
+  {
+    "id": "java-a-052",
+    "version": "java-11",
+    "topic": "gc-zgc",
+    "difficulty": "advanced",
+    "prompt": "What is a main advantage of ZGC over G1?",
+    "options": [
+      "Pause times are in microseconds",
+      "It handles multi-terabyte heaps with low pause times",
+      "It eliminates all GC pauses",
+      "It disables write barriers"
+    ],
+    "answerIndex": 1,
+    "explanation": "ZGC scales to large heaps with pause times under 10ms."
+  },
+  {
+    "id": "java-a-053",
+    "version": "java-15",
+    "topic": "gc-shenandoah",
+    "difficulty": "advanced",
+    "prompt": "What is Shenandoah GC's primary optimization?",
+    "options": [
+      "Concurrent compaction to reduce pause times",
+      "No write barriers",
+      "Single-threaded stop-the-world phases",
+      "It removes the need for finalization"
+    ],
+    "answerIndex": 0,
+    "explanation": "Shenandoah performs concurrent compaction to keep pauses short."
+  },
+  {
+    "id": "java-a-054",
+    "version": "java-21",
+    "topic": "loom-structured-cancellation",
+    "difficulty": "advanced",
+    "prompt": "How does structured concurrency handle exceptions in subtasks?",
+    "options": [
+      "It ignores them",
+      "It cancels sibling tasks in the same scope and propagates the error",
+      "It restarts failed tasks automatically",
+      "It retries with exponential backoff"
+    ],
+    "answerIndex": 1,
+    "explanation": "Failure in one subtask cancels siblings and propagates to the parent scope."
+  },
+  {
+    "id": "java-a-055",
+    "version": "java-23",
+    "topic": "ffm-arenas",
+    "difficulty": "advanced",
+    "prompt": "What is the role of an Arena in the FFM API?",
+    "options": [
+      "To manage memory segment lifetimes as a scope",
+      "To allocate heap memory only",
+      "To pin Java objects",
+      "To replace Unsafe in reflection"
+    ],
+    "answerIndex": 0,
+    "explanation": "Arenas scope allocations; freeing them releases all segments at once."
+  },
+  {
+    "id": "java-a-056",
+    "version": "java-23",
+    "topic": "vector-api-refinements",
+    "difficulty": "advanced",
+    "prompt": "What do recent Vector API refinements emphasize?",
+    "options": [
+      "GPU acceleration",
+      "Portable SIMD across architectures with explicit lane operations",
+      "Removing bounds checks entirely",
+      "Replacing streams with SIMD only"
+    ],
+    "answerIndex": 1,
+    "explanation": "Vector API aims for portable SIMD with predictable lane semantics."
+  },
+  {
+    "id": "java-a-057",
+    "version": "java-8",
+    "topic": "methodhandles-vs-reflection",
+    "difficulty": "advanced",
+    "prompt": "Why are MethodHandles often faster than reflection?",
+    "options": [
+      "They bypass access checks completely",
+      "They are strongly typed and can be JIT-inlined",
+      "They use JNI internally",
+      "They allocate off-heap memory"
+    ],
+    "answerIndex": 1,
+    "explanation": "MethodHandles provide typed invocation sites optimizable by the JIT."
+  },
+  {
+    "id": "java-a-058",
+    "version": "java-9",
+    "topic": "modules-dynamic-layer",
+    "difficulty": "advanced",
+    "prompt": "What is a ModuleLayer used for?",
+    "options": [
+      "GC tuning per module",
+      "Creating dynamic module graphs at runtime",
+      "Replacing class loaders",
+      "Locking threads to modules"
+    ],
+    "answerIndex": 1,
+    "explanation": "ModuleLayer supports dynamic composition of module graphs."
+  },
+  {
+    "id": "java-a-059",
+    "version": "java-11",
+    "topic": "jfr-events",
+    "difficulty": "advanced",
+    "prompt": "What is a key advantage of Java Flight Recorder (JFR)?",
+    "options": [
+      "Zero overhead tracing",
+      "Low-overhead profiling always on in production",
+      "It replaces the debugger entirely",
+      "It only profiles GC"
+    ],
+    "answerIndex": 1,
+    "explanation": "JFR records events with minimal impact, designed for production use."
+  },
+  {
+    "id": "java-a-060",
+    "version": "java-21",
+    "topic": "loom-pinning",
+    "difficulty": "advanced",
+    "prompt": "When does a virtual thread pin its carrier thread?",
+    "options": [
+      "During synchronized blocks or native calls",
+      "During any Java method",
+      "During GC",
+      "When allocating on the heap"
+    ],
+    "answerIndex": 0,
+    "explanation": "Monitors and native calls can pin the carrier, limiting scalability."
+  },
+  {
+    "id": "java-a-061",
+    "version": "java-24",
+    "topic": "pattern-switch-stability",
+    "difficulty": "advanced",
+    "prompt": "What refinement was added to pattern switch in Java 24?",
+    "options": [
+      "Support for async patterns",
+      "Stabilized semantics and performance optimizations",
+      "Removal of guards",
+      "Integration with text blocks"
+    ],
+    "answerIndex": 1,
+    "explanation": "Java 24 focused on refining and stabilizing pattern switch semantics."
+  },
+  {
+    "id": "java-a-062",
+    "version": "java-23",
+    "topic": "ffm-downcalls",
+    "difficulty": "advanced",
+    "prompt": "A downcall handle in FFM is used for:",
+    "options": [
+      "Calling Java methods from native code",
+      "Calling native functions from Java",
+      "Allocating heap segments",
+      "Disabling JNI"
+    ],
+    "answerIndex": 1,
+    "explanation": "Downcall handles let Java invoke native functions directly."
+  },
+  {
+    "id": "java-a-063",
+    "version": "java-8",
+    "topic": "jmm-false-sharing",
+    "difficulty": "advanced",
+    "prompt": "What is false sharing in Java concurrency?",
+    "options": [
+      "When multiple threads write to distinct variables on the same cache line",
+      "When GC moves objects across generations",
+      "When threads share the same ThreadLocal",
+      "When var inference fails across threads"
+    ],
+    "answerIndex": 0,
+    "explanation": "False sharing degrades performance due to cache line contention."
+  },
+  {
+    "id": "java-a-064",
+    "version": "java-21",
+    "topic": "structured-concurrency-benefits",
+    "difficulty": "advanced",
+    "prompt": "Main benefit of structured concurrency?",
+    "options": [
+      "Deterministic scheduling of all threads",
+      "Managing lifecycles of tasks as a unit for cancellation and error handling",
+      "Removing ExecutorService",
+      "Forcing async/await syntax"
+    ],
+    "answerIndex": 1,
+    "explanation": "It groups tasks as a unit, making cancellation/error propagation safer."
+  },
+  {
+    "id": "java-a-065",
+    "version": "java-22",
+    "topic": "unnamed-classes",
+    "difficulty": "advanced",
+    "prompt": "Unnamed classes simplify:",
+    "options": [
+      "Tiny programs with implicit main",
+      "Module declarations",
+      "Reflection APIs",
+      "Serialization"
+    ],
+    "answerIndex": 0,
+    "explanation": "They reduce boilerplate in small Java programs by removing class declarations."
+  },
+  {
+    "id": "java-a-066",
+    "version": "java-17",
+    "topic": "sealed-patterns",
+    "difficulty": "advanced",
+    "prompt": "How do sealed types improve pattern matching?",
+    "options": [
+      "They allow exhaustive checks in switch expressions",
+      "They remove instanceof",
+      "They eliminate need for equals/hashCode",
+      "They enable reflection-free access"
+    ],
+    "answerIndex": 0,
+    "explanation": "Sealed hierarchies let the compiler enforce exhaustiveness in switch."
+  },
+  {
+    "id": "java-a-067",
+    "version": "java-24",
+    "topic": "records-enhancements",
+    "difficulty": "advanced",
+    "prompt": "What recent enhancement improves records?",
+    "options": [
+      "Support for inheritance",
+      "Better destructuring and integration with pattern matching",
+      "Allowing mutable fields",
+      "Support for reflection-only fields"
+    ],
+    "answerIndex": 1,
+    "explanation": "Recent releases enhance records with destructuring and patterns."
+  },
+  {
+    "id": "java-a-068",
+    "version": "java-9",
+    "topic": "string-concat-factory",
+    "difficulty": "advanced",
+    "prompt": "StringConcatFactory (invokedynamic) allows the JVM to:",
+    "options": [
+      "Always use StringBuilder",
+      "Select optimal concat strategy at runtime",
+      "Inline regex templates",
+      "Convert Strings to text blocks"
+    ],
+    "answerIndex": 1,
+    "explanation": "JVM can choose between StringBuilder, bytecode folding, etc. via indy."
+  },
+  {
+    "id": "java-a-069",
+    "version": "java-8",
+    "topic": "nio2-async",
+    "difficulty": "advanced",
+    "prompt": "AsynchronousFileChannel enables:",
+    "options": [
+      "Blocking read/write only",
+      "Non-blocking I/O with Futures or callbacks",
+      "GC-free memory allocation",
+      "Replacing TCP sockets"
+    ],
+    "answerIndex": 1,
+    "explanation": "It supports async file I/O with completion handlers or Futures."
+  },
+  {
+    "id": "java-a-070",
+    "version": "java-21",
+    "topic": "virtual-threads-limitations",
+    "difficulty": "advanced",
+    "prompt": "Which is a limitation of Virtual Threads?",
+    "options": [
+      "They cannot perform blocking I/O",
+      "They may be pinned during synchronized or native code, reducing scalability",
+      "They require custom JVM flags",
+      "They only work with Project Valhalla"
+    ],
+    "answerIndex": 1,
+    "explanation": "Virtual Threads can be pinned in critical sections, so design needs care."
   }
 ]

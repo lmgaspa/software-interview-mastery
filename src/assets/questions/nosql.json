@@ -1,0 +1,542 @@
+[
+  {
+    "id": "nosql-001",
+    "topic": "basics",
+    "difficulty": "basic",
+    "prompt": "What does NoSQL stand for?",
+    "options": [
+      "Not Only SQL",
+      "No Structured Query Language",
+      "Non-Standard SQL",
+      "Non-Operational SQL"
+    ],
+    "answerIndex": 0,
+    "explanation": "NoSQL means Not Only SQL, indicating flexible models beyond relational."
+  },
+  {
+    "id": "nosql-002",
+    "topic": "basics",
+    "difficulty": "basic",
+    "prompt": "Which of the following is NOT a type of NoSQL database?",
+    "options": ["Document store", "Key-Value store", "Graph database", "Relational database"],
+    "answerIndex": 3,
+    "explanation": "Relational databases are traditional SQL, not NoSQL."
+  },
+  {
+    "id": "nosql-003",
+    "topic": "types",
+    "difficulty": "basic",
+    "prompt": "Which NoSQL type stores data as JSON-like documents?",
+    "options": ["Key-Value", "Document", "Graph", "Column-family"],
+    "answerIndex": 1,
+    "explanation": "Document stores like MongoDB store JSON-like documents."
+  },
+  {
+    "id": "nosql-004",
+    "topic": "types",
+    "difficulty": "basic",
+    "prompt": "Which NoSQL type is best for representing social network relationships?",
+    "options": ["Document", "Graph", "Column-family", "Key-Value"],
+    "answerIndex": 1,
+    "explanation": "Graph DBs like Neo4j handle complex relationships well."
+  },
+  {
+    "id": "nosql-005",
+    "topic": "types",
+    "difficulty": "basic",
+    "prompt": "Which NoSQL type is designed for high write throughput and time-series data?",
+    "options": ["Key-Value", "Column-family", "Document", "Graph"],
+    "answerIndex": 1,
+    "explanation": "Column-family databases like Cassandra excel at write-heavy workloads."
+  },
+  {
+    "id": "nosql-006",
+    "topic": "cap-theorem",
+    "difficulty": "intermediate",
+    "prompt": "According to the CAP theorem, which three properties are considered?",
+    "options": [
+      "Consistency, Availability, Partition tolerance",
+      "Concurrency, Accuracy, Performance",
+      "Commit, Access, Persistence",
+      "Cache, Aggregation, Partitioning"
+    ],
+    "answerIndex": 0,
+    "explanation": "CAP theorem states a distributed system can guarantee only 2 of Consistency, Availability, Partition tolerance."
+  },
+  {
+    "id": "nosql-007",
+    "topic": "cap-theorem",
+    "difficulty": "intermediate",
+    "prompt": "Which databases are typically AP (Available + Partition-tolerant)?",
+    "options": ["Cassandra, DynamoDB", "MongoDB, PostgreSQL", "MySQL, Oracle", "Redis (Standalone)"],
+    "answerIndex": 0,
+    "explanation": "Cassandra and DynamoDB prefer availability over strict consistency."
+  },
+  {
+    "id": "nosql-008",
+    "topic": "cap-theorem",
+    "difficulty": "intermediate",
+    "prompt": "Which databases are typically CP (Consistent + Partition-tolerant)?",
+    "options": ["Cassandra, DynamoDB", "MongoDB, HBase", "Redis, CouchDB", "MySQL, PostgreSQL"],
+    "answerIndex": 1,
+    "explanation": "MongoDB and HBase favor consistency and partition tolerance."
+  },
+  {
+    "id": "nosql-009",
+    "topic": "mongodb",
+    "difficulty": "basic",
+    "prompt": "Which query language is used in MongoDB?",
+    "options": ["SQL", "MongoQL", "MQL (MongoDB Query Language)", "JSONPath"],
+    "answerIndex": 2,
+    "explanation": "MongoDB uses its own query syntax (MQL) based on JSON-like structure."
+  },
+  {
+    "id": "nosql-010",
+    "topic": "mongodb",
+    "difficulty": "basic",
+    "prompt": "What is the default primary key field in MongoDB documents?",
+    "options": ["id", "_id", "primary", "pk"],
+    "answerIndex": 1,
+    "explanation": "MongoDB assigns an _id field as unique identifier."
+  },
+  {
+    "id": "nosql-011",
+    "topic": "mongodb",
+    "difficulty": "intermediate",
+    "prompt": "What does sharding in MongoDB provide?",
+    "options": [
+      "Vertical scaling",
+      "Horizontal scaling across multiple servers",
+      "Better compression",
+      "Automatic indexing"
+    ],
+    "answerIndex": 1,
+    "explanation": "Sharding distributes collections across multiple servers for horizontal scale."
+  },
+  {
+    "id": "nosql-012",
+    "topic": "mongodb",
+    "difficulty": "intermediate",
+    "prompt": "Which MongoDB index type supports geospatial queries?",
+    "options": ["Text index", "2dsphere index", "Hashed index", "Compound index"],
+    "answerIndex": 1,
+    "explanation": "2dsphere index enables geospatial queries on latitude/longitude data."
+  },
+  {
+    "id": "nosql-013",
+    "topic": "cassandra",
+    "difficulty": "basic",
+    "prompt": "Cassandra is based on which data model?",
+    "options": ["Document", "Column-family", "Graph", "Key-Value"],
+    "answerIndex": 1,
+    "explanation": "Cassandra uses column-family data model inspired by Google Bigtable."
+  },
+  {
+    "id": "nosql-014",
+    "topic": "cassandra",
+    "difficulty": "basic",
+    "prompt": "What query language does Cassandra use?",
+    "options": ["CQL", "SQL", "HQL", "NoQL"],
+    "answerIndex": 0,
+    "explanation": "Cassandra uses CQL (Cassandra Query Language)."
+  },
+  {
+    "id": "nosql-015",
+    "topic": "cassandra",
+    "difficulty": "intermediate",
+    "prompt": "Which consistency level in Cassandra requires acknowledgment from all replicas?",
+    "options": ["ONE", "QUORUM", "ALL", "LOCAL_QUORUM"],
+    "answerIndex": 2,
+    "explanation": "Consistency level ALL requires all replicas to acknowledge."
+  },
+  {
+    "id": "nosql-016",
+    "topic": "cassandra",
+    "difficulty": "intermediate",
+    "prompt": "What is a partition key in Cassandra?",
+    "options": [
+      "A random number assigned to rows",
+      "The column(s) that determine data distribution across nodes",
+      "The primary key alias",
+      "A secondary index"
+    ],
+    "answerIndex": 1,
+    "explanation": "Partition key decides which node stores the row."
+  },
+  {
+    "id": "nosql-017",
+    "topic": "dynamodb",
+    "difficulty": "intermediate",
+    "prompt": "What is the primary key in DynamoDB composed of?",
+    "options": [
+      "Partition key only",
+      "Partition key + optional sort key",
+      "RowID",
+      "Auto-generated integer"
+    ],
+    "answerIndex": 1,
+    "explanation": "DynamoDB allows partition key alone or with a sort key."
+  },
+  {
+    "id": "nosql-018",
+    "topic": "dynamodb",
+    "difficulty": "intermediate",
+    "prompt": "What are DynamoDB Streams used for?",
+    "options": [
+      "Replication only",
+      "Real-time event capture on table changes",
+      "Caching",
+      "Sharding"
+    ],
+    "answerIndex": 1,
+    "explanation": "Streams provide real-time data change capture."
+  },
+  {
+    "id": "nosql-019",
+    "topic": "redis",
+    "difficulty": "basic",
+    "prompt": "Which data type is NOT natively supported in Redis?",
+    "options": ["Strings", "Lists", "Graphs", "Hashes"],
+    "answerIndex": 2,
+    "explanation": "Redis does not natively support graph data types."
+  },
+  {
+    "id": "nosql-020",
+    "topic": "redis",
+    "difficulty": "basic",
+    "prompt": "What is Redis primarily used for?",
+    "options": [
+      "In-memory caching and fast data structures",
+      "Transactional OLTP systems",
+      "Analytical processing",
+      "Schema migrations"
+    ],
+    "answerIndex": 0,
+    "explanation": "Redis is an in-memory key-value store ideal for caching and fast operations."
+  },
+  {
+    "id": "nosql-021",
+    "topic": "redis",
+    "difficulty": "intermediate",
+    "prompt": "Which persistence option allows Redis to write snapshots to disk?",
+    "options": ["RDB", "AOF", "JOURNAL", "CHECKPOINT"],
+    "answerIndex": 0,
+    "explanation": "Redis RDB creates periodic snapshots of dataset."
+  },
+  {
+    "id": "nosql-022",
+    "topic": "redis",
+    "difficulty": "intermediate",
+    "prompt": "Which Redis data structure implements a leaderboard?",
+    "options": ["Hashes", "Sorted Sets", "Lists", "Bitmaps"],
+    "answerIndex": 1,
+    "explanation": "Sorted Sets support ranking with scores (leaderboards)."
+  },
+  {
+    "id": "nosql-023",
+    "topic": "couchdb",
+    "difficulty": "basic",
+    "prompt": "Which protocol does CouchDB use for communication?",
+    "options": ["SQL", "Thrift", "HTTP/REST + JSON", "gRPC"],
+    "answerIndex": 2,
+    "explanation": "CouchDB is RESTful and uses HTTP/JSON for all operations."
+  },
+  {
+    "id": "nosql-024",
+    "topic": "couchdb",
+    "difficulty": "intermediate",
+    "prompt": "CouchDB supports which replication model?",
+    "options": ["Master-Slave", "Multi-Master", "Single-leader", "Leaderless"],
+    "answerIndex": 1,
+    "explanation": "CouchDB supports multi-master replication."
+  },
+  {
+    "id": "nosql-025",
+    "topic": "indexes",
+    "difficulty": "intermediate",
+    "prompt": "What is a secondary index in NoSQL?",
+    "options": [
+      "An index on non-primary key attributes",
+      "An index on primary key only",
+      "An index for foreign keys",
+      "A clustered index"
+    ],
+    "answerIndex": 0,
+    "explanation": "Secondary indexes allow queries on non-key fields."
+  },
+  {
+    "id": "nosql-026",
+    "topic": "indexes",
+    "difficulty": "intermediate",
+    "prompt": "Which NoSQL database supports Global Secondary Indexes (GSIs)?",
+    "options": ["Cassandra", "DynamoDB", "Redis", "CouchDB"],
+    "answerIndex": 1,
+    "explanation": "DynamoDB supports GSIs and LSIs for flexible queries."
+  },
+  {
+    "id": "nosql-027",
+    "topic": "replication",
+    "difficulty": "intermediate",
+    "prompt": "What is eventual consistency?",
+    "options": [
+      "All reads see the latest data instantly",
+      "Data replicas converge to consistency over time",
+      "Transactions always roll back",
+      "A SQL-only concept"
+    ],
+    "answerIndex": 1,
+    "explanation": "Eventual consistency means replicas will converge eventually."
+  },
+  {
+    "id": "nosql-028",
+    "topic": "replication",
+    "difficulty": "intermediate",
+    "prompt": "Which database is known for tunable consistency?",
+    "options": ["MongoDB", "Cassandra", "Redis", "CouchDB"],
+    "answerIndex": 1,
+    "explanation": "Cassandra lets you tune consistency per query (ONE, QUORUM, ALL)."
+  },
+  {
+    "id": "nosql-029",
+    "topic": "replication",
+    "difficulty": "intermediate",
+    "prompt": "Which type of replication does DynamoDB provide?",
+    "options": [
+      "Single-leader",
+      "Leaderless with quorum writes",
+      "Multi-leader with CRDTs",
+      "Multi-region with global tables"
+    ],
+    "answerIndex": 3,
+    "explanation": "DynamoDB Global Tables replicate across regions."
+  },
+  {
+    "id": "nosql-030",
+    "topic": "performance",
+    "difficulty": "intermediate",
+    "prompt": "Why are writes fast in Cassandra?",
+    "options": [
+      "Because it ignores replication",
+      "Because writes are append-only to commit log and memtable",
+      "Because it uses SQL optimizer",
+      "Because it avoids indexes"
+    ],
+    "answerIndex": 1,
+    "explanation": "Writes go to commit log and memtable, flushed later as SSTables."
+  },
+  {
+    "id": "nosql-031",
+    "topic": "performance",
+    "difficulty": "intermediate",
+    "prompt": "Which database uses a masterless ring architecture?",
+    "options": ["MongoDB", "Cassandra", "Redis", "DynamoDB"],
+    "answerIndex": 1,
+    "explanation": "Cassandra uses peer-to-peer ring with no single master."
+  },
+  {
+    "id": "nosql-032",
+    "topic": "performance",
+    "difficulty": "intermediate",
+    "prompt": "Why is Redis so fast?",
+    "options": [
+      "Runs in-memory and uses single-threaded event loop",
+      "Uses GPUs",
+      "Avoids indexes",
+      "Runs only on SSDs"
+    ],
+    "answerIndex": 0,
+    "explanation": "Redis is in-memory and single-threaded with efficient data structures."
+  },
+  {
+    "id": "nosql-033",
+    "topic": "advanced",
+    "difficulty": "advanced",
+    "prompt": "What is a materialized view in Cassandra?",
+    "options": [
+      "A copy of data with a new primary key",
+      "A SQL view",
+      "A cache",
+      "An in-memory snapshot"
+    ],
+    "answerIndex": 0,
+    "explanation": "Materialized views allow alternative primary keys for queries."
+  },
+  {
+    "id": "nosql-034",
+    "topic": "advanced",
+    "difficulty": "intermediate",
+    "prompt": "What is MapReduce commonly used for in NoSQL?",
+    "options": [
+      "Real-time queries",
+      "Distributed aggregation and processing",
+      "Transaction handling",
+      "Index management"
+    ],
+    "answerIndex": 1,
+    "explanation": "MapReduce performs large-scale distributed aggregation."
+  },
+  {
+    "id": "nosql-035",
+    "topic": "advanced",
+    "difficulty": "advanced",
+    "prompt": "Which database pioneered the concept of Dynamo-style replication?",
+    "options": ["MongoDB", "Cassandra", "Amazon Dynamo", "CouchDB"],
+    "answerIndex": 2,
+    "explanation": "Amazon Dynamo inspired Cassandra, Riak, and others."
+  },
+  {
+    "id": "nosql-036",
+    "topic": "advanced",
+    "difficulty": "intermediate",
+    "prompt": "What does BASE stand for in NoSQL?",
+    "options": [
+      "Basically Available, Soft state, Eventual consistency",
+      "Basic Availability, Stable execution",
+      "Binary Access Storage Engine",
+      "Balanced, Available, Scalable, Extensible"
+    ],
+    "answerIndex": 0,
+    "explanation": "BASE contrasts ACID: eventual consistency vs strict guarantees."
+  },
+  {
+    "id": "nosql-037",
+    "topic": "advanced",
+    "difficulty": "intermediate",
+    "prompt": "Which NoSQL DB supports ACID transactions natively (from v4.0)?",
+    "options": ["MongoDB", "Cassandra", "Redis", "CouchDB"],
+    "answerIndex": 0,
+    "explanation": "MongoDB 4.0 introduced multi-document ACID transactions."
+  },
+  {
+    "id": "nosql-038",
+    "topic": "advanced",
+    "difficulty": "intermediate",
+    "prompt": "Which database is optimized for time-series data?",
+    "options": ["InfluxDB", "MongoDB", "Neo4j", "Redis"],
+    "answerIndex": 0,
+    "explanation": "InfluxDB is a specialized NoSQL DB for time-series metrics."
+  },
+  {
+    "id": "nosql-039",
+    "topic": "advanced",
+    "difficulty": "intermediate",
+    "prompt": "What does eventual consistency trade off compared to strong consistency?",
+    "options": [
+      "Higher latency but better availability",
+      "Lower latency and higher availability",
+      "Less storage",
+      "More normalized schema"
+    ],
+    "answerIndex": 0,
+    "explanation": "Eventual consistency improves availability but may show stale reads."
+  },
+  {
+    "id": "nosql-040",
+    "topic": "interview-practical",
+    "difficulty": "intermediate",
+    "prompt": "How do you design a session store with NoSQL?",
+    "options": [
+      "Use Redis with TTL on keys",
+      "Use PostgreSQL",
+      "Use Neo4j",
+      "Use Cassandra with triggers"
+    ],
+    "answerIndex": 0,
+    "explanation": "Redis with TTL is common for storing session data."
+  },
+  {
+    "id": "nosql-041",
+    "topic": "interview-practical",
+    "difficulty": "intermediate",
+    "prompt": "Which NoSQL database would you use for a recommendation engine?",
+    "options": ["Neo4j", "Cassandra", "MongoDB", "Redis"],
+    "answerIndex": 0,
+    "explanation": "Graph databases like Neo4j are great for recommendation engines."
+  },
+  {
+    "id": "nosql-042",
+    "topic": "interview-practical",
+    "difficulty": "basic",
+    "prompt": "How would you store product catalog data with flexible attributes?",
+    "options": ["MongoDB", "MySQL", "Redis", "Neo4j"],
+    "answerIndex": 0,
+    "explanation": "MongoDB document model suits flexible product attributes."
+  },
+  {
+    "id": "nosql-043",
+    "topic": "interview-practical",
+    "difficulty": "intermediate",
+    "prompt": "How would you implement a leaderboard in NoSQL?",
+    "options": [
+      "Redis Sorted Sets",
+      "MongoDB capped collection",
+      "Cassandra super columns",
+      "Neo4j traversal"
+    ],
+    "answerIndex": 0,
+    "explanation": "Redis Sorted Sets are ideal for leaderboards."
+  },
+  {
+    "id": "nosql-044",
+    "topic": "interview-practical",
+    "difficulty": "intermediate",
+    "prompt": "Which NoSQL store is best for high-frequency log ingestion?",
+    "options": ["MongoDB", "Cassandra", "Redis", "Neo4j"],
+    "answerIndex": 1,
+    "explanation": "Cassandra is optimized for write-heavy, log-like workloads."
+  },
+  {
+    "id": "nosql-045",
+    "topic": "interview-practical",
+    "difficulty": "basic",
+    "prompt": "Which NoSQL DB would you use for caching user profiles?",
+    "options": ["MongoDB", "Redis", "Cassandra", "CouchDB"],
+    "answerIndex": 1,
+    "explanation": "Redis is the fastest choice for caching frequently accessed data."
+  },
+  {
+    "id": "nosql-046",
+    "topic": "interview-practical",
+    "difficulty": "intermediate",
+    "prompt": "Which NoSQL DB is well-suited for distributed shopping cart design?",
+    "options": ["Redis", "MongoDB", "Cassandra", "All of the above depending on use-case"],
+    "answerIndex": 3,
+    "explanation": "Different DBs can support shopping carts based on consistency and scale needs."
+  },
+  {
+    "id": "nosql-047",
+    "topic": "interview-practical",
+    "difficulty": "intermediate",
+    "prompt": "How would you ensure durability in Redis?",
+    "options": ["Use RDB and AOF persistence", "Disable persistence", "Rely only on cache", "Use replication only"],
+    "answerIndex": 0,
+    "explanation": "Combining RDB snapshots with AOF logs ensures durability."
+  },
+  {
+    "id": "nosql-048",
+    "topic": "interview-practical",
+    "difficulty": "intermediate",
+    "prompt": "Which NoSQL DB fits storing IoT sensor data?",
+    "options": ["InfluxDB", "Neo4j", "Redis", "MongoDB"],
+    "answerIndex": 0,
+    "explanation": "InfluxDB specializes in time-series IoT sensor data."
+  },
+  {
+    "id": "nosql-049",
+    "topic": "interview-practical",
+    "difficulty": "intermediate",
+    "prompt": "How do you scale MongoDB horizontally?",
+    "options": ["Partitioning", "Sharding", "Materialized views", "Joins"],
+    "answerIndex": 1,
+    "explanation": "MongoDB uses sharding for horizontal scalability."
+  },
+  {
+    "id": "nosql-050",
+    "topic": "interview-practical",
+    "difficulty": "intermediate",
+    "prompt": "Which NoSQL DB would you use for an ad clickstream system?",
+    "options": ["Cassandra", "Redis", "Neo4j", "CouchDB"],
+    "answerIndex": 0,
+    "explanation": "Cassandra is ideal for write-heavy, high-throughput clickstream data."
+  }
+]

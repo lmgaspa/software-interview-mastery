@@ -1,14 +1,28 @@
-export type Topic = 'java' | 'spring';
+// src/app/models/question.model.ts
+
 export type Difficulty = 'basic' | 'intermediate' | 'advanced';
 
+export type Topic =
+  | 'java'
+  | 'spring'
+  | 'git'
+  | 'nosql'
+  | 'designPatterns'
+  | 'dockerK8s'
+  | 'aws'
+  | 'testsCiCd';
+
 export interface Question {
-  id: string;               // ex.: "java-b-001"
-  difficulty: Difficulty;   // 'basic' | 'intermediate' | 'advanced'
-  prompt: string;           // enunciado (em inglês)
-  options: string[];        // múltipla escolha
-  answerIndex: number;      // índice da resposta correta
-  explanation?: string;     // explicação breve
-    /** NOVO: metadados por pergunta */
-  topic?: string;          // ex.: "Collections", "Exceptions", "Threads"…
-  version?: string;        // ex.: "java-8", "java-17", "java-21"
+  id: string;
+  prompt: string;
+  options: string[];
+  answerIndex: number;
+
+  // Campos opcionais usados no app/template
+  topic?: Topic | string;
+  difficulty?: Difficulty;
+  explanation?: string;
+
+  // 🔧 adicionando 'version' para corrigir o erro no template
+  version?: string;
 }

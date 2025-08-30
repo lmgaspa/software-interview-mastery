@@ -1,0 +1,319 @@
+[
+  {
+    "id": "testsandcicd-001",
+    "topic": "junit-basics",
+    "prompt": "Which JUnit 5 annotation marks a test method?",
+    "options": ["@TestCase", "@Spec", "@Test", "@It"],
+    "answerIndex": 2,
+    "explanation": "JUnit 5 uses @Test to mark test methods.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "testsandcicd-002",
+    "topic": "junit-basics",
+    "prompt": "Which annotations run once per class in JUnit 5?",
+    "options": ["@BeforeEach / @AfterEach", "@BeforeAll / @AfterAll", "@Setup / @Teardown", "@Init / @Destroy"],
+    "answerIndex": 1,
+    "explanation": "@BeforeAll/@AfterAll run at class level.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "testsandcicd-003",
+    "topic": "junit-basics",
+    "prompt": "What assertion checks equality in JUnit 5?",
+    "options": ["assertTrue()", "assertEquals()", "assertSame()", "assertAll()"],
+    "answerIndex": 1,
+    "explanation": "assertEquals(expected, actual) checks equality.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "testsandcicd-004",
+    "topic": "junit-basics",
+    "prompt": "Which annotation disables a test in JUnit 5?",
+    "options": ["@Ignore", "@Disabled", "@Skip", "@Pending"],
+    "answerIndex": 1,
+    "explanation": "JUnit 5 uses @Disabled (JUnit 4 used @Ignore).",
+    "difficulty": "basic"
+  },
+  {
+    "id": "testsandcicd-005",
+    "topic": "mockito-basics",
+    "prompt": "How do you create a mock with Mockito?",
+    "options": ["new Mock()", "Mockito.mock()", "@Spy", "@Captor"],
+    "answerIndex": 1,
+    "explanation": "Mockito.mock(Type.class) creates a mock instance.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "testsandcicd-006",
+    "topic": "mockito-basics",
+    "prompt": "Which method verifies interactions in Mockito?",
+    "options": ["when()", "thenReturn()", "verify()", "doNothing()"],
+    "answerIndex": 2,
+    "explanation": "verify(mock).method() checks if a method was called.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "testsandcicd-007",
+    "topic": "mockito-basics",
+    "prompt": "Which annotation injects mocks into the class under test?",
+    "options": ["@Mock", "@InjectMocks", "@Spy", "@Captor"],
+    "answerIndex": 1,
+    "explanation": "@InjectMocks instantiates the SUT and injects mocks.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "testsandcicd-008",
+    "topic": "junit-basics",
+    "prompt": "Which assertion checks that an exception is thrown?",
+    "options": ["assertThrows()", "fail()", "assertTimeout()", "assertDoesNotThrow()"],
+    "answerIndex": 0,
+    "explanation": "assertThrows(ExpectedException.class, () -> ...).",
+    "difficulty": "basic"
+  },
+  {
+    "id": "testsandcicd-009",
+    "topic": "testing-theory",
+    "prompt": "Unit tests should primarily test:",
+    "options": ["External APIs end-to-end", "Single units in isolation", "Entire database flows", "UI rendering in browser"],
+    "answerIndex": 1,
+    "explanation": "Unit tests focus on isolated components with mocked dependencies.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "testsandcicd-010",
+    "topic": "ci-basics",
+    "prompt": "What does CI stand for?",
+    "options": ["Continuous Inspection", "Continuous Integration", "Code Integration", "Centralized Integration"],
+    "answerIndex": 1,
+    "explanation": "CI = Continuous Integration (build and test on every change).",
+    "difficulty": "basic"
+  },
+  {
+    "id": "testsandcicd-011",
+    "topic": "ci-basics",
+    "prompt": "What is typically the first step in a CI pipeline?",
+    "options": ["Deploy to prod", "Run UI tests only", "Checkout + build", "Rotate secrets"],
+    "answerIndex": 2,
+    "explanation": "CI starts with code checkout and build.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "testsandcicd-012",
+    "topic": "ci-basics",
+    "prompt": "Which file configures GitHub Actions?",
+    "options": [".gitlab-ci.yml", "Jenkinsfile", ".github/workflows/*.yml", "azure-pipelines.yaml"],
+    "answerIndex": 2,
+    "explanation": "Workflows live under .github/workflows.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "testsandcicd-013",
+    "topic": "junit-basics",
+    "prompt": "Which method groups multiple assertions and reports all failures together?",
+    "options": ["assertAll()", "assertEach()", "assertGroup()", "assumeTrue()"],
+    "answerIndex": 0,
+    "explanation": "assertAll() aggregates multiple assertions.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "testsandcicd-014",
+    "topic": "mockito-basics",
+    "prompt": "Which syntax stubs a method in Mockito?",
+    "options": ["verify(mock).m()", "when(mock.m()).thenReturn(x)", "assertEquals()", "assumeTrue()"],
+    "answerIndex": 1,
+    "explanation": "when(...).thenReturn(...) defines behavior.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "testsandcicd-015",
+    "topic": "ci-basics",
+    "prompt": "CD usually refers to:",
+    "options": ["Continuous Delivery/Deployment", "Centralized Development", "Core DevOps", "Container Distribution"],
+    "answerIndex": 0,
+    "explanation": "CD = Continuous Delivery or Continuous Deployment.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "testsandcicd-016",
+    "topic": "ci-basics",
+    "prompt": "A green build in CI means:",
+    "options": ["Build failed", "Build succeeded", "Tests skipped", "Deployment paused"],
+    "answerIndex": 1,
+    "explanation": "Green indicates success.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "testsandcicd-017",
+    "topic": "testing-theory",
+    "prompt": "The test pyramid recommends most tests at the:",
+    "options": ["UI end-to-end level", "Integration level", "Unit level", "Manual level"],
+    "answerIndex": 2,
+    "explanation": "The pyramid emphasizes more unit tests and fewer E2E tests.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "testsandcicd-018",
+    "topic": "mockito-basics",
+    "prompt": "Which verifies a method was never called?",
+    "options": ["verifyNoMoreInteractions()", "verify(mock, never()).m()", "verifyZeroInteractions()", "doNothing()"],
+    "answerIndex": 1,
+    "explanation": "verify(mock, never()) checks that the method was not invoked.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "testsandcicd-019",
+    "topic": "junit-basics",
+    "prompt": "Parameterized tests in JUnit 5 use:",
+    "options": ["@ParamTest", "@ParameterizedTest", "@Theory", "@PropertyTest"],
+    "answerIndex": 1,
+    "explanation": "JUnit 5 uses @ParameterizedTest with sources.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "testsandcicd-020",
+    "topic": "ci-basics",
+    "prompt": "Artifacts in CI are used to:",
+    "options": ["Store build outputs for later steps", "Rotate credentials", "Open firewall ports", "Create databases"],
+    "answerIndex": 0,
+    "explanation": "Artifacts preserve outputs like binaries and reports between jobs.",
+    "difficulty": "basic"
+  },
+
+  {
+    "id": "testsandcicd-021",
+    "topic": "junit-intermediate",
+    "prompt": "Which annotation supplies CSV values to a parameterized test?",
+    "options": ["@CsvSource", "@ValueSource", "@MethodSource", "@EnumSource"],
+    "answerIndex": 0,
+    "explanation": "@CsvSource provides multiple rows of test data.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "testsandcicd-022",
+    "topic": "mockito-intermediate",
+    "prompt": "How do you capture arguments passed to a mocked method?",
+    "options": ["@Captor with ArgumentCaptor", "when(...)", "doThrow(...)", "spy(...)"],
+    "answerIndex": 0,
+    "explanation": "ArgumentCaptor captures arguments for assertions.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "testsandcicd-023",
+    "topic": "mockito-intermediate",
+    "prompt": "Main difference between a Spy and a Mock:",
+    "options": ["Spy is stricter", "Spy wraps a real instance and calls real methods by default", "They are identical", "Spy cannot stub methods"],
+    "answerIndex": 1,
+    "explanation": "Spies delegate to the real object unless stubbed.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "testsandcicd-024",
+    "topic": "mockito-intermediate",
+    "prompt": "How to stub void methods throwing exceptions in Mockito?",
+    "options": ["when(v.m()).thenThrow()", "doThrow(...).when(v).m()", "thenAnswer()", "verify(v).m()"],
+    "answerIndex": 1,
+    "explanation": "doThrow(...).when(mock).voidMethod().",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "testsandcicd-025",
+    "topic": "junit-intermediate",
+    "prompt": "Which JUnit feature skips tests if preconditions fail?",
+    "options": ["Assertions", "Assumptions", "Conditions", "Filters"],
+    "answerIndex": 1,
+    "explanation": "assumeTrue/assumeFalse skip tests when assumptions fail.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "testsandcicd-026",
+    "topic": "spring-test",
+    "prompt": "@SpringBootTest typically:",
+    "options": ["Loads full context", "Loads only web layer", "Loads no context", "Mocks repositories only"],
+    "answerIndex": 0,
+    "explanation": "@SpringBootTest loads the full Spring context.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "testsandcicd-027",
+    "topic": "spring-test",
+    "prompt": "@WebMvcTest is used for:",
+    "options": ["Service layer", "Repository layer", "Controller slice tests", "Full integration tests"],
+    "answerIndex": 2,
+    "explanation": "@WebMvcTest focuses on the web layer (controllers).",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "testsandcicd-028",
+    "topic": "coverage",
+    "prompt": "Which tool commonly generates Java coverage reports?",
+    "options": ["JaCoCo", "Istanbul", "Cobertura.js", "NYC"],
+    "answerIndex": 0,
+    "explanation": "JaCoCo is the standard coverage tool in Java.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "testsandcicd-029",
+    "topic": "build-tools",
+    "prompt": "Maven plugin that runs unit tests is:",
+    "options": ["maven-surefire-plugin", "maven-failsafe-plugin", "maven-jar-plugin", "maven-deploy-plugin"],
+    "answerIndex": 0,
+    "explanation": "Surefire runs unit tests; Failsafe runs integration tests.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "testsandcicd-030",
+    "topic": "build-tools",
+    "prompt": "Gradle task to run tests is:",
+    "options": ["gradle verify", "gradle test", "gradle junit", "gradle runTests"],
+    "answerIndex": 1,
+    "explanation": "'gradle test' is the standard test task.",
+    "difficulty": "intermediate"
+  },
+
+  {
+    "id": "testsandcicd-041",
+    "topic": "testing-advanced",
+    "prompt": "Mutation testing (e.g., PIT) measures:",
+    "options": ["Cyclomatic complexity", "How many code mutations tests kill", "Coverage lines", "Performance bottlenecks"],
+    "answerIndex": 1,
+    "explanation": "It mutates code and checks if tests detect the changes.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "testsandcicd-042",
+    "topic": "testing-advanced",
+    "prompt": "Contract testing (e.g., Pact) validates:",
+    "options": ["Performance under load", "Compatibility between consumer and provider APIs", "Database integrity", "Thread safety"],
+    "answerIndex": 1,
+    "explanation": "Contract tests ensure consumer and provider agree on API behavior.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "testsandcicd-043",
+    "topic": "ci-advanced",
+    "prompt": "Blue-green deployment strategy means:",
+    "options": ["Deploying to two regions", "Running two environments (blue/green) and switching traffic", "Rolling back automatically", "Zero testing"],
+    "answerIndex": 1,
+    "explanation": "One environment is live while the other is prepared for release.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "testsandcicd-044",
+    "topic": "ci-advanced",
+    "prompt": "Canary releases are:",
+    "options": ["Deploying to all users instantly", "Deploying to a subset of users first", "Deploying only to dev environment", "Manual releases"],
+    "answerIndex": 1,
+    "explanation": "Canary releases expose new versions to a small % of traffic.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "testsandcicd-045",
+    "topic": "ci-advanced",
+    "prompt": "Feature flags in CI/CD are used to:",
+    "options": ["Disable caching", "Toggle features on/off in production", "Rollback builds", "Encrypt secrets"],
+    "answerIndex": 1,
+    "explanation": "Feature flags allow safe gradual rollouts.",
+    "difficulty": "advanced"
+  }
+]

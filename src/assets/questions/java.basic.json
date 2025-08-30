@@ -533,5 +533,260 @@
     "options": ["Atomicity of all ops", "Visibility of writes across threads", "Locks around fields", "GC pauses removed"],
     "answerIndex": 1,
     "explanation": "volatile ensures visibility and ordering, not atomicity for compound ops."
+  },
+  {
+    "id": "java-b-051",
+    "version": "java-8",
+    "topic": "oop-access-modifiers",
+    "difficulty": "basic",
+    "prompt": "Which access modifier gives package-private visibility?",
+    "options": ["public", "protected", "private", "no modifier"],
+    "answerIndex": 3,
+    "explanation": "When no modifier is used, members are visible only within the same package."
+  },
+  {
+    "id": "java-b-052",
+    "version": "java-8",
+    "topic": "oop-static-instance",
+    "difficulty": "basic",
+    "prompt": "Which statement about 'static' is TRUE?",
+    "options": [
+      "Static members belong to instances",
+      "Static methods can be called without an instance",
+      "Static fields are thread-local by default",
+      "Static blocks run on every method call"
+    ],
+    "answerIndex": 1,
+    "explanation": "Static members belong to the class and can be used without an instance."
+  },
+  {
+    "id": "java-b-053",
+    "version": "java-8",
+    "topic": "parameters-semantics",
+    "difficulty": "basic",
+    "prompt": "Java passes arguments to methods by:",
+    "options": ["Pass-by-reference", "Pass-by-value", "Copy-on-write", "Depends on the type"],
+    "answerIndex": 1,
+    "explanation": "Java is strictly pass-by-value; for objects it passes the reference value."
+  },
+  {
+    "id": "java-b-054",
+    "version": "java-8",
+    "topic": "strings-equality",
+    "difficulty": "basic",
+    "prompt": "How should you compare String contents?",
+    "options": ["==", "equals()", "compareTo()==1", "hashCode()==hashCode()"],
+    "answerIndex": 1,
+    "explanation": "Use equals() to compare contents; '==' checks reference identity."
+  },
+  {
+    "id": "java-b-055",
+    "version": "java-8",
+    "topic": "strings-immutability",
+    "difficulty": "basic",
+    "prompt": "Strings in Java are:",
+    "options": ["Mutable", "Immutable", "Thread-local", "Off-heap only"],
+    "answerIndex": 1,
+    "explanation": "String is immutable; modifying creates new instances."
+  },
+  {
+    "id": "java-b-056",
+    "version": "java-8",
+    "topic": "strings-builder",
+    "difficulty": "basic",
+    "prompt": "For efficient string concatenation in loops, prefer:",
+    "options": ["String+", "StringBuilder", "StringBuffer always", "char[]"],
+    "answerIndex": 1,
+    "explanation": "StringBuilder avoids creating many temporary String objects."
+  },
+  {
+    "id": "java-b-057",
+    "version": "java-8",
+    "topic": "collections-arraylist",
+    "difficulty": "basic",
+    "prompt": "Which is TRUE about ArrayList?",
+    "options": [
+      "Preserves insertion order",
+      "Disallows nulls",
+      "Is synchronized by default",
+      "Sorts elements automatically"
+    ],
+    "answerIndex": 0,
+    "explanation": "ArrayList preserves order and is not synchronized by default."
+  },
+  {
+    "id": "java-b-058",
+    "version": "java-8",
+    "topic": "enums-basics",
+    "difficulty": "basic",
+    "prompt": "Which best describes a Java enum?",
+    "options": [
+      "A set of int constants",
+      "A special class type with fixed instances",
+      "A record alias",
+      "A macro substitution"
+    ],
+    "answerIndex": 1,
+    "explanation": "Enums are classes with a finite set of pre-defined instances."
+  },
+  {
+    "id": "java-b-059",
+    "version": "java-8",
+    "topic": "try-with-resources",
+    "difficulty": "basic",
+    "prompt": "try-with-resources requires resources to implement:",
+    "options": ["Serializable", "AutoCloseable", "Cloneable", "Closeable only"],
+    "answerIndex": 1,
+    "explanation": "Any AutoCloseable can be used; Closeable extends AutoCloseable."
+  },
+  {
+    "id": "java-b-060",
+    "version": "java-8",
+    "topic": "exceptions-finally",
+    "difficulty": "basic",
+    "prompt": "A 'finally' block runs:",
+    "options": [
+      "Only when no exception occurs",
+      "Only when an exception occurs",
+      "Always, except when System.exit is called or a fatal error occurs",
+      "Never with try-with-resources"
+    ],
+    "answerIndex": 2,
+    "explanation": "finally is guaranteed to run in normal flows, barring abrupt termination."
+  },
+  {
+    "id": "java-b-061",
+    "version": "java-8",
+    "topic": "equals-hashcode-basics",
+    "difficulty": "basic",
+    "prompt": "Classes used in HashMap keys should:",
+    "options": [
+      "Only override equals()",
+      "Only override hashCode()",
+      "Override equals() and hashCode() consistently",
+      "Never be immutable"
+    ],
+    "answerIndex": 2,
+    "explanation": "The general contract demands equals and hashCode consistency."
+  },
+  {
+    "id": "java-b-062",
+    "version": "java-8",
+    "topic": "comparable-comparator",
+    "difficulty": "basic",
+    "prompt": "Comparable vs Comparator:",
+    "options": [
+      "Comparable defines natural order in the class; Comparator defines external order",
+      "They are identical",
+      "Comparator is for primitives only",
+      "Comparable is only for enums"
+    ],
+    "answerIndex": 0,
+    "explanation": "Comparable<T> is implemented by the type; Comparator<T> is separate."
+  },
+  {
+    "id": "java-b-063",
+    "version": "java-8",
+    "topic": "autoboxing",
+    "difficulty": "basic",
+    "prompt": "Which is TRUE about autoboxing?",
+    "options": [
+      "It never allocates objects",
+      "It can create wrapper objects implicitly",
+      "It disables == for wrappers",
+      "It prevents NullPointerException"
+    ],
+    "answerIndex": 1,
+    "explanation": "Autoboxing/unboxing converts between primitives and wrappers automatically."
+  },
+  {
+    "id": "java-b-064",
+    "version": "java-8",
+    "topic": "numbers-bigdecimal",
+    "difficulty": "basic",
+    "prompt": "For precise monetary calculations, use:",
+    "options": ["double", "float", "BigDecimal", "long always"],
+    "answerIndex": 2,
+    "explanation": "BigDecimal avoids binary floating-point rounding issues."
+  },
+  {
+    "id": "java-b-065",
+    "version": "java-11",
+    "topic": "datetime-instant",
+    "difficulty": "basic",
+    "prompt": "Which class represents a point on the time-line in UTC?",
+    "options": ["LocalDate", "LocalDateTime", "Instant", "ZonedDateTime"],
+    "answerIndex": 2,
+    "explanation": "Instant is a machine time point in UTC."
+  },
+  {
+    "id": "java-b-066",
+    "version": "java-11",
+    "topic": "datetime-zoned",
+    "difficulty": "basic",
+    "prompt": "To represent a date-time with a time zone, use:",
+    "options": ["LocalDateTime", "Instant", "ZonedDateTime", "Date"],
+    "answerIndex": 2,
+    "explanation": "ZonedDateTime combines LocalDateTime with a ZoneId."
+  },
+  {
+    "id": "java-b-067",
+    "version": "java-8",
+    "topic": "io-basics",
+    "difficulty": "basic",
+    "prompt": "InputStream vs Reader difference:",
+    "options": [
+      "InputStream is for binary data; Reader is for characters",
+      "Both are for characters",
+      "Both are for bytes",
+      "Reader is deprecated"
+    ],
+    "answerIndex": 0,
+    "explanation": "Streams handle bytes; Readers/Writers handle text."
+  },
+  {
+    "id": "java-b-068",
+    "version": "java-9",
+    "topic": "classpath-vs-modulepath",
+    "difficulty": "basic",
+    "prompt": "Classpath vs Modulepath main difference:",
+    "options": [
+      "Classpath is for modules; Modulepath for jars",
+      "Modulepath enforces module boundaries and descriptors",
+      "They are synonyms",
+      "Modulepath removes reflection"
+    ],
+    "answerIndex": 1,
+    "explanation": "Modulepath uses module descriptors (module-info.java) and strong encapsulation."
+  },
+  {
+    "id": "java-b-069",
+    "version": "java-8",
+    "topic": "lambdas-functional-interfaces",
+    "difficulty": "basic",
+    "prompt": "A functional interface is one that:",
+    "options": [
+      "Has any number of abstract methods",
+      "Has exactly one abstract method",
+      "Cannot have default methods",
+      "Must be annotated with @FunctionalInterface"
+    ],
+    "answerIndex": 1,
+    "explanation": "Only one abstract method is required; the annotation is optional."
+  },
+  {
+    "id": "java-b-070",
+    "version": "java-8",
+    "topic": "jdbc-basics",
+    "difficulty": "basic",
+    "prompt": "What is the usual order for JDBC operations?",
+    "options": [
+      "open → execute → close",
+      "getConnection → prepare/execute → process ResultSet → close",
+      "prepare → connect → execute → sleep",
+      "connect → close → execute"
+    ],
+    "answerIndex": 1,
+    "explanation": "Obtain a Connection, prepare/execute statements, handle ResultSet, and close resources."
   }
 ]

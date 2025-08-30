@@ -1,0 +1,791 @@
+[
+  {
+    "id": "sql-b-001",
+    "topic": "sql-basics",
+    "difficulty": "basic",
+    "prompt": "Which SQL keyword is used to sort the result-set?",
+    "options": ["SORT", "ORDER", "ORDER BY", "SORT BY"],
+    "answerIndex": 2,
+    "explanation": "'ORDER BY' sorts results ascending by default."
+  },
+  {
+    "id": "sql-b-002",
+    "topic": "sql-basics",
+    "difficulty": "basic",
+    "prompt": "Which clause is used to filter rows after aggregation?",
+    "options": ["WHERE", "HAVING", "GROUP BY", "LIMIT"],
+    "answerIndex": 1,
+    "explanation": "'HAVING' is used after GROUP BY, unlike WHERE."
+  },
+  {
+    "id": "sql-b-003",
+    "topic": "joins",
+    "difficulty": "basic",
+    "prompt": "What does an INNER JOIN return?",
+    "options": [
+      "All rows from both tables",
+      "Only matching rows in both tables",
+      "Unmatched rows from the left table",
+      "Unmatched rows from the right table"
+    ],
+    "answerIndex": 1,
+    "explanation": "INNER JOIN returns only matching rows."
+  },
+  {
+    "id": "sql-b-004",
+    "topic": "joins",
+    "difficulty": "basic",
+    "prompt": "Which join returns all rows from the left table and matching rows from the right?",
+    "options": ["INNER JOIN", "LEFT JOIN", "RIGHT JOIN", "FULL JOIN"],
+    "answerIndex": 1,
+    "explanation": "LEFT JOIN includes all rows from the left table."
+  },
+  {
+    "id": "sql-b-005",
+    "topic": "aggregations",
+    "difficulty": "basic",
+    "prompt": "Which SQL function counts the number of rows?",
+    "options": ["COUNT()", "SUM()", "LEN()", "ROWS()"],
+    "answerIndex": 0,
+    "explanation": "COUNT() counts rows or non-null values."
+  },
+  {
+    "id": "sql-b-006",
+    "topic": "constraints",
+    "difficulty": "basic",
+    "prompt": "Which constraint ensures a column cannot contain NULL values?",
+    "options": ["CHECK", "NOT NULL", "UNIQUE", "DEFAULT"],
+    "answerIndex": 1,
+    "explanation": "NOT NULL enforces non-null values."
+  },
+  {
+    "id": "sql-b-007",
+    "topic": "transactions",
+    "difficulty": "basic",
+    "prompt": "Which SQL command starts a transaction?",
+    "options": ["BEGIN", "START TRANSACTION", "BEGIN TRANSACTION", "All of the above"],
+    "answerIndex": 3,
+    "explanation": "Different RDBMS use BEGIN or START TRANSACTION."
+  },
+  {
+    "id": "sql-b-008",
+    "topic": "indexes",
+    "difficulty": "basic",
+    "prompt": "What is the main purpose of an index?",
+    "options": [
+      "To speed up data retrieval",
+      "To compress data",
+      "To encrypt data",
+      "To ensure uniqueness"
+    ],
+    "answerIndex": 0,
+    "explanation": "Indexes improve query performance, but slow down inserts/updates."
+  },
+  {
+    "id": "sql-b-009",
+    "topic": "normalization",
+    "difficulty": "basic",
+    "prompt": "Which normal form eliminates multi-valued attributes?",
+    "options": ["1NF", "2NF", "3NF", "4NF"],
+    "answerIndex": 0,
+    "explanation": "1NF requires atomic (indivisible) values."
+  },
+  {
+    "id": "sql-b-010",
+    "topic": "set-operations",
+    "difficulty": "basic",
+    "prompt": "Which operator removes duplicates between two SELECT queries?",
+    "options": ["UNION", "UNION ALL", "INTERSECT", "EXCEPT"],
+    "answerIndex": 0,
+    "explanation": "UNION eliminates duplicates, unlike UNION ALL."
+  },
+
+  {
+    "id": "sql-i-011",
+    "topic": "subqueries",
+    "difficulty": "intermediate",
+    "prompt": "What is a correlated subquery?",
+    "options": [
+      "A query inside a CTE",
+      "A subquery that references columns from the outer query",
+      "A subquery that runs once per database",
+      "A query inside a transaction"
+    ],
+    "answerIndex": 1,
+    "explanation": "A correlated subquery depends on outer query values."
+  },
+  {
+    "id": "sql-i-012",
+    "topic": "window-functions",
+    "difficulty": "intermediate",
+    "prompt": "Which function assigns unique numbers to rows in order?",
+    "options": ["RANK()", "ROW_NUMBER()", "DENSE_RANK()", "NTILE()"],
+    "answerIndex": 1,
+    "explanation": "ROW_NUMBER() assigns unique sequential numbers."
+  },
+  {
+    "id": "sql-i-013",
+    "topic": "window-functions",
+    "difficulty": "intermediate",
+    "prompt": "Which window function can produce gaps in ranking?",
+    "options": ["RANK()", "DENSE_RANK()", "ROW_NUMBER()", "COUNT()"],
+    "answerIndex": 0,
+    "explanation": "RANK() skips numbers if there are ties."
+  },
+  {
+    "id": "sql-i-014",
+    "topic": "transactions-isolation",
+    "difficulty": "intermediate",
+    "prompt": "Which isolation level prevents dirty reads but allows non-repeatable reads?",
+    "options": ["READ UNCOMMITTED", "READ COMMITTED", "REPEATABLE READ", "SERIALIZABLE"],
+    "answerIndex": 1,
+    "explanation": "READ COMMITTED avoids dirty reads but not non-repeatable reads."
+  },
+  {
+    "id": "sql-i-015",
+    "topic": "transactions-isolation",
+    "difficulty": "intermediate",
+    "prompt": "Phantom reads are prevented at which isolation level?",
+    "options": ["READ COMMITTED", "REPEATABLE READ", "SERIALIZABLE", "READ UNCOMMITTED"],
+    "answerIndex": 2,
+    "explanation": "Only SERIALIZABLE prevents phantom reads."
+  },
+  {
+    "id": "sql-i-016",
+    "topic": "cte",
+    "difficulty": "intermediate",
+    "prompt": "What is a CTE (Common Table Expression)?",
+    "options": [
+      "A temporary named result set",
+      "A permanent table",
+      "An index type",
+      "A foreign key"
+    ],
+    "answerIndex": 0,
+    "explanation": "CTE is defined with WITH for reuse in a query."
+  },
+  {
+    "id": "sql-i-017",
+    "topic": "indexes-performance",
+    "difficulty": "intermediate",
+    "prompt": "What is a covering index?",
+    "options": [
+      "An index that includes all columns a query needs",
+      "An index covering multiple tables",
+      "An index with encryption",
+      "A clustered index"
+    ],
+    "answerIndex": 0,
+    "explanation": "Covering indexes prevent going back to the table."
+  },
+  {
+    "id": "sql-i-018",
+    "topic": "design",
+    "difficulty": "intermediate",
+    "prompt": "In database design, what is denormalization?",
+    "options": [
+      "Splitting tables into smaller ones",
+      "Combining tables to reduce joins",
+      "Removing primary keys",
+      "Dropping indexes"
+    ],
+    "answerIndex": 1,
+    "explanation": "Denormalization reduces joins at cost of redundancy."
+  },
+  {
+    "id": "sql-i-019",
+    "topic": "design",
+    "difficulty": "intermediate",
+    "prompt": "Which schema design is common in data warehouses?",
+    "options": ["Snowflake", "Star", "Galaxy", "All of the above"],
+    "answerIndex": 3,
+    "explanation": "Star, Snowflake, and Galaxy are warehouse schema patterns."
+  },
+  {
+    "id": "sql-i-020",
+    "topic": "practical-query",
+    "difficulty": "intermediate",
+    "prompt": "How to find duplicate rows in a table?",
+    "options": [
+      "Using GROUP BY with HAVING COUNT(*) > 1",
+      "Using WHERE id = id",
+      "Using DISTINCT",
+      "Using UNIQUE constraint"
+    ],
+    "answerIndex": 0,
+    "explanation": "GROUP BY with HAVING COUNT > 1 identifies duplicates."
+  },
+
+  {
+    "id": "sql-a-021",
+    "topic": "optimization",
+    "difficulty": "advanced",
+    "prompt": "What is a common drawback of using too many indexes?",
+    "options": [
+      "Queries always become faster",
+      "Write operations slow down",
+      "Indexes consume zero storage",
+      "Indexes disable joins"
+    ],
+    "answerIndex": 1,
+    "explanation": "Indexes speed reads but slow down INSERT/UPDATE/DELETE."
+  },
+  {
+    "id": "sql-a-022",
+    "topic": "optimization",
+    "difficulty": "advanced",
+    "prompt": "What is the main difference between clustered and non-clustered indexes?",
+    "options": [
+      "Clustered sorts data physically, non-clustered stores pointers",
+      "Clustered is faster for writes",
+      "Non-clustered deletes duplicates",
+      "They are identical"
+    ],
+    "answerIndex": 0,
+    "explanation": "Clustered index orders table rows; non-clustered is a separate structure."
+  },
+  {
+    "id": "sql-a-023",
+    "topic": "window-functions",
+    "difficulty": "advanced",
+    "prompt": "Which function calculates a running total in SQL?",
+    "options": ["SUM() OVER()", "GROUP SUM()", "ROLLUP()", "AGGREGATE()"],
+    "answerIndex": 0,
+    "explanation": "SUM() with OVER and ORDER BY can compute running totals."
+  },
+  {
+    "id": "sql-a-024",
+    "topic": "optimization",
+    "difficulty": "advanced",
+    "prompt": "What is the difference between OLTP and OLAP databases?",
+    "options": [
+      "OLTP is for transactions; OLAP is for analytics",
+      "OLTP is slower than OLAP",
+      "OLAP does not use SQL",
+      "OLTP only runs on MySQL"
+    ],
+    "answerIndex": 0,
+    "explanation": "OLTP handles transactions; OLAP is optimized for queries/analysis."
+  },
+  {
+    "id": "sql-a-025",
+    "topic": "transactions-isolation",
+    "difficulty": "advanced",
+    "prompt": "Which isolation level guarantees full serial execution?",
+    "options": ["READ COMMITTED", "SERIALIZABLE", "REPEATABLE READ", "READ UNCOMMITTED"],
+    "answerIndex": 1,
+    "explanation": "SERIALIZABLE is the strictest isolation level."
+  },
+  {
+    "id": "sql-a-026",
+    "topic": "window-functions",
+    "difficulty": "advanced",
+    "prompt": "What is the difference between RANK() and DENSE_RANK()?",
+    "options": [
+      "RANK() skips numbers on ties, DENSE_RANK() does not",
+      "DENSE_RANK() is faster",
+      "They are identical",
+      "RANK() always starts at 0"
+    ],
+    "answerIndex": 0,
+    "explanation": "RANK skips values after ties, DENSE_RANK continues sequentially."
+  },
+  {
+    "id": "sql-a-027",
+    "topic": "set-operations",
+    "difficulty": "advanced",
+    "prompt": "Which operator returns rows from the first query not in the second?",
+    "options": ["EXCEPT", "INTERSECT", "DIFFERENCE", "UNION"],
+    "answerIndex": 0,
+    "explanation": "EXCEPT finds rows in first query missing in second."
+  },
+  {
+    "id": "sql-a-028",
+    "topic": "practical-query",
+    "difficulty": "advanced",
+    "prompt": "How to select the second highest salary from Employee table?",
+    "options": [
+      "SELECT MAX(salary) FROM employee;",
+      "SELECT salary FROM employee ORDER BY salary DESC LIMIT 1;",
+      "SELECT MAX(salary) FROM employee WHERE salary < (SELECT MAX(salary) FROM employee);",
+      "SELECT DISTINCT salary FROM employee ORDER BY salary ASC;"
+    ],
+    "answerIndex": 2,
+    "explanation": "Using subquery on MAX finds the second highest salary."
+  },
+  {
+    "id": "sql-a-029",
+    "topic": "practical-query",
+    "difficulty": "advanced",
+    "prompt": "How to get the first 3 employees with highest salary?",
+    "options": [
+      "SELECT * FROM employee LIMIT 3;",
+      "SELECT * FROM employee ORDER BY salary DESC LIMIT 3;",
+      "SELECT TOP 3 salary FROM employee;",
+      "Both 2 and 3 (depending on RDBMS)"
+    ],
+    "answerIndex": 3,
+    "explanation": "Postgres/MySQL use LIMIT; SQL Server uses TOP."
+  },
+  {
+    "id": "sql-a-030",
+    "topic": "practical-query",
+    "difficulty": "advanced",
+    "prompt": "How do you count distinct values in SQL?",
+    "options": ["COUNT()", "COUNT(DISTINCT column)", "UNIQUE COUNT()", "SUM(DISTINCT)"],
+    "answerIndex": 1,
+    "explanation": "COUNT(DISTINCT col) returns number of unique values."
+  },
+  {
+    "id": "sql-b-001",
+    "topic": "sql-basics",
+    "difficulty": "basic",
+    "prompt": "Which SQL keyword is used to sort the result-set?",
+    "options": ["SORT", "ORDER", "ORDER BY", "SORT BY"],
+    "answerIndex": 2,
+    "explanation": "'ORDER BY' sorts results ascending by default."
+  },
+  {
+    "id": "sql-b-002",
+    "topic": "sql-basics",
+    "difficulty": "basic",
+    "prompt": "Which clause is used to filter rows after aggregation?",
+    "options": ["WHERE", "HAVING", "GROUP BY", "LIMIT"],
+    "answerIndex": 1,
+    "explanation": "'HAVING' is used after GROUP BY, unlike WHERE."
+  },
+  {
+    "id": "sql-b-003",
+    "topic": "joins",
+    "difficulty": "basic",
+    "prompt": "What does an INNER JOIN return?",
+    "options": [
+      "All rows from both tables",
+      "Only matching rows in both tables",
+      "Unmatched rows from the left table",
+      "Unmatched rows from the right table"
+    ],
+    "answerIndex": 1,
+    "explanation": "INNER JOIN returns only matching rows."
+  },
+  {
+    "id": "sql-b-004",
+    "topic": "joins",
+    "difficulty": "basic",
+    "prompt": "Which join returns all rows from the left table and matching rows from the right?",
+    "options": ["INNER JOIN", "LEFT JOIN", "RIGHT JOIN", "FULL JOIN"],
+    "answerIndex": 1,
+    "explanation": "LEFT JOIN includes all rows from the left table."
+  },
+  {
+    "id": "sql-b-005",
+    "topic": "aggregations",
+    "difficulty": "basic",
+    "prompt": "Which SQL function counts the number of rows?",
+    "options": ["COUNT()", "SUM()", "LEN()", "ROWS()"],
+    "answerIndex": 0,
+    "explanation": "COUNT() counts rows or non-null values."
+  },
+  {
+    "id": "sql-b-006",
+    "topic": "constraints",
+    "difficulty": "basic",
+    "prompt": "Which constraint ensures a column cannot contain NULL values?",
+    "options": ["CHECK", "NOT NULL", "UNIQUE", "DEFAULT"],
+    "answerIndex": 1,
+    "explanation": "NOT NULL enforces non-null values."
+  },
+  {
+    "id": "sql-b-007",
+    "topic": "transactions",
+    "difficulty": "basic",
+    "prompt": "Which SQL command starts a transaction?",
+    "options": ["BEGIN", "START TRANSACTION", "BEGIN TRANSACTION", "All of the above"],
+    "answerIndex": 3,
+    "explanation": "Different RDBMS use BEGIN or START TRANSACTION."
+  },
+  {
+    "id": "sql-b-008",
+    "topic": "indexes",
+    "difficulty": "basic",
+    "prompt": "What is the main purpose of an index?",
+    "options": [
+      "To speed up data retrieval",
+      "To compress data",
+      "To encrypt data",
+      "To ensure uniqueness"
+    ],
+    "answerIndex": 0,
+    "explanation": "Indexes improve query performance, but slow down inserts/updates."
+  },
+  {
+    "id": "sql-b-009",
+    "topic": "normalization",
+    "difficulty": "basic",
+    "prompt": "Which normal form eliminates multi-valued attributes?",
+    "options": ["1NF", "2NF", "3NF", "4NF"],
+    "answerIndex": 0,
+    "explanation": "1NF requires atomic (indivisible) values."
+  },
+  {
+    "id": "sql-b-010",
+    "topic": "set-operations",
+    "difficulty": "basic",
+    "prompt": "Which operator removes duplicates between two SELECT queries?",
+    "options": ["UNION", "UNION ALL", "INTERSECT", "EXCEPT"],
+    "answerIndex": 0,
+    "explanation": "UNION eliminates duplicates, unlike UNION ALL."
+  },
+  {
+    "id": "sql-b-011",
+    "topic": "ddl",
+    "difficulty": "basic",
+    "prompt": "Which SQL command permanently removes a table and its data?",
+    "options": ["DROP", "DELETE", "TRUNCATE", "CLEAR"],
+    "answerIndex": 0,
+    "explanation": "DROP removes both table structure and data."
+  },
+  {
+    "id": "sql-b-012",
+    "topic": "dml",
+    "difficulty": "basic",
+    "prompt": "Which SQL command is used to add data into a table?",
+    "options": ["INSERT", "UPDATE", "ALTER", "APPEND"],
+    "answerIndex": 0,
+    "explanation": "INSERT is used to add rows into a table."
+  },
+  {
+    "id": "sql-b-013",
+    "topic": "basics",
+    "difficulty": "basic",
+    "prompt": "Which clause filters rows before grouping?",
+    "options": ["HAVING", "WHERE", "LIMIT", "QUALIFY"],
+    "answerIndex": 1,
+    "explanation": "WHERE filters before GROUP BY, HAVING filters after."
+  },
+  {
+    "id": "sql-b-014",
+    "topic": "joins",
+    "difficulty": "basic",
+    "prompt": "Which join includes all rows from both tables?",
+    "options": ["INNER JOIN", "FULL OUTER JOIN", "LEFT JOIN", "RIGHT JOIN"],
+    "answerIndex": 1,
+    "explanation": "FULL OUTER JOIN returns all rows with NULLs where no match exists."
+  },
+  {
+    "id": "sql-b-015",
+    "topic": "aggregations",
+    "difficulty": "basic",
+    "prompt": "Which function returns the average of a numeric column?",
+    "options": ["SUM()", "AVG()", "MEAN()", "COUNT()"],
+    "answerIndex": 1,
+    "explanation": "AVG() returns the average value."
+  },
+
+  {
+    "id": "sql-i-016",
+    "topic": "subqueries",
+    "difficulty": "intermediate",
+    "prompt": "What is a correlated subquery?",
+    "options": [
+      "A query inside a CTE",
+      "A subquery that references columns from the outer query",
+      "A subquery that runs once per database",
+      "A query inside a transaction"
+    ],
+    "answerIndex": 1,
+    "explanation": "A correlated subquery depends on outer query values."
+  },
+  {
+    "id": "sql-i-017",
+    "topic": "window-functions",
+    "difficulty": "intermediate",
+    "prompt": "Which function assigns unique numbers to rows in order?",
+    "options": ["RANK()", "ROW_NUMBER()", "DENSE_RANK()", "NTILE()"],
+    "answerIndex": 1,
+    "explanation": "ROW_NUMBER() assigns unique sequential numbers."
+  },
+  {
+    "id": "sql-i-018",
+    "topic": "transactions-isolation",
+    "difficulty": "intermediate",
+    "prompt": "Which isolation level prevents dirty reads but allows non-repeatable reads?",
+    "options": ["READ UNCOMMITTED", "READ COMMITTED", "REPEATABLE READ", "SERIALIZABLE"],
+    "answerIndex": 1,
+    "explanation": "READ COMMITTED avoids dirty reads but not non-repeatable reads."
+  },
+  {
+    "id": "sql-i-019",
+    "topic": "cte",
+    "difficulty": "intermediate",
+    "prompt": "What is a CTE (Common Table Expression)?",
+    "options": [
+      "A temporary named result set",
+      "A permanent table",
+      "An index type",
+      "A foreign key"
+    ],
+    "answerIndex": 0,
+    "explanation": "CTE is defined with WITH for reuse in a query."
+  },
+  {
+    "id": "sql-i-020",
+    "topic": "indexes-performance",
+    "difficulty": "intermediate",
+    "prompt": "What is a covering index?",
+    "options": [
+      "An index that includes all columns a query needs",
+      "An index covering multiple tables",
+      "An index with encryption",
+      "A clustered index"
+    ],
+    "answerIndex": 0,
+    "explanation": "Covering indexes prevent going back to the table."
+  },
+  {
+    "id": "sql-i-021",
+    "topic": "design",
+    "difficulty": "intermediate",
+    "prompt": "In database design, what is denormalization?",
+    "options": [
+      "Splitting tables into smaller ones",
+      "Combining tables to reduce joins",
+      "Removing primary keys",
+      "Dropping indexes"
+    ],
+    "answerIndex": 1,
+    "explanation": "Denormalization reduces joins at cost of redundancy."
+  },
+  {
+    "id": "sql-i-022",
+    "topic": "window-functions",
+    "difficulty": "intermediate",
+    "prompt": "Which window function divides rows into a specified number of groups?",
+    "options": ["ROW_NUMBER()", "NTILE(n)", "RANK()", "DENSE_RANK()"],
+    "answerIndex": 1,
+    "explanation": "NTILE(n) distributes rows into n buckets."
+  },
+  {
+    "id": "sql-i-023",
+    "topic": "transactions",
+    "difficulty": "intermediate",
+    "prompt": "What does ROLLBACK do?",
+    "options": [
+      "Confirms a transaction",
+      "Undoes changes since last COMMIT",
+      "Deletes a database",
+      "Clears cache"
+    ],
+    "answerIndex": 1,
+    "explanation": "ROLLBACK undoes uncommitted changes."
+  },
+  {
+    "id": "sql-i-024",
+    "topic": "indexes",
+    "difficulty": "intermediate",
+    "prompt": "Which index type enforces uniqueness?",
+    "options": ["Clustered index", "Non-clustered index", "Unique index", "Bitmap index"],
+    "answerIndex": 2,
+    "explanation": "Unique indexes ensure all values are unique."
+  },
+  {
+    "id": "sql-i-025",
+    "topic": "constraints",
+    "difficulty": "intermediate",
+    "prompt": "What does a FOREIGN KEY enforce?",
+    "options": [
+      "Values must exist in another table",
+      "Values must be unique",
+      "Values must be non-null",
+      "Values must be auto-incremented"
+    ],
+    "answerIndex": 0,
+    "explanation": "FOREIGN KEY enforces referential integrity."
+  },
+  {
+    "id": "sql-i-026",
+    "topic": "design",
+    "difficulty": "intermediate",
+    "prompt": "Which schema design is common in data warehouses?",
+    "options": ["Snowflake", "Star", "Galaxy", "All of the above"],
+    "answerIndex": 3,
+    "explanation": "Star, Snowflake, and Galaxy are warehouse schema patterns."
+  },
+  {
+    "id": "sql-i-027",
+    "topic": "set-operations",
+    "difficulty": "intermediate",
+    "prompt": "Which operator returns rows from the first query not in the second?",
+    "options": ["EXCEPT", "INTERSECT", "DIFFERENCE", "UNION"],
+    "answerIndex": 0,
+    "explanation": "EXCEPT finds rows in first query missing in second."
+  },
+  {
+    "id": "sql-i-028",
+    "topic": "optimization",
+    "difficulty": "intermediate",
+    "prompt": "What is a downside of adding too many indexes?",
+    "options": [
+      "Queries always become faster",
+      "Write operations slow down",
+      "Indexes consume zero storage",
+      "Indexes disable joins"
+    ],
+    "answerIndex": 1,
+    "explanation": "Indexes speed reads but slow down INSERT/UPDATE/DELETE."
+  },
+  {
+    "id": "sql-i-029",
+    "topic": "practical-query",
+    "difficulty": "intermediate",
+    "prompt": "How to select the top 5 salaries from employee table?",
+    "options": [
+      "SELECT salary FROM employee LIMIT 5;",
+      "SELECT salary FROM employee ORDER BY salary DESC LIMIT 5;",
+      "SELECT salary TOP 5 FROM employee;",
+      "SELECT salary FROM employee GROUP BY 5"
+    ],
+    "answerIndex": 1,
+    "explanation": "ORDER BY salary DESC LIMIT 5 returns top salaries."
+  },
+  {
+    "id": "sql-i-030",
+    "topic": "practical-query",
+    "difficulty": "intermediate",
+    "prompt": "How to count distinct job titles in employees?",
+    "options": [
+      "COUNT(job_title)",
+      "COUNT(DISTINCT job_title)",
+      "SELECT UNIQUE job_title",
+      "GROUP BY job_title"
+    ],
+    "answerIndex": 1,
+    "explanation": "COUNT(DISTINCT job_title) returns unique count."
+  },
+
+  {
+    "id": "sql-a-031",
+    "topic": "optimization",
+    "difficulty": "advanced",
+    "prompt": "What is the main difference between clustered and non-clustered indexes?",
+    "options": [
+      "Clustered sorts data physically, non-clustered stores pointers",
+      "Clustered is faster for writes",
+      "Non-clustered deletes duplicates",
+      "They are identical"
+    ],
+    "answerIndex": 0,
+    "explanation": "Clustered index orders table rows; non-clustered is a separate structure."
+  },
+  {
+    "id": "sql-a-032",
+    "topic": "transactions-isolation",
+    "difficulty": "advanced",
+    "prompt": "Which isolation level guarantees full serial execution?",
+    "options": ["READ COMMITTED", "SERIALIZABLE", "REPEATABLE READ", "READ UNCOMMITTED"],
+    "answerIndex": 1,
+    "explanation": "SERIALIZABLE is the strictest isolation level."
+  },
+  {
+    "id": "sql-a-033",
+    "topic": "window-functions",
+    "difficulty": "advanced",
+    "prompt": "Which function calculates a running total in SQL?",
+    "options": ["SUM() OVER()", "GROUP SUM()", "ROLLUP()", "AGGREGATE()"],
+    "answerIndex": 0,
+    "explanation": "SUM() with OVER and ORDER BY can compute running totals."
+  },
+  {
+    "id": "sql-a-034",
+    "topic": "optimization",
+    "difficulty": "advanced",
+    "prompt": "What is the difference between OLTP and OLAP databases?",
+    "options": [
+      "OLTP is for transactions; OLAP is for analytics",
+      "OLTP is slower than OLAP",
+      "OLAP does not use SQL",
+      "OLTP only runs on MySQL"
+    ],
+    "answerIndex": 0,
+    "explanation": "OLTP handles transactions; OLAP is optimized for queries/analysis."
+  },
+  {
+    "id": "sql-a-035",
+    "topic": "practical-query",
+    "difficulty": "advanced",
+    "prompt": "How to select the second highest salary from Employee table?",
+    "options": [
+      "SELECT MAX(salary) FROM employee;",
+      "SELECT salary FROM employee ORDER BY salary DESC LIMIT 1;",
+      "SELECT MAX(salary) FROM employee WHERE salary < (SELECT MAX(salary) FROM employee);",
+      "SELECT DISTINCT salary FROM employee ORDER BY salary ASC;"
+    ],
+    "answerIndex": 2,
+    "explanation": "Using subquery on MAX finds the second highest salary."
+  },
+  {
+    "id": "sql-a-036",
+    "topic": "practical-query",
+    "difficulty": "advanced",
+    "prompt": "How to get the first 3 employees with highest salary?",
+    "options": [
+      "SELECT * FROM employee LIMIT 3;",
+      "SELECT * FROM employee ORDER BY salary DESC LIMIT 3;",
+      "SELECT TOP 3 salary FROM employee;",
+      "Both 2 and 3 (depending on RDBMS)"
+    ],
+    "answerIndex": 3,
+    "explanation": "Postgres/MySQL use LIMIT; SQL Server uses TOP."
+  },
+  {
+    "id": "sql-a-037",
+    "topic": "transactions-isolation",
+    "difficulty": "advanced",
+    "prompt": "Phantom reads are prevented at which isolation level?",
+    "options": ["READ COMMITTED", "REPEATABLE READ", "SERIALIZABLE", "READ UNCOMMITTED"],
+    "answerIndex": 2,
+    "explanation": "Only SERIALIZABLE prevents phantom reads."
+  },
+  {
+    "id": "sql-a-038",
+    "topic": "optimization",
+    "difficulty": "advanced",
+    "prompt": "What is a covering index?",
+    "options": [
+      "An index that includes all columns a query needs",
+      "An index covering multiple tables",
+      "An index with encryption",
+      "A clustered index"
+    ],
+    "answerIndex": 0,
+    "explanation": "Covering indexes prevent going back to the table."
+  },
+  {
+    "id": "sql-a-039",
+    "topic": "practical-query",
+    "difficulty": "advanced",
+    "prompt": "How do you find duplicate rows in SQL?",
+    "options": [
+      "GROUP BY with HAVING COUNT(*) > 1",
+      "WHERE column = column",
+      "DISTINCT",
+      "UNIQUE constraint"
+    ],
+    "answerIndex": 0,
+    "explanation": "GROUP BY + HAVING identifies duplicates."
+  },
+  {
+    "id": "sql-a-040",
+    "topic": "optimization",
+    "difficulty": "advanced",
+    "prompt": "What is a common drawback of using too many indexes?",
+    "options": [
+      "Queries always become faster",
+      "Write operations slow down",
+      "Indexes consume zero storage",
+      "Indexes disable joins"
+    ],
+    "answerIndex": 1,
+    "explanation": "Indexes speed reads but slow down INSERT/UPDATE/DELETE."
+  }
+]

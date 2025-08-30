@@ -1,0 +1,1459 @@
+[
+  {
+    "id": "sql-001",
+    "topic": "sql-basics",
+    "prompt": "Which SQL keyword is used to sort the result-set?",
+    "options": ["SORT", "ORDER", "ORDER BY", "SORT BY"],
+    "answerIndex": 2,
+    "explanation": "'ORDER BY' sorts results ascending by default.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-002",
+    "topic": "sql-basics",
+    "prompt": "Which clause is used to filter rows after aggregation?",
+    "options": ["WHERE", "HAVING", "GROUP BY", "LIMIT"],
+    "answerIndex": 1,
+    "explanation": "'HAVING' is used after GROUP BY, unlike WHERE.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-003",
+    "topic": "joins",
+    "prompt": "What does an INNER JOIN return?",
+    "options": [
+      "All rows from both tables",
+      "Only matching rows in both tables",
+      "Unmatched rows from the left table",
+      "Unmatched rows from the right table"
+    ],
+    "answerIndex": 1,
+    "explanation": "INNER JOIN returns only matching rows.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-004",
+    "topic": "joins",
+    "prompt": "Which join returns all rows from the left table and matching rows from the right?",
+    "options": ["INNER JOIN", "LEFT JOIN", "RIGHT JOIN", "FULL JOIN"],
+    "answerIndex": 1,
+    "explanation": "LEFT JOIN includes all rows from the left table.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-005",
+    "topic": "joins",
+    "prompt": "Which join can return NULLs on both sides?",
+    "options": ["LEFT JOIN", "RIGHT JOIN", "INNER JOIN", "FULL OUTER JOIN"],
+    "answerIndex": 3,
+    "explanation": "FULL OUTER JOIN includes all rows, with NULLs where no match exists.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-006",
+    "topic": "aggregations",
+    "prompt": "Which SQL function counts the number of rows?",
+    "options": ["COUNT()", "SUM()", "LEN()", "ROWS()"],
+    "answerIndex": 0,
+    "explanation": "COUNT() counts rows or non-null values.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-007",
+    "topic": "aggregations",
+    "prompt": "Which clause groups rows with the same values?",
+    "options": ["ORDER BY", "GROUP BY", "UNION", "PARTITION BY"],
+    "answerIndex": 1,
+    "explanation": "GROUP BY groups rows for aggregation.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-008",
+    "topic": "subqueries",
+    "prompt": "Which operator is used to check if a value exists in a subquery?",
+    "options": ["IN", "EXISTS", "ALL", "ANY"],
+    "answerIndex": 1,
+    "explanation": "EXISTS checks if the subquery returns at least one row.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-009",
+    "topic": "subqueries",
+    "prompt": "What is a correlated subquery?",
+    "options": [
+      "A query inside a CTE",
+      "A subquery that references columns from the outer query",
+      "A subquery that runs once per database",
+      "A query inside a transaction"
+    ],
+    "answerIndex": 1,
+    "explanation": "A correlated subquery depends on outer query values.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-010",
+    "topic": "constraints",
+    "prompt": "Which constraint enforces unique values including NULL disallowed?",
+    "options": ["UNIQUE", "CHECK", "PRIMARY KEY", "FOREIGN KEY"],
+    "answerIndex": 2,
+    "explanation": "PRIMARY KEY implies UNIQUE + NOT NULL.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-011",
+    "topic": "constraints",
+    "prompt": "Which constraint ensures a column cannot contain NULL values?",
+    "options": ["CHECK", "NOT NULL", "UNIQUE", "DEFAULT"],
+    "answerIndex": 1,
+    "explanation": "NOT NULL enforces non-null values.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-012",
+    "topic": "constraints",
+    "prompt": "What does a FOREIGN KEY enforce?",
+    "options": [
+      "Values must exist in another table",
+      "Values must be unique",
+      "Values must be non-null",
+      "Values must be auto-incremented"
+    ],
+    "answerIndex": 0,
+    "explanation": "FOREIGN KEY enforces referential integrity.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-013",
+    "topic": "transactions",
+    "prompt": "What does ACID stand for?",
+    "options": [
+      "Atomicity, Consistency, Isolation, Durability",
+      "Accuracy, Control, Integrity, Durability",
+      "Availability, Consistency, Isolation, Data",
+      "Atomicity, Concurrency, Indexing, Durability"
+    ],
+    "answerIndex": 0,
+    "explanation": "ACID describes transaction guarantees.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-014",
+    "topic": "transactions",
+    "prompt": "Which SQL command starts a transaction?",
+    "options": ["BEGIN", "START TRANSACTION", "BEGIN TRANSACTION", "All of the above"],
+    "answerIndex": 3,
+    "explanation": "Different RDBMS use BEGIN or START TRANSACTION.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-015",
+    "topic": "transactions",
+    "prompt": "What does ROLLBACK do?",
+    "options": [
+      "Confirms a transaction",
+      "Undoes changes since last COMMIT",
+      "Deletes a database",
+      "Clears cache"
+    ],
+    "answerIndex": 1,
+    "explanation": "ROLLBACK undoes uncommitted changes.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-016",
+    "topic": "indexes",
+    "prompt": "What is the main purpose of an index?",
+    "options": [
+      "To speed up data retrieval",
+      "To compress data",
+      "To encrypt data",
+      "To ensure uniqueness"
+    ],
+    "answerIndex": 0,
+    "explanation": "Indexes improve query performance, but slow down inserts/updates.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-017",
+    "topic": "indexes",
+    "prompt": "Which index type enforces uniqueness?",
+    "options": ["Clustered index", "Non-clustered index", "Unique index", "Bitmap index"],
+    "answerIndex": 2,
+    "explanation": "Unique indexes ensure all values are unique.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-018",
+    "topic": "indexes",
+    "prompt": "What is the difference between clustered and non-clustered indexes?",
+    "options": [
+      "Clustered sorts data physically, non-clustered stores pointers",
+      "Clustered is faster for writes",
+      "Non-clustered deletes duplicates",
+      "They are identical"
+    ],
+    "answerIndex": 0,
+    "explanation": "Clustered index orders table rows; non-clustered is a separate structure.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-019",
+    "topic": "normalization",
+    "prompt": "Which normal form removes partial dependencies?",
+    "options": ["1NF", "2NF", "3NF", "BCNF"],
+    "answerIndex": 1,
+    "explanation": "2NF eliminates partial dependency on primary key.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-020",
+    "topic": "normalization",
+    "prompt": "Which normal form removes transitive dependencies?",
+    "options": ["1NF", "2NF", "3NF", "4NF"],
+    "answerIndex": 2,
+    "explanation": "3NF eliminates non-key dependencies.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-021",
+    "topic": "normalization",
+    "prompt": "Which normal form eliminates multi-valued attributes?",
+    "options": ["1NF", "2NF", "3NF", "4NF"],
+    "answerIndex": 0,
+    "explanation": "1NF requires atomic (indivisible) values.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-022",
+    "topic": "cte",
+    "prompt": "What is a CTE (Common Table Expression)?",
+    "options": [
+      "A temporary named result set",
+      "A permanent table",
+      "An index type",
+      "A foreign key"
+    ],
+    "answerIndex": 0,
+    "explanation": "CTE is defined with WITH for reuse in a query.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-023",
+    "topic": "cte",
+    "prompt": "Which keyword introduces a CTE?",
+    "options": ["WITH", "AS", "TEMP", "CTE"],
+    "answerIndex": 0,
+    "explanation": "WITH defines a CTE.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-024",
+    "topic": "window-functions",
+    "prompt": "Which function assigns unique numbers to rows in order?",
+    "options": ["RANK()", "ROW_NUMBER()", "DENSE_RANK()", "NTILE()"],
+    "answerIndex": 1,
+    "explanation": "ROW_NUMBER() assigns unique sequential numbers.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-025",
+    "topic": "window-functions",
+    "prompt": "Which window function can produce gaps in ranking?",
+    "options": ["RANK()", "DENSE_RANK()", "ROW_NUMBER()", "COUNT()"],
+    "answerIndex": 0,
+    "explanation": "RANK() skips numbers if there are ties.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-026",
+    "topic": "window-functions",
+    "prompt": "Which window function divides rows into a specified number of groups?",
+    "options": ["ROW_NUMBER()", "NTILE(n)", "RANK()", "DENSE_RANK()"],
+    "answerIndex": 1,
+    "explanation": "NTILE(n) distributes rows into n buckets.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-027",
+    "topic": "window-functions",
+    "prompt": "Which function calculates a running total in SQL?",
+    "options": ["SUM() OVER()", "GROUP SUM()", "ROLLUP()", "AGGREGATE()"],
+    "answerIndex": 0,
+    "explanation": "SUM() with OVER and ORDER BY can compute running totals.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-028",
+    "topic": "window-functions",
+    "prompt": "What is the difference between RANK() and DENSE_RANK()?",
+    "options": [
+      "RANK() skips numbers on ties, DENSE_RANK() does not",
+      "DENSE_RANK() is faster",
+      "They are identical",
+      "RANK() always starts at 0"
+    ],
+    "answerIndex": 0,
+    "explanation": "RANK skips values after ties, DENSE_RANK continues sequentially.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-029",
+    "topic": "set-operations",
+    "prompt": "Which operator removes duplicates between two SELECT queries?",
+    "options": ["UNION", "UNION ALL", "INTERSECT", "EXCEPT"],
+    "answerIndex": 0,
+    "explanation": "UNION eliminates duplicates, unlike UNION ALL.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-030",
+    "topic": "set-operations",
+    "prompt": "Which set operator includes duplicates?",
+    "options": ["UNION", "UNION ALL", "INTERSECT", "EXCEPT"],
+    "answerIndex": 1,
+    "explanation": "UNION ALL keeps duplicates.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-031",
+    "topic": "set-operations",
+    "prompt": "Which operator returns rows from the first query not in the second?",
+    "options": ["EXCEPT", "INTERSECT", "DIFFERENCE", "UNION"],
+    "answerIndex": 0,
+    "explanation": "EXCEPT finds rows in first query missing in second.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-032",
+    "topic": "ddl",
+    "prompt": "Which SQL command is used to remove a table but keep its structure?",
+    "options": ["DROP", "DELETE", "TRUNCATE", "REMOVE"],
+    "answerIndex": 2,
+    "explanation": "TRUNCATE deletes rows but keeps schema.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-033",
+    "topic": "ddl",
+    "prompt": "Which command permanently removes both table and data?",
+    "options": ["TRUNCATE", "DROP", "DELETE", "CLEAR"],
+    "answerIndex": 1,
+    "explanation": "DROP removes the table definition and data.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-034",
+    "topic": "ddl",
+    "prompt": "Which command only removes specific rows based on condition?",
+    "options": ["DELETE", "TRUNCATE", "DROP", "REMOVE"],
+    "answerIndex": 0,
+    "explanation": "DELETE removes rows with WHERE clause conditions.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-035",
+    "topic": "dml",
+    "prompt": "Which keyword inserts multiple rows in a single statement?",
+    "options": ["BULK INSERT", "INSERT ALL", "INSERT ... VALUES (...), (...)", "COPY"],
+    "answerIndex": 2,
+    "explanation": "Standard SQL allows multiple VALUES clauses in one INSERT.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-036",
+    "topic": "indexes-performance",
+    "prompt": "What is a downside of adding too many indexes?",
+    "options": [
+      "Queries always become faster",
+      "Write operations slow down",
+      "Indexes consume zero storage",
+      "Indexes disable joins"
+    ],
+    "answerIndex": 1,
+    "explanation": "Indexes speed reads but slow down INSERT/UPDATE/DELETE.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-037",
+    "topic": "indexes-performance",
+    "prompt": "What is a covering index?",
+    "options": [
+      "An index that includes all columns a query needs",
+      "An index covering multiple tables",
+      "An index with encryption",
+      "A clustered index"
+    ],
+    "answerIndex": 0,
+    "explanation": "Covering indexes prevent going back to the table.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-038",
+    "topic": "transactions-isolation",
+    "prompt": "Which isolation level prevents dirty reads but allows non-repeatable reads?",
+    "options": ["READ UNCOMMITTED", "READ COMMITTED", "REPEATABLE READ", "SERIALIZABLE"],
+    "answerIndex": 1,
+    "explanation": "READ COMMITTED avoids dirty reads but not non-repeatable reads.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-039",
+    "topic": "transactions-isolation",
+    "prompt": "Which isolation level guarantees full serial execution?",
+    "options": ["READ COMMITTED", "SERIALIZABLE", "REPEATABLE READ", "READ UNCOMMITTED"],
+    "answerIndex": 1,
+    "explanation": "SERIALIZABLE is the strictest isolation level.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-040",
+    "topic": "transactions-isolation",
+    "prompt": "Phantom reads are prevented at which isolation level?",
+    "options": ["READ COMMITTED", "REPEATABLE READ", "SERIALIZABLE", "READ UNCOMMITTED"],
+    "answerIndex": 2,
+    "explanation": "Only SERIALIZABLE prevents phantom reads.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-041",
+    "topic": "design",
+    "prompt": "In database design, what is denormalization?",
+    "options": [
+      "Splitting tables into smaller ones",
+      "Combining tables to reduce joins",
+      "Removing primary keys",
+      "Dropping indexes"
+    ],
+    "answerIndex": 1,
+    "explanation": "Denormalization reduces joins at cost of redundancy.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-042",
+    "topic": "design",
+    "prompt": "Which schema design is common in data warehouses?",
+    "options": ["Snowflake", "Star", "Galaxy", "All of the above"],
+    "answerIndex": 3,
+    "explanation": "Star, Snowflake, and Galaxy are warehouse schema patterns.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-043",
+    "topic": "design",
+    "prompt": "What is the difference between OLTP and OLAP databases?",
+    "options": [
+      "OLTP is for transactions; OLAP is for analytics",
+      "OLTP is slower than OLAP",
+      "OLAP does not use SQL",
+      "OLTP only runs on MySQL"
+    ],
+    "answerIndex": 0,
+    "explanation": "OLTP handles transactions; OLAP is optimized for queries/analysis.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-044",
+    "topic": "nosql-comparison",
+    "prompt": "Which is a key difference between SQL and NoSQL databases?",
+    "options": [
+      "SQL uses schemas; NoSQL often schema-less",
+      "SQL is always faster",
+      "NoSQL guarantees ACID by default",
+      "SQL cannot scale"
+    ],
+    "answerIndex": 0,
+    "explanation": "SQL is schema-based; NoSQL offers flexibility and scale.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-045",
+    "topic": "nosql-comparison",
+    "prompt": "Which NoSQL type is similar to SQL tables?",
+    "options": ["Graph DB", "Columnar DB", "Key-Value Store", "Document DB"],
+    "answerIndex": 1,
+    "explanation": "Column-family stores resemble relational tables.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-046",
+    "topic": "practical-query",
+    "prompt": "Which SQL keyword limits the number of rows returned?",
+    "options": ["LIMIT", "TOP", "ROWNUM", "All of the above (depending on RDBMS)"],
+    "answerIndex": 3,
+    "explanation": "LIMIT (MySQL/Postgres), TOP (SQL Server), ROWNUM (Oracle).",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-047",
+    "topic": "practical-query",
+    "prompt": "How to select the second highest salary from Employee table?",
+    "options": [
+      "SELECT MAX(salary) FROM employee;",
+      "SELECT salary FROM employee ORDER BY salary DESC LIMIT 1;",
+      "SELECT MAX(salary) FROM employee WHERE salary < (SELECT MAX(salary) FROM employee);",
+      "SELECT DISTINCT salary FROM employee ORDER BY salary ASC;"
+    ],
+    "answerIndex": 2,
+    "explanation": "Using subquery on MAX finds the second highest salary.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-048",
+    "topic": "practical-query",
+    "prompt": "How to find duplicate rows in a table?",
+    "options": [
+      "Using GROUP BY with HAVING COUNT(*) > 1",
+      "Using WHERE id = id",
+      "Using DISTINCT",
+      "Using UNIQUE constraint"
+    ],
+    "answerIndex": 0,
+    "explanation": "GROUP BY with HAVING COUNT > 1 identifies duplicates.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-049",
+    "topic": "practical-query",
+    "prompt": "How to get the first 3 employees with highest salary?",
+    "options": [
+      "SELECT * FROM employee LIMIT 3;",
+      "SELECT * FROM employee ORDER BY salary DESC LIMIT 3;",
+      "SELECT TOP 3 salary FROM employee;",
+      "Both 2 and 3 (depending on RDBMS)"
+    ],
+    "answerIndex": 3,
+    "explanation": "Postgres/MySQL use LIMIT; SQL Server uses TOP.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-050",
+    "topic": "practical-query",
+    "prompt": "How do you count distinct values in SQL?",
+    "options": ["COUNT()", "COUNT(DISTINCT column)", "UNIQUE COUNT()", "SUM(DISTINCT)"],
+    "answerIndex": 1,
+    "explanation": "COUNT(DISTINCT col) returns number of unique values.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-051",
+    "topic": "postgres-fulltext",
+    "prompt": "Which PostgreSQL index type is commonly used for full-text search on tsvector columns?",
+    "options": ["GIN", "BRIN", "B-Tree", "Hash"],
+    "answerIndex": 0,
+    "explanation": "GIN indexes support fast membership/containment lookups typical of tsvector.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-052",
+    "topic": "postgres-indexes",
+    "prompt": "Which PostgreSQL index type is suitable for range and geometric queries and can support full-text too?",
+    "options": ["GiST", "GIN", "Hash", "BRIN"],
+    "answerIndex": 0,
+    "explanation": "GiST is a balanced tree for many data types including ranges and geometry.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-053",
+    "topic": "postgres-indexes",
+    "prompt": "BRIN indexes are most effective when:",
+    "options": [
+      "The table is tiny (<1000 rows)",
+      "Data is randomly distributed",
+      "Data is naturally ordered (e.g., time-series) on disk",
+      "For exact equality lookups only"
+    ],
+    "answerIndex": 2,
+    "explanation": "BRIN summarizes page ranges and shines on large, naturally ordered data.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-054",
+    "topic": "postgres-jsonb",
+    "prompt": "In PostgreSQL JSONB, which operator checks containment (left contains right)?",
+    "options": ["@>", "<@", "?", "||"],
+    "answerIndex": 0,
+    "explanation": "Left @> right means the left JSONB contains the right.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-055",
+    "topic": "postgres-fulltext",
+    "prompt": "Which function converts text to a tsvector for full-text search?",
+    "options": ["to_tsvector()", "to_tsquery()", "plainto_tsquery()", "ts_rank()"],
+    "answerIndex": 0,
+    "explanation": "to_tsvector() tokenizes and normalizes text for indexing.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-056",
+    "topic": "postgres-dml",
+    "prompt": "Which PostgreSQL syntax implements an UPSERT?",
+    "options": [
+      "MERGE INTO ...",
+      "INSERT ... ON CONFLICT DO UPDATE",
+      "REPLACE INTO ...",
+      "INSERT OR REPLACE ..."
+    ],
+    "answerIndex": 1,
+    "explanation": "PostgreSQL uses INSERT ... ON CONFLICT for UPSERT behavior.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-057",
+    "topic": "postgres-performance",
+    "prompt": "Which command shows the actual plan with execution timings and row counts?",
+    "options": ["EXPLAIN", "EXPLAIN ANALYZE", "VACUUM VERBOSE", "ANALYZE VERBOSE"],
+    "answerIndex": 1,
+    "explanation": "EXPLAIN ANALYZE runs the query and shows measured timings and counts.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-058",
+    "topic": "postgres-wal",
+    "prompt": "Which setting controls whether commits wait for WAL to be flushed for durability vs latency?",
+    "options": ["shared_buffers", "synchronous_commit", "work_mem", "wal_buffers"],
+    "answerIndex": 1,
+    "explanation": "synchronous_commit trades latency for durability guarantees.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-059",
+    "topic": "postgres-mvcc",
+    "prompt": "Under MVCC in PostgreSQL, what happens to old row versions after updates/deletes?",
+    "options": [
+      "They are immediately removed",
+      "They become dead tuples until VACUUM reclaims space",
+      "They are archived to WAL forever",
+      "They are moved to a history table"
+    ],
+    "answerIndex": 1,
+    "explanation": "Dead tuples persist until autovacuum/vacuum cleans them.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-060",
+    "topic": "postgres-storage",
+    "prompt": "A HOT (Heap-Only Tuple) update occurs when:",
+    "options": [
+      "The updated row grows beyond page size",
+      "No indexed columns are modified",
+      "All columns are modified",
+      "The table is UNLOGGED"
+    ],
+    "answerIndex": 1,
+    "explanation": "HOT updates avoid index changes if indexed columns do not change.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-061",
+    "topic": "postgres-maintenance",
+    "prompt": "Autovacuum decides to VACUUM a table roughly when dead tuples exceed:",
+    "options": [
+      "A fixed 1000 rows",
+      "autovacuum_vacuum_threshold + autovacuum_vacuum_scale_factor * reltuples",
+      "shared_buffers / 2",
+      "work_mem * active_sessions"
+    ],
+    "answerIndex": 1,
+    "explanation": "That's the standard autovacuum threshold formula.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-062",
+    "topic": "postgres-storage",
+    "prompt": "TOAST in PostgreSQL is used to:",
+    "options": [
+      "Encrypt data at rest",
+      "Store large field values out-of-line",
+      "Compress entire tables",
+      "Speed up checkpoints"
+    ],
+    "answerIndex": 1,
+    "explanation": "TOAST stores large values (e.g., large text/bytea) out-of-line with compression.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-063",
+    "topic": "postgres-partitioning",
+    "prompt": "PostgreSQL natively supports which partitioning strategies?",
+    "options": ["Range", "List", "Hash", "All of the above"],
+    "answerIndex": 3,
+    "explanation": "Range, List, and Hash partitioning are supported.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-064",
+    "topic": "postgres-fdw",
+    "prompt": "Which FDW is used to connect to other PostgreSQL servers?",
+    "options": ["postgres_fdw", "file_fdw", "mysql_fdw", "oracle_fdw"],
+    "answerIndex": 0,
+    "explanation": "postgres_fdw provides optimized remote Postgres access.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-065",
+    "topic": "postgres-replication",
+    "prompt": "In logical replication, which object lists tables/changes that subscribers can receive?",
+    "options": ["Subscription", "Publication", "Slot", "Tablespace"],
+    "answerIndex": 1,
+    "explanation": "Publications define which changes are sent to subscribers.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-066",
+    "topic": "postgres-views",
+    "prompt": "REFRESH MATERIALIZED VIEW CONCURRENTLY requires:",
+    "options": [
+      "A unique index on the materialized view",
+      "An exclusive lock on the base tables",
+      "superuser privileges",
+      "A GIN index on the base query"
+    ],
+    "answerIndex": 0,
+    "explanation": "A unique index is required to refresh concurrently.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-067",
+    "topic": "postgres-cte",
+    "prompt": "Which statement about CTEs in PostgreSQL 12+ is true?",
+    "options": [
+      "CTEs are always optimization fences",
+      "Non-recursive CTEs may be inlined by the planner",
+      "CTEs cannot reference outer queries",
+      "CTEs are materialized by default in all versions"
+    ],
+    "answerIndex": 1,
+    "explanation": "From PG12, non-recursive CTEs can be inlined for better plans.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-068",
+    "topic": "postgres-querying",
+    "prompt": "DISTINCT ON in PostgreSQL requires which best practice to be correct/deterministic?",
+    "options": [
+      "ORDER BY must list columns matching DISTINCT ON prefix first",
+      "Use GROUP BY instead of ORDER BY",
+      "Use HAVING after DISTINCT ON",
+      "It requires a unique index"
+    ],
+    "answerIndex": 0,
+    "explanation": "ORDER BY should start with the DISTINCT ON list to control the chosen rows.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-069",
+    "topic": "postgres-joins",
+    "prompt": "A LATERAL join allows a subquery/function to:",
+    "options": [
+      "Reference columns from earlier FROM items",
+      "Run in parallel automatically",
+      "Bypass the planner",
+      "Skip VACUUM"
+    ],
+    "answerIndex": 0,
+    "explanation": "LATERAL subqueries can depend on preceding FROM relations.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-070",
+    "topic": "postgres-ddl",
+    "prompt": "Which PostgreSQL feature is the SQL-standard replacement for SERIAL?",
+    "options": [
+      "SEQUENCE DEFAULT nextval()",
+      "GENERATED {ALWAYS | BY DEFAULT} AS IDENTITY",
+      "UUID DEFAULT gen_random_uuid()",
+      "AUTO_INCREMENT"
+    ],
+    "answerIndex": 1,
+    "explanation": "IDENTITY columns are standard and available since PG10.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-071",
+    "topic": "postgres-security",
+    "prompt": "How do you enable Row-Level Security (RLS) on a table?",
+    "options": [
+      "CREATE POLICY ...; ALTER TABLE ... ENABLE ROW LEVEL SECURITY;",
+      "GRANT SELECT ON TABLE ... TO PUBLIC;",
+      "CREATE ROLE rls_user;",
+      "SET row_level_security = on;"
+    ],
+    "answerIndex": 0,
+    "explanation": "RLS requires enabling on the table and defining policies.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-072",
+    "topic": "postgres-locks",
+    "prompt": "Which function acquires an advisory lock that is released at transaction end?",
+    "options": [
+      "pg_advisory_lock()",
+      "pg_advisory_xact_lock()",
+      "pg_try_advisory_lock()",
+      "pg_advisory_unlock()"
+    ],
+    "answerIndex": 1,
+    "explanation": "pg_advisory_xact_lock() holds the lock for the current transaction scope.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-073",
+    "topic": "postgres-observability",
+    "prompt": "What does the pg_stat_statements extension provide?",
+    "options": [
+      "Row-level auditing",
+      "Normalized query stats (counts, time, buffers)",
+      "Automatic index creation",
+      "Deadlock prevention"
+    ],
+    "answerIndex": 1,
+    "explanation": "It aggregates per-query statistics for tuning and troubleshooting.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-074",
+    "topic": "postgres-performance",
+    "prompt": "work_mem primarily affects which operations?",
+    "options": [
+      "Hash joins and sorts per operation",
+      "Shared buffer cache size",
+      "Autovacuum worker count",
+      "WAL segment size"
+    ],
+    "answerIndex": 0,
+    "explanation": "work_mem is per operation for sorts/hash; too low spills to disk.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-075",
+    "topic": "postgres-planner",
+    "prompt": "effective_cache_size informs the planner about:",
+    "options": [
+      "Exact cache size used by the kernel",
+      "Estimated memory available for caching data",
+      "Per-session memory limits",
+      "Shared memory segment size"
+    ],
+    "answerIndex": 1,
+    "explanation": "It's a hint for planner cost estimates, not an actual allocation.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-076",
+    "topic": "postgres-jsonb",
+    "prompt": "For fast JSONB existence/containment queries, which index is typically best?",
+    "options": ["GIN", "GiST", "BRIN", "Hash"],
+    "answerIndex": 0,
+    "explanation": "GIN supports efficient containment/existence operations with JSONB.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-077",
+    "topic": "postgres-wal",
+    "prompt": "Which wal_level is required to use logical replication?",
+    "options": ["minimal", "replica", "logical", "archive"],
+    "answerIndex": 2,
+    "explanation": "wal_level=logical enables logical decoding and replication.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-078",
+    "topic": "postgres-wal",
+    "prompt": "Which parameter controls how long a checkpoint should take relative to the interval?",
+    "options": [
+      "checkpoint_completion_target",
+      "max_wal_size",
+      "wal_compression",
+      "checkpoint_timeout"
+    ],
+    "answerIndex": 0,
+    "explanation": "It spreads checkpoint I/O over time to reduce spikes.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-079",
+    "topic": "postgres-jit",
+    "prompt": "Which statement about JIT in PostgreSQL is correct?",
+    "options": [
+      "JIT compiles SQL into bytecode stored in WAL",
+      "JIT can speed CPU-bound queries and is visible in EXPLAIN ANALYZE (JIT)",
+      "JIT is enabled only for superusers",
+      "JIT prevents parallel query"
+    ],
+    "answerIndex": 1,
+    "explanation": "JIT (LLVM) can accelerate CPU-heavy parts; plans show a JIT section.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-080",
+    "topic": "postgres-tables",
+    "prompt": "Which is true about UNLOGGED tables in PostgreSQL?",
+    "options": [
+      "They are included in WAL and survive crashes",
+      "They are not WAL-logged and are truncated after a crash",
+      "They cannot have indexes",
+      "They are read-only"
+    ],
+    "answerIndex": 1,
+    "explanation": "UNLOGGED tables skip WAL for speed but are truncated on crash recovery.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-081",
+    "topic": "sql-advanced",
+    "prompt": "Which window frame returns a cumulative sum up to the current row regardless of ties?",
+    "options": [
+      "ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW",
+      "RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW",
+      "GROUPS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW",
+      "ROWS BETWEEN 1 PRECEDING AND CURRENT ROW"
+    ],
+    "answerIndex": 0,
+    "explanation": "ROWS is row-count–based and unaffected by ORDER BY ties; RANGE groups equal ORDER BY values.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-082",
+    "topic": "sql-advanced",
+    "prompt": "Which set operation preserves duplicates and aligns columns by position rather than name?",
+    "options": ["UNION", "UNION ALL", "INTERSECT", "EXCEPT"],
+    "answerIndex": 1,
+    "explanation": "UNION ALL does not deduplicate and all set ops align by column position.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-083",
+    "topic": "sql-advanced",
+    "prompt": "Which technique is best to express an anti-join (rows in A with no match in B) portably?",
+    "options": [
+      "A LEFT JOIN with IS NULL on B keys",
+      "NOT IN subquery on nullable column",
+      "CROSS JOIN with filter",
+      "FULL OUTER JOIN"
+    ],
+    "answerIndex": 0,
+    "explanation": "LEFT JOIN ... WHERE b.key IS NULL is safe with NULLs; NOT IN can misbehave when subquery yields NULL.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-084",
+    "topic": "sql-advanced",
+    "prompt": "Which grouping extension produces subtotals at all levels plus a grand total?",
+    "options": ["GROUP BY ROLLUP", "GROUP BY CUBE", "GROUPING SETS ()", "GROUP BY ALL"],
+    "answerIndex": 1,
+    "explanation": "CUBE generates all combinations of the specified grouping columns.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-085",
+    "topic": "sql-advanced",
+    "prompt": "What does GROUPING() return in reports using ROLLUP/CUBE?",
+    "options": [
+      "The count of rows in the group",
+      "1 if a column is aggregated to NULL by the grouping set, else 0",
+      "Whether the group is empty",
+      "The grouping column value"
+    ],
+    "answerIndex": 1,
+    "explanation": "GROUPING(col) distinguishes NULL from a rolled-up NULL.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-086",
+    "topic": "sql-advanced",
+    "prompt": "Which clause lets you filter after window functions are computed?",
+    "options": ["WHERE", "HAVING", "QUALIFY", "FILTER"],
+    "answerIndex": 2,
+    "explanation": "Some SQL dialects (BigQuery/Snowflake/Trino) support QUALIFY to filter by window results.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-087",
+    "topic": "sql-advanced",
+    "prompt": "Which join order choice can enable a hash anti-join for NOT EXISTS?",
+    "options": [
+      "Driving from the smaller filtered table",
+      "Driving from the largest table unfiltered",
+      "Using CROSS JOIN",
+      "Replacing NOT EXISTS with NOT IN"
+    ],
+    "answerIndex": 0,
+    "explanation": "Filtering early and driving from a reduced set improves hash anti-join performance.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-088",
+    "topic": "sql-advanced",
+    "prompt": "Which statement about SARGability is correct?",
+    "options": [
+      "Functions on indexed columns improve SARGability",
+      "Expressions like WHERE UPPER(col)=... can prevent index use",
+      "Leading wildcard LIKE '%%x' is SARGable",
+      "Computed columns are never SARGable"
+    ],
+    "answerIndex": 1,
+    "explanation": "Wrapping the column in a function often prevents use of an index on that column.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-089",
+    "topic": "sql-advanced",
+    "prompt": "Which window function returns the value from the Nth row of the frame relative to current?",
+    "options": ["LAG()", "LEAD()", "NTH_VALUE()", "FIRST_VALUE()"],
+    "answerIndex": 2,
+    "explanation": "NTH_VALUE(expr, n) returns the nth value in the window frame.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-090",
+    "topic": "sql-advanced",
+    "prompt": "What is the main difference between DISTINCT and DISTINCT ON (dialect-specific)?",
+    "options": [
+      "DISTINCT ON keeps exactly one row per listed expressions following ORDER BY",
+      "They are identical",
+      "DISTINCT ON always sorts the whole table by PK",
+      "DISTINCT removes NULLs"
+    ],
+    "answerIndex": 0,
+    "explanation": "DISTINCT ON chooses one row per key, guided by ORDER BY (where supported).",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-091",
+    "topic": "sql-advanced",
+    "prompt": "Which pattern ensures correct top-N per group selection?",
+    "options": [
+      "JOIN with MAX() subquery per group",
+      "ROW_NUMBER() OVER (PARTITION BY grp ORDER BY metric DESC) = 1",
+      "LIMIT 1",
+      "GROUP BY grp ORDER BY metric DESC"
+    ],
+    "answerIndex": 1,
+    "explanation": "ROW_NUMBER partitioned by group picks the top ordered row per group.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-092",
+    "topic": "sql-advanced",
+    "prompt": "When comparing NOT IN vs NOT EXISTS, which is safer with NULLs?",
+    "options": ["NOT IN", "NOT EXISTS", "Both equal", "Use FULL OUTER JOIN instead"],
+    "answerIndex": 1,
+    "explanation": "NOT EXISTS semantics are unaffected by NULLs in the subquery.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-093",
+    "topic": "sql-advanced",
+    "prompt": "Which isolation anomaly is prevented by REPEATABLE READ but allowed by READ COMMITTED?",
+    "options": ["Dirty reads", "Non-repeatable reads", "Phantom reads", "Write skew"],
+    "answerIndex": 1,
+    "explanation": "READ COMMITTED allows non-repeatable reads; REPEATABLE READ prevents them.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-094",
+    "topic": "sql-advanced",
+    "prompt": "Which construct creates hierarchical queries without vendor-specific CONNECT BY?",
+    "options": [
+      "Recursive CTE with UNION ALL",
+      "CROSS APPLY",
+      "UNION DISTINCT with LIMIT",
+      "GROUPING SETS"
+    ],
+    "answerIndex": 0,
+    "explanation": "Recursive CTEs are the portable way to traverse hierarchies.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-095",
+    "topic": "sql-advanced",
+    "prompt": "Which function can return percentile approximations in some SQL engines?",
+    "options": ["PERCENTILE_DISC", "PERCENT_RANK", "APPROX_PERCENTILE", "CUME_DIST"],
+    "answerIndex": 2,
+    "explanation": "APPROX_PERCENTILE (name varies) computes approximate quantiles efficiently.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-096",
+    "topic": "sql-advanced",
+    "prompt": "Which is true about MERGE (ANSI SQL) semantics?",
+    "options": [
+      "It updates target rows only",
+      "It can conditionally INSERT/UPDATE/DELETE based on matches",
+      "It requires unique keys on both sides",
+      "It cannot reference source columns"
+    ],
+    "answerIndex": 1,
+    "explanation": "MERGE allows conditional upserts and deletes depending on match predicates.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-097",
+    "topic": "sql-advanced",
+    "prompt": "Which expression returns the first non-NULL among arguments?",
+    "options": ["COALESCE(a,b,c)", "NVL2(a,b,c)", "NULLIF(a,b)", "ISNULL(a)"],
+    "answerIndex": 0,
+    "explanation": "COALESCE is ANSI-standard for first non-NULL.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-098",
+    "topic": "sql-advanced",
+    "prompt": "Which window function computes a moving average over a preceding N rows?",
+    "options": [
+      "AVG(x) OVER (ORDER BY t ROWS BETWEEN N PRECEDING AND CURRENT ROW)",
+      "AVG(x) OVER ()",
+      "AVG(x) GROUP BY t",
+      "AVG(x) OVER (PARTITION BY t)"
+    ],
+    "answerIndex": 0,
+    "explanation": "ROWS frame with PRECEDING implements moving windows by row count.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-099",
+    "topic": "sql-advanced",
+    "prompt": "Which technique handles gaps-and-islands on ordered sequences?",
+    "options": [
+      "Using LAG to detect breaks and SUM of break flags",
+      "FULL JOIN on itself",
+      "UNION ALL with MAX",
+      "DISTINCT ON only"
+    ],
+    "answerIndex": 0,
+    "explanation": "LAG detects discontinuities; cumulative SUM groups islands.",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "sql-100",
+    "topic": "sql-advanced",
+    "prompt": "Which clause adds conditional aggregation per row in ANSI SQL?",
+    "options": [
+      "FILTER (WHERE ...)",
+      "QUALIFY",
+      "WHERE inside SUM()",
+      "HAVING inside SELECT"
+    ],
+    "answerIndex": 0,
+    "explanation": "Aggregate FILTER applies a WHERE-like condition to a specific aggregate.",
+    "difficulty": "advanced"
+  },
+
+  { 
+    "id": "sql-101",
+    "topic": "postgres-basics",
+    "prompt": "Default PostgreSQL port number is:",
+    "options": ["3306", "1521", "5432", "1433"],
+    "answerIndex": 2,
+    "explanation": "PostgreSQL listens on 5432 by default.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-102",
+    "topic": "postgres-basics",
+    "prompt": "Which command creates a new database in PostgreSQL?",
+    "options": ["CREATE SCHEMA mydb;", "CREATE DATABASE mydb;", "NEW DATABASE mydb;", "INIT DB mydb;"],
+    "answerIndex": 1,
+    "explanation": "CREATE DATABASE creates a database; CREATE SCHEMA creates a schema in a database.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-103",
+    "topic": "postgres-basics",
+    "prompt": "Which is the default index type in PostgreSQL?",
+    "options": ["B-Tree", "GIN", "GiST", "BRIN"],
+    "answerIndex": 0,
+    "explanation": "B-tree is the default and supports equality and range queries.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-104",
+    "topic": "postgres-basics",
+    "prompt": "Case-insensitive pattern match operator commonly used is:",
+    "options": ["LIKE", "ILIKE", "~", "~*"],
+    "answerIndex": 1,
+    "explanation": "ILIKE performs case-insensitive LIKE.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-105",
+    "topic": "postgres-basics",
+    "prompt": "Which type stores globally unique identifiers?",
+    "options": ["UUID", "OID", "SERIAL", "BIGINT"],
+    "answerIndex": 0,
+    "explanation": "UUID is a native type for GUIDs.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-106",
+    "topic": "postgres-basics",
+    "prompt": "Which alias refers to TIMESTAMP WITH TIME ZONE?",
+    "options": ["timestamptz", "timestampz", "tstz", "tztimestamp"],
+    "answerIndex": 0,
+    "explanation": "timestamptz is the canonical alias.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-107",
+    "topic": "postgres-basics",
+    "prompt": "Which statement is true about identifiers in PostgreSQL?",
+    "options": [
+      "Unquoted identifiers are case-sensitive",
+      "Unquoted identifiers are folded to lower case",
+      "Unquoted identifiers are folded to upper case",
+      "Quotes are never allowed"
+    ],
+    "answerIndex": 1,
+    "explanation": "Unquoted identifiers are lowercased; quoted preserve case.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-108",
+    "topic": "postgres-basics",
+    "prompt": "Which operator concatenates text values?",
+    "options": ["||", "+", "&", "CONCAT"],
+    "answerIndex": 0,
+    "explanation": "|| concatenates strings; CONCAT() also exists.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-109",
+    "topic": "postgres-basics",
+    "prompt": "How do you limit and offset rows in PostgreSQL?",
+    "options": ["TOP & OFFSET", "LIMIT & OFFSET", "ROWNUM & START", "FETCH NEXT ONLY"],
+    "answerIndex": 1,
+    "explanation": "LIMIT ... OFFSET ... is common in PostgreSQL.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-110",
+    "topic": "postgres-basics",
+    "prompt": "Which data type stores binary data?",
+    "options": ["BYTEA", "VARBINARY", "BLOB", "RAW"],
+    "answerIndex": 0,
+    "explanation": "BYTEA is PostgreSQL's binary type.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-111",
+    "topic": "postgres-basics",
+    "prompt": "Which command lists tables in current schema in psql?",
+    "options": ["\\dt", "\\d+", "\\l", "\\dn"],
+    "answerIndex": 0,
+    "explanation": "\\dt shows tables (psql meta-command).",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-112",
+    "topic": "postgres-basics",
+    "prompt": "Which clause creates a schema-local name without qualifying by database?",
+    "options": ["CREATE DATABASE", "CREATE NAMESPACE", "CREATE SCHEMA", "CREATE DOMAIN"],
+    "answerIndex": 2,
+    "explanation": "Schemas organize objects within a database.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-113",
+    "topic": "postgres-basics",
+    "prompt": "Which operator accesses a JSONB field value as JSON?",
+    "options": ["->", "->>", "#>", "#>>"],
+    "answerIndex": 0,
+    "explanation": "-> returns JSON; ->> returns text.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-114",
+    "topic": "postgres-basics",
+    "prompt": "Which feature provides auto-incrementing integers (SQL-standard)?",
+    "options": [
+      "SERIAL",
+      "GENERATED BY DEFAULT AS IDENTITY",
+      "AUTO_INCREMENT",
+      "SEQUENCE ONLY"
+    ],
+    "answerIndex": 1,
+    "explanation": "IDENTITY is the SQL-standard successor to SERIAL.",
+    "difficulty": "basic"
+  },
+  {
+    "id": "sql-115",
+    "topic": "postgres-basics",
+    "prompt": "Which boolean literals are valid in PostgreSQL?",
+    "options": ["TRUE/FALSE", "1/0 only", "Y/N only", "ON/OFF only"],
+    "answerIndex": 0,
+    "explanation": "TRUE/FALSE are the canonical boolean literals (with many accepted synonyms).",
+    "difficulty": "basic"
+  },
+
+  {
+    "id": "sql-116",
+    "topic": "postgres-intermediate",
+    "prompt": "Which index supports case-insensitive search on text efficiently when combined with LOWER()?",
+    "options": [
+      "B-Tree on LOWER(col)",
+      "BRIN on col",
+      "GIN on col",
+      "Hash on col"
+    ],
+    "answerIndex": 0,
+    "explanation": "Expression indexes like CREATE INDEX ... ON tbl (LOWER(col)) speed ILIKE/LOWER comparisons.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-117",
+    "topic": "postgres-intermediate",
+    "prompt": "Which command updates planner statistics after bulk loads?",
+    "options": ["VACUUM", "ANALYZE", "REINDEX", "CHECKPOINT"],
+    "answerIndex": 1,
+    "explanation": "ANALYZE refreshes column stats for better plans.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-118",
+    "topic": "postgres-intermediate",
+    "prompt": "Partial indexes are most useful when:",
+    "options": [
+      "Most rows match the predicate",
+      "Few rows match the predicate",
+      "The table is empty",
+      "The table has only one column"
+    ],
+    "answerIndex": 1,
+    "explanation": "They index only rows satisfying a WHERE, reducing size and improving performance.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-119",
+    "topic": "postgres-intermediate",
+    "prompt": "Which statement about VACUUM FULL is true?",
+    "options": [
+      "It reclaims space without locks",
+      "It rewrites the table and requires an exclusive lock",
+      "It disables autovacuum",
+      "It truncates WAL"
+    ],
+    "answerIndex": 1,
+    "explanation": "VACUUM FULL rewrites tables, requiring stronger locks than plain VACUUM.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-120",
+    "topic": "postgres-intermediate",
+    "prompt": "Which operator extracts text from JSONB?",
+    "options": ["->", "->>", "#>", "@>"],
+    "answerIndex": 1,
+    "explanation": "->> returns text; -> returns JSON.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-121",
+    "topic": "postgres-intermediate",
+    "prompt": "Which statement about UNIQUE NULL handling in PostgreSQL is true?",
+    "options": [
+      "UNIQUE forbids multiple NULLs",
+      "UNIQUE allows multiple NULLs",
+      "UNIQUE converts NULL to ''",
+      "UNIQUE implies NOT NULL"
+    ],
+    "answerIndex": 1,
+    "explanation": "Multiple NULLs are allowed under UNIQUE per SQL standard.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-122",
+    "topic": "postgres-intermediate",
+    "prompt": "Which feature caches execution plans for repeated parameterized queries?",
+    "options": ["Prepared statements", "Rules", "Triggers", "Foreign tables"],
+    "answerIndex": 0,
+    "explanation": "PREPARE/EXECUTE or driver-prepared statements reuse plans.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-123",
+    "topic": "postgres-intermediate",
+    "prompt": "Which command rebuilds a bloated index?",
+    "options": ["REINDEX INDEX idx;", "VACUUM INDEX idx;", "ALTER INDEX idx REBUILD;", "ANALYZE idx;"],
+    "answerIndex": 0,
+    "explanation": "REINDEX recreates the index from scratch.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-124",
+    "topic": "postgres-intermediate",
+    "prompt": "How to avoid sequence gaps on failed transactions?",
+    "options": [
+      "Use GENERATED ALWAYS AS IDENTITY; gaps still happen",
+      "Wrap INSERT in savepoint",
+      "Use SERIAL instead",
+      "Sequence gaps are expected; avoid if you must not rely on sequential continuity"
+    ],
+    "answerIndex": 3,
+    "explanation": "Sequences are not gap-free by design in PostgreSQL.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-125",
+    "topic": "postgres-intermediate",
+    "prompt": "Which join enables subqueries/functions to reference preceding FROM items?",
+    "options": ["LATERAL", "NATURAL", "CROSS", "SEMI"],
+    "answerIndex": 0,
+    "explanation": "LATERAL lets the subquery depend on earlier FROM relations.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-126",
+    "topic": "postgres-intermediate",
+    "prompt": "Which clause performs an upsert in PostgreSQL?",
+    "options": [
+      "MERGE",
+      "INSERT ... ON CONFLICT DO UPDATE",
+      "REPLACE INTO",
+      "INSERT OR REPLACE"
+    ],
+    "answerIndex": 1,
+    "explanation": "PostgreSQL supports ON CONFLICT for upserts.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-127",
+    "topic": "postgres-intermediate",
+    "prompt": "Materialized views differ from views because they:",
+    "options": [
+      "Store query results physically",
+      "Always stay in sync automatically",
+      "Cannot be indexed",
+      "Do not support REFRESH"
+    ],
+    "answerIndex": 0,
+    "explanation": "Materialized views persist results and require REFRESH to update.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-128",
+    "topic": "postgres-intermediate",
+    "prompt": "Which setting increases memory per sort/hash operation (per node)?",
+    "options": ["shared_buffers", "work_mem", "maintenance_work_mem", "temp_buffers"],
+    "answerIndex": 1,
+    "explanation": "work_mem is per sort/hash operation; too low causes disk spills.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-129",
+    "topic": "postgres-intermediate",
+    "prompt": "Which feature enforces per-row access rules?",
+    "options": ["GRANT/REVOKE only", "Row-Level Security (RLS) policies", "Schemas", "Domains"],
+    "answerIndex": 1,
+    "explanation": "RLS policies control visibility per row.",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "sql-130",
+    "topic": "postgres-intermediate",
+    "prompt": "Which extension provides normalized query statistics for tuning?",
+    "options": ["pgcrypto", "pg_trgm", "pg_stat_statements", "hstore"],
+    "answerIndex": 2,
+    "explanation": "pg_stat_statements aggregates stats per normalized query.",
+    "difficulty": "intermediate"
+  }
+]

@@ -1,6 +1,6 @@
 import { Component, inject, computed } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import { NgIf } from '@angular/common';
+import { NgIf, CommonModule } from '@angular/common'; // ⬅️ adicione CommonModule
 
 import { QuizStore } from '../../../../core/state/quiz.store';
 import { QuestionCardComponent } from '../../components/question-card/question-card.component';
@@ -8,7 +8,12 @@ import { QuestionCardComponent } from '../../components/question-card/question-c
 @Component({
   standalone: true,
   selector: 'app-play',
-  imports: [NgIf, RouterLink, QuestionCardComponent],
+  imports: [
+    CommonModule,       // ⬅️ adicione aqui
+    NgIf,               // pode manter (ou remover; CommonModule já exporta NgIf)
+    RouterLink,
+    QuestionCardComponent
+  ],
   template: `
     <div class="container py-4" style="max-width:820px; width:100%;">
       <!-- Header -->
@@ -38,8 +43,7 @@ import { QuestionCardComponent } from '../../components/question-card/question-c
           [selected]="selected()"
           [topic]="q.topic"
           [version]="q.version"
-          (choose)="onChoose($event)"
-        >
+          (choose)="onChoose($event)">
         </app-question-card>
 
         <!-- Footer -->
@@ -47,8 +51,7 @@ import { QuestionCardComponent } from '../../components/question-card/question-c
           <button
             class="btn btn-ghost-dark"
             (click)="prev()"
-            [disabled]="store.currentIndex() === 0"
-          >
+            [disabled]="store.currentIndex() === 0">
             Previous
           </button>
 
@@ -69,9 +72,11 @@ export class PlayPage {
   private router = inject(Router);
 
   selected = computed(() => this.store.answers()[this.store.currentIndex()]);
+
   onChoose(i: number) {
     this.store.answerCurrent(i);
   }
+
   prev() {
     this.store.prev();
   }

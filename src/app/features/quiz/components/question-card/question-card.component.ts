@@ -1,10 +1,10 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgIf } from '@angular/common';
 
 @Component({
   standalone: true,
   selector: 'app-question-card',
-  imports: [CommonModule],
+  imports: [CommonModule, NgIf],
   template: `
   <div class="card-glass">
     <div class="d-flex justify-content-between align-items-start mb-2">
