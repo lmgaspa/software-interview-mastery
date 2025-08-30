@@ -25,6 +25,7 @@ export class QuestionLoaderService {
 
     // Arquivo único por tópico
     git:            'assets/questions/git.json',
+    sql:            'assets/questions/sql.json',
     nosql:          'assets/questions/nosql.json',
     designPatterns: 'assets/questions/design-patterns.json',
     dockerK8s:      'assets/questions/docker-k8s.json',

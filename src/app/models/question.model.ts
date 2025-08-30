@@ -6,6 +6,7 @@ export type Topic =
   | 'java'
   | 'spring'
   | 'git'
+  | 'sql'
   | 'nosql'
   | 'designPatterns'
   | 'dockerK8s'

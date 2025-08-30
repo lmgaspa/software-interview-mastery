@@ -68,6 +68,7 @@ export class SettingsPage {
     'java',
     'spring',
     'git',
+    'sql',
     'nosql',
     'designPatterns',
     'dockerK8s',
@@ -78,6 +79,7 @@ export class SettingsPage {
   // ✅ tópicos com arquivo único (no seu service)
   private singleFileTopics = new Set<Topic>([
     'git',
+    'sql',
     'nosql',
     'designPatterns',
     'dockerK8s',
@@ -98,6 +100,7 @@ export class SettingsPage {
       case 'java': return 'Java';
       case 'spring': return 'Spring';
       case 'git': return 'Git';
+      case 'sql': return 'SQL';
       case 'nosql': return 'NoSQL';
       case 'designPatterns': return 'Design Patterns';
       case 'dockerK8s': return 'Docker & Kubernetes';
