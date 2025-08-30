@@ -3,7 +3,10 @@
    ======================= */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html, body { height: 100%; font-family: 'Segoe UI', Roboto, sans-serif; }
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
 
 :root {
   --grad-start: #ff4b2b; /* vermelho */
@@ -46,19 +49,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* O .text-muted do Bootstrap é escuro; reforce contraste em fundo escuro */
-.text-muted { color: rgba(255,255,255,.85) !important; }
+.text-muted {
+  color: rgba(255,255,255,.85) !important;
+}
 
 /* =======================
    Links & Buttons
    ======================= */
-a, button { transition: all .25s ease; }
-a:hover, button:hover { transform: translateY(-2px); opacity: .95; }
+a, button {
+  transition: all .25s ease;
+}
+a:hover, button:hover {
+  transform: translateY(-2px);
+  opacity: .95;
+}
 
-/* Botões: aparência consistente mesmo se for <a class="btn"> */
+/* Botões consistentes mesmo se for <a class="btn"> */
 a.btn { text-decoration: none !important; }
 .btn { border-radius: 999px; }
 
-/* Primário com gradiente */
+/* Botão primário com gradiente */
 .btn-primary {
   background: linear-gradient(90deg, #ff4b2b, #ff416c) !important;
   border: 0 !important;
@@ -71,17 +81,49 @@ a.btn { text-decoration: none !important; }
   filter: brightness(1.03);
 }
 
-/* Outline claro para fundos escuros */
+/* Outline claro p/ fundos escuros */
 .btn-outline-light {
-  color: #fff !important;
+  color: #ffffff !important;
   border: 2px solid rgba(255,255,255,.85) !important;
   background: transparent !important;
   padding: .6rem 1.5rem;
 }
-.btn-outline-light:hover { background: rgba(255,255,255,.12) !important; }
+.btn-outline-light:hover {
+  background: rgba(255,255,255,.12) !important;
+}
+
+/* Ghost button custom */
+.btn-ghost-light {
+  color: #fff !important;
+  border: 2px solid rgba(255,255,255,.65) !important;
+  background: transparent !important;
+  padding: .55rem 1.25rem;
+  border-radius: 999px;
+  transition: all .2s ease;
+}
+.btn-ghost-light:hover:not(:disabled) {
+  background: rgba(255,255,255,.12) !important;
+}
+.btn-ghost-light:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Botão com ícone (seta, menu, etc.) */
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+  border-radius: 999px;
+  padding: .45rem .75rem;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(0,0,0,.15);
+}
 
 /* Foco acessível */
-.btn:focus-visible, a:focus-visible {
+.btn:focus-visible,
+a:focus-visible {
   outline: 3px solid rgba(255,255,255,.6);
   outline-offset: 2px;
 }
@@ -103,14 +145,19 @@ a.btn { text-decoration: none !important; }
 /* =======================
    Layout helpers
    ======================= */
-/* Use esta ao invés de sobrescrever .container do Bootstrap */
 .page-container {
   padding: 2rem;
   max-width: 960px;
   margin: 0 auto;
 }
 
-/* Espaçamentos utilitários */
+.page-header {
+  padding: .25rem .5rem;
+}
+
+/* =======================
+   Utility spacings
+   ======================= */
 .stack-sm > * + * { margin-top: .5rem; }
 .stack-md > * + * { margin-top: 1rem; }
 .stack-lg > * + * { margin-top: 1.5rem; }

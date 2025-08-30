@@ -1,0 +1,752 @@
+ [
+ {
+    "id": "java-i-001",
+    "version": "java-8",
+    "topic": "collections-equality",
+    "difficulty": "intermediate",
+    "prompt": "For an element to work correctly in a HashSet, what is required?",
+    "options": [
+      "Override only toString()",
+      "Override equals() and hashCode() consistently",
+      "Declare the class as final",
+      "Implement Comparable always"
+    ],
+    "answerIndex": 1,
+    "explanation": "HashSet relies on hashCode() for bucket placement and equals() for equality checks."
+  },
+  {
+    "id": "java-i-002",
+    "version": "java-8",
+    "topic": "collections-ordering",
+    "difficulty": "intermediate",
+    "prompt": "Which collection maintains natural ordering and disallows duplicates?",
+    "options": [
+      "TreeSet",
+      "LinkedHashMap",
+      "PriorityQueue",
+      "ArrayDeque"
+    ],
+    "answerIndex": 0,
+    "explanation": "TreeSet keeps elements ordered and does not allow duplicates."
+  },
+  {
+    "id": "java-i-003",
+    "version": "java-8",
+    "topic": "generics-wildcards",
+    "difficulty": "intermediate",
+    "prompt": "When should you use '? extends T' in Generics?",
+    "options": [
+      "When reading values of type T (covariance)",
+      "When adding elements of type T",
+      "When mixing unrelated types",
+      "When avoiding runtime type checks"
+    ],
+    "answerIndex": 0,
+    "explanation": "PECS principle: Producer Extends, Consumer Super."
+  },
+  {
+    "id": "java-i-004",
+    "version": "java-8",
+    "topic": "generics-wildcards",
+    "difficulty": "intermediate",
+    "prompt": "What does '? super T' usually allow?",
+    "options": [
+      "Safe reading of T",
+      "Writing elements of type T (contravariance)",
+      "Instantiating T via reflection",
+      "Disabling type erasure"
+    ],
+    "answerIndex": 1,
+    "explanation": "'super' is used for consumers — you can safely add Ts."
+  },
+  {
+    "id": "java-i-005",
+    "version": "java-8",
+    "topic": "streams-collectors",
+    "difficulty": "intermediate",
+    "prompt": "Which Collector groups elements by a classification function?",
+    "options": [
+      "Collectors.partitioningBy",
+      "Collectors.mapping",
+      "Collectors.groupingBy",
+      "Collectors.toConcurrentMap"
+    ],
+    "answerIndex": 2,
+    "explanation": "groupingBy(classifier) produces a Map<K, List<V>>."
+  },
+  {
+    "id": "java-i-006",
+    "version": "java-8",
+    "topic": "streams-parallel",
+    "difficulty": "intermediate",
+    "prompt": "When is using parallelStream() safe and potentially beneficial?",
+    "options": [
+      "When pipelines have heavy side effects",
+      "When processing CPU-bound independent tasks over large datasets",
+      "When performing blocking I/O",
+      "Always when multiple cores exist"
+    ],
+    "answerIndex": 1,
+    "explanation": "Parallel streams help for CPU-intensive, independent tasks with large data sets."
+  },
+  {
+    "id": "java-i-007",
+    "version": "java-8",
+    "topic": "optional-usage",
+    "difficulty": "intermediate",
+    "prompt": "What is the recommended practice with Optional?",
+    "options": [
+      "Use Optional in JPA entity fields",
+      "Return Optional in getters",
+      "Use Optional as parameters",
+      "Use Optional mainly as return types"
+    ],
+    "answerIndex": 3,
+    "explanation": "Optional was designed for method returns, not fields or parameters."
+  },
+  {
+    "id": "java-i-008",
+    "version": "java-8",
+    "topic": "concurrency-executor",
+    "difficulty": "intermediate",
+    "prompt": "What is the advantage of ExecutorService over creating Threads manually?",
+    "options": [
+      "It avoids using heap memory",
+      "It manages pools, task queues, and lifecycle",
+      "It is always faster",
+      "It eliminates the need for synchronization"
+    ],
+    "answerIndex": 1,
+    "explanation": "ExecutorService abstracts thread pooling, scheduling, and graceful shutdown."
+  },
+  {
+    "id": "java-i-009",
+    "version": "java-8",
+    "topic": "concurrency-future",
+    "difficulty": "intermediate",
+    "prompt": "Which method blocks until a Future completes and returns the result?",
+    "options": [
+      "join()",
+      "await()",
+      "get()",
+      "result()"
+    ],
+    "answerIndex": 2,
+    "explanation": "Future.get() blocks until completion or exception."
+  },
+  {
+    "id": "java-i-010",
+    "version": "java-8",
+    "topic": "concurrency-completablefuture",
+    "difficulty": "intermediate",
+    "prompt": "Which CompletableFuture method flattens asynchronous composition?",
+    "options": [
+      "thenAccept",
+      "thenApply",
+      "thenCompose",
+      "whenComplete"
+    ],
+    "answerIndex": 2,
+    "explanation": "thenCompose avoids nested Future<Future<T>>."
+  },
+  {
+    "id": "java-i-011",
+    "version": "java-8",
+    "topic": "locks-synchronization",
+    "difficulty": "intermediate",
+    "prompt": "What is an advantage of ReentrantLock over synchronized?",
+    "options": [
+      "It skips memory visibility",
+      "It supports conditions and timed locking",
+      "It is always faster",
+      "It is deadlock-free"
+    ],
+    "answerIndex": 1,
+    "explanation": "ReentrantLock supports tryLock(), Conditions, and more control."
+  },
+  {
+    "id": "java-i-012",
+    "version": "java-8",
+    "topic": "memory-model",
+    "difficulty": "intermediate",
+    "prompt": "In the Java Memory Model, what does 'happens-before' mean?",
+    "options": [
+      "Order of compilation",
+      "Visibility and ordering guarantee between actions",
+      "Thread scheduling priority",
+      "Sequence of method calls"
+    ],
+    "answerIndex": 1,
+    "explanation": "Happens-before defines visibility and ordering between threads."
+  },
+  {
+    "id": "java-i-013",
+    "version": "java-8",
+    "topic": "nio2-path-files",
+    "difficulty": "intermediate",
+    "prompt": "Which class provides utility methods for file operations in NIO.2?",
+    "options": [
+      "java.io.FileUtils",
+      "java.nio.file.Files",
+      "java.io.Files",
+      "java.nio.PathUtils"
+    ],
+    "answerIndex": 1,
+    "explanation": "The Files class provides copy, move, readAllLines, walk, etc."
+  },
+  {
+    "id": "java-i-014",
+    "version": "java-8",
+    "topic": "annotations-retention",
+    "difficulty": "intermediate",
+    "prompt": "Which RetentionPolicy keeps annotations available at runtime?",
+    "options": [
+      "SOURCE",
+      "CLASS",
+      "RUNTIME",
+      "BINARY"
+    ],
+    "answerIndex": 2,
+    "explanation": "RUNTIME retention allows reflection access."
+  },
+  {
+    "id": "java-i-015",
+    "version": "java-8",
+    "topic": "reflection",
+    "difficulty": "intermediate",
+    "prompt": "What is a common risk of using reflection?",
+    "options": [
+      "It generates invalid bytecode",
+      "It breaks encapsulation and can be slow",
+      "It cannot handle exceptions",
+      "It conflicts with JIT compilation"
+    ],
+    "answerIndex": 1,
+    "explanation": "Reflection is slower and can bypass encapsulation."
+  },
+  {
+    "id": "java-i-016",
+    "version": "java-9",
+    "topic": "modules-jpms",
+    "difficulty": "intermediate",
+    "prompt": "In JPMS, what is the difference between 'exports' and 'opens'?",
+    "options": [
+      "'exports' exposes for reflection; 'opens' for compilation",
+      "'exports' exposes at compile/run time; 'opens' only for runtime reflection",
+      "They are identical",
+      "'opens' blocks access by default"
+    ],
+    "answerIndex": 1,
+    "explanation": "exports is for APIs; opens allows runtime reflection (used by frameworks)."
+  },
+  {
+    "id": "java-i-017",
+    "version": "java-9",
+    "topic": "immutable-collections",
+    "difficulty": "intermediate",
+    "prompt": "Which factory method creates concise immutable lists in Java 9+?",
+    "options": [
+      "Collections.fixedList(...)",
+      "List.of(...)",
+      "Arrays.immutableList(...)",
+      "List.unmodifiable(...)"
+    ],
+    "answerIndex": 1,
+    "explanation": "List.of / Set.of / Map.of create concise immutable collections."
+  },
+  {
+    "id": "java-i-018",
+    "version": "java-10",
+    "topic": "var-inference",
+    "difficulty": "intermediate",
+    "prompt": "What is a limitation of 'var' in Java 10?",
+    "options": [
+      "It cannot be used in loops",
+      "It cannot be used for class fields",
+      "It cannot infer generics",
+      "It requires @Var annotation"
+    ],
+    "answerIndex": 1,
+    "explanation": "'var' can only be used for local variables, not fields, params, or returns."
+  },
+  {
+    "id": "java-i-019",
+    "version": "java-11",
+    "topic": "httpclient-advanced",
+    "difficulty": "intermediate",
+    "prompt": "Which HttpClient feature in Java 11 supports async programming?",
+    "options": [
+      "Blocking Futures",
+      "CompletableFuture with sendAsync",
+      "Direct NIO sockets",
+      "Non-configurable executors"
+    ],
+    "answerIndex": 1,
+    "explanation": "sendAsync returns CompletableFuture<HttpResponse<T>>."
+  },
+  {
+    "id": "java-i-020",
+    "version": "java-11",
+    "topic": "strings-api",
+    "difficulty": "intermediate",
+    "prompt": "Which combination of String methods was added in Java 11?",
+    "options": [
+      "strip(), isBlank(), lines()",
+      "trimAll(), isEmptyOrBlank()",
+      "splitLines(), chop()",
+      "padLeft(), padRight()"
+    ],
+    "answerIndex": 0,
+    "explanation": "Java 11 added strip(), isBlank(), and lines()."
+  },
+  {
+    "id": "java-i-021",
+    "version": "java-12",
+    "topic": "switch-expressions",
+    "difficulty": "intermediate",
+    "prompt": "Which new feature of switch was introduced in Java 12 as preview?",
+    "options": [
+      "Multiple case fall-through",
+      "Switch expressions returning values",
+      "Pattern matching inside switch",
+      "Parallel switch execution"
+    ],
+    "answerIndex": 1,
+    "explanation": "Java 12 added switch expressions as a preview feature."
+  },
+  {
+    "id": "java-i-022",
+    "version": "java-13",
+    "topic": "text-blocks",
+    "difficulty": "intermediate",
+    "prompt": "What was the purpose of text blocks introduced as preview in Java 13?",
+    "options": [
+      "Inline regex compilation",
+      "Simpler multiline string literals",
+      "Automatic String formatting",
+      "XML-only string parsing"
+    ],
+    "answerIndex": 1,
+    "explanation": "Text blocks allow easier definition of multiline string literals."
+  },
+  {
+    "id": "java-i-023",
+    "version": "java-14",
+    "topic": "records",
+    "difficulty": "intermediate",
+    "prompt": "Which problem do records primarily solve?",
+    "options": [
+      "Verbose data-carrier classes",
+      "Thread safety in synchronized code",
+      "Garbage collection pauses",
+      "Overloaded constructor ambiguity"
+    ],
+    "answerIndex": 0,
+    "explanation": "Records provide a compact syntax for immutable data classes."
+  },
+  {
+    "id": "java-i-024",
+    "version": "java-14",
+    "topic": "npe-diagnostics",
+    "difficulty": "intermediate",
+    "prompt": "What improvement was made to NullPointerException messages in Java 14?",
+    "options": [
+      "They automatically fix nulls",
+      "They indicate which variable was null",
+      "They disable NPEs at runtime",
+      "They convert nulls to Optionals"
+    ],
+    "answerIndex": 1,
+    "explanation": "Helpful NPE messages show which variable caused the null dereference."
+  },
+  {
+    "id": "java-i-025",
+    "version": "java-15",
+    "topic": "sealed-classes-preview",
+    "difficulty": "intermediate",
+    "prompt": "What is the purpose of sealed classes introduced in Java 15 (preview)?",
+    "options": [
+      "To forbid reflection",
+      "To restrict which classes can extend or implement them",
+      "To improve serialization performance",
+      "To simplify class loading"
+    ],
+    "answerIndex": 1,
+    "explanation": "Sealed classes restrict inheritance to a known set of subclasses."
+  },
+  {
+    "id": "java-i-026",
+    "version": "java-16",
+    "topic": "pattern-matching-instanceof",
+    "difficulty": "intermediate",
+    "prompt": "What benefit does pattern matching for instanceof provide?",
+    "options": [
+      "Automatically generates equals()",
+      "Avoids explicit casting after instanceof check",
+      "Improves garbage collection",
+      "Optimizes stream operations"
+    ],
+    "answerIndex": 1,
+    "explanation": "Pattern matching removes the need for redundant casts."
+  },
+  {
+    "id": "java-i-027",
+    "version": "java-16",
+    "topic": "records",
+    "difficulty": "intermediate",
+    "prompt": "Which of these is TRUE about Java records?",
+    "options": [
+      "They are always mutable",
+      "They automatically generate equals, hashCode, and toString",
+      "They cannot implement interfaces",
+      "They replace annotations"
+    ],
+    "answerIndex": 1,
+    "explanation": "Records automatically generate equals, hashCode, and toString."
+  },
+  {
+    "id": "java-i-028",
+    "version": "java-17",
+    "topic": "sealed-classes",
+    "difficulty": "intermediate",
+    "prompt": "Which modifier specifies permitted subclasses of a sealed class?",
+    "options": [
+      "permits",
+      "allows",
+      "extends",
+      "restricts"
+    ],
+    "answerIndex": 0,
+    "explanation": "The 'permits' clause defines allowed subclasses of a sealed class."
+  },
+  {
+    "id": "java-i-029",
+    "version": "java-17",
+    "topic": "switch-patterns-preview",
+    "difficulty": "intermediate",
+    "prompt": "Pattern matching for switch enables which feature?",
+    "options": [
+      "Switching on generics",
+      "Switch cases that match by type and with guards",
+      "Parallel switch execution",
+      "Implicit conversions in switch"
+    ],
+    "answerIndex": 1,
+    "explanation": "Switch pattern matching allows type patterns with optional 'when' guards."
+  },
+  {
+    "id": "java-i-030",
+    "version": "java-17",
+    "topic": "jep356-pseudo-random",
+    "difficulty": "intermediate",
+    "prompt": "Which improvement was added to random number generators in Java 17?",
+    "options": [
+      "SecureRandom becomes default",
+      "A new RandomGenerator interface with multiple algorithms",
+      "Random numbers are now hardware-based",
+      "Deprecated Math.random()"
+    ],
+    "answerIndex": 1,
+    "explanation": "Java 17 introduced RandomGenerator and pluggable algorithms."
+  },
+  {
+    "id": "java-i-031",
+    "version": "java-18",
+    "topic": "simple-web-server",
+    "difficulty": "intermediate",
+    "prompt": "What is the purpose of the jwebserver tool introduced in Java 18?",
+    "options": [
+      "Serve static files for development/testing",
+      "Provide full enterprise hosting",
+      "Compile JSP pages",
+      "Act as a reverse proxy"
+    ],
+    "answerIndex": 0,
+    "explanation": "The jwebserver tool serves static content for quick testing."
+  },
+  {
+    "id": "java-i-032",
+    "version": "java-19",
+    "topic": "virtual-threads",
+    "difficulty": "intermediate",
+    "prompt": "Virtual Threads introduced as preview in Java 19 are part of which project?",
+    "options": [
+      "Amber",
+      "Panama",
+      "Loom",
+      "Valhalla"
+    ],
+    "answerIndex": 2,
+    "explanation": "Project Loom introduced lightweight Virtual Threads."
+  },
+  {
+    "id": "java-i-033",
+    "version": "java-19",
+    "topic": "record-patterns",
+    "difficulty": "intermediate",
+    "prompt": "Record patterns (preview) allow developers to:",
+    "options": [
+      "Define mutable records",
+      "Deconstruct record components in patterns",
+      "Use records as annotations",
+      "Compile records into bytecode faster"
+    ],
+    "answerIndex": 1,
+    "explanation": "Record patterns support destructuring of record components."
+  },
+  {
+    "id": "java-i-034",
+    "version": "java-20",
+    "topic": "scoped-values",
+    "difficulty": "intermediate",
+    "prompt": "What is the purpose of Scoped Values in Java 20?",
+    "options": [
+      "Provide global mutable state",
+      "Share immutable data across threads like thread-local",
+      "Serialize data faster",
+      "Replace volatile variables"
+    ],
+    "answerIndex": 1,
+    "explanation": "Scoped values provide inheritable immutable data across threads."
+  },
+  {
+    "id": "java-i-035",
+    "version": "java-21",
+    "topic": "virtual-threads",
+    "difficulty": "intermediate",
+    "prompt": "What was the key change to Virtual Threads in Java 21?",
+    "options": [
+      "They were removed",
+      "They became a permanent standard feature",
+      "They require external libraries",
+      "They only work on Windows"
+    ],
+    "answerIndex": 1,
+    "explanation": "Virtual Threads became standard in Java 21."
+  },
+  {
+    "id": "java-i-036",
+    "version": "java-21",
+    "topic": "sequenced-collections",
+    "difficulty": "intermediate",
+    "prompt": "Sequenced Collections API introduced in Java 21 provides:",
+    "options": [
+      "Thread-safe maps",
+      "Consistent access to first and last elements",
+      "Immutable collections only",
+      "Parallel collection processing"
+    ],
+    "answerIndex": 1,
+    "explanation": "Sequenced Collections unify first/last element access across collections."
+  },
+  {
+    "id": "java-i-037",
+    "version": "java-21",
+    "topic": "structured-concurrency",
+    "difficulty": "intermediate",
+    "prompt": "What problem does Structured Concurrency address?",
+    "options": [
+      "Deadlock detection",
+      "Managing lifecycles of concurrent tasks as a unit",
+      "Improving GC collection times",
+      "Enhancing stream API parallelism"
+    ],
+    "answerIndex": 1,
+    "explanation": "Structured Concurrency treats concurrent tasks as a single unit for lifecycle control."
+  },
+  {
+    "id": "java-i-038",
+    "version": "java-21",
+    "topic": "pattern-switch",
+    "difficulty": "intermediate",
+    "prompt": "Pattern matching for switch allows what?",
+    "options": [
+      "Guards and type patterns in cases",
+      "Only primitive switches",
+      "Switches over annotations",
+      "Parallel switch cases"
+    ],
+    "answerIndex": 0,
+    "explanation": "Pattern switch allows matching by type with guards."
+  },
+  {
+    "id": "java-i-039",
+    "version": "java-22",
+    "topic": "unnamed-classes",
+    "difficulty": "intermediate",
+    "prompt": "What is the purpose of unnamed classes in Java 22 (preview)?",
+    "options": [
+      "Support for multiple inheritance",
+      "Simplify small programs with implicit class definitions",
+      "Remove modules",
+      "Replace packages"
+    ],
+    "answerIndex": 1,
+    "explanation": "Unnamed classes reduce boilerplate for small Java programs."
+  },
+  {
+    "id": "java-i-040",
+    "version": "java-22",
+    "topic": "string-templates",
+    "difficulty": "intermediate",
+    "prompt": "String Templates (preview) introduced in Java 21/22 provide:",
+    "options": [
+      "Safer and more flexible string interpolation",
+      "Inline regex compilation",
+      "Automatic toString generation",
+      "Replacement for text blocks"
+    ],
+    "answerIndex": 0,
+    "explanation": "String Templates provide secure and extensible interpolation with processors."
+  },
+  {
+    "id": "java-i-041",
+    "version": "java-22",
+    "topic": "ffm-api",
+    "difficulty": "intermediate",
+    "prompt": "The Foreign Function and Memory (FFM) API enables:",
+    "options": [
+      "Java-to-C interop without JNI",
+      "Hot code replacement",
+      "Async streams",
+      "Java serialization improvements"
+    ],
+    "answerIndex": 0,
+    "explanation": "FFM API allows direct interop with native memory and functions."
+  },
+  {
+    "id": "java-i-042",
+    "version": "java-23",
+    "topic": "ffm-api-standard",
+    "difficulty": "intermediate",
+    "prompt": "What is the status of the FFM API in Java 23?",
+    "options": [
+      "Incubator feature",
+      "Removed",
+      "Standard feature",
+      "Optional external module"
+    ],
+    "answerIndex": 2,
+    "explanation": "FFM API graduated to standard status in Java 23."
+  },
+  {
+    "id": "java-i-043",
+    "version": "java-23",
+    "topic": "vector-api",
+    "difficulty": "intermediate",
+    "prompt": "The Vector API in Java 23 is primarily designed for:",
+    "options": [
+      "SIMD computations for performance",
+      "GPU rendering",
+      "Database queries",
+      "Parallel streams"
+    ],
+    "answerIndex": 0,
+    "explanation": "Vector API enables SIMD computations on CPUs."
+  },
+  {
+    "id": "java-i-044",
+    "version": "java-23",
+    "topic": "pattern-switch-refinements",
+    "difficulty": "intermediate",
+    "prompt": "What happened to pattern switch in Java 23?",
+    "options": [
+      "It was deprecated",
+      "It received refinements and became more stable",
+      "It was replaced by sealed interfaces",
+      "It was removed entirely"
+    ],
+    "answerIndex": 1,
+    "explanation": "Java 23 refined and stabilized pattern matching for switch."
+  },
+  {
+    "id": "java-i-045",
+    "version": "java-24",
+    "topic": "records-enhancements",
+    "difficulty": "intermediate",
+    "prompt": "Enhancements to records in Java 24 mainly focus on:",
+    "options": [
+      "Mutable fields support",
+      "Improved pattern matching and destructuring",
+      "Adding inheritance to records",
+      "Integrating records with GC"
+    ],
+    "answerIndex": 1,
+    "explanation": "Java 24 enhancements integrate records better with pattern matching."
+  },
+  {
+    "id": "java-i-046",
+    "version": "java-24",
+    "topic": "loom-refinements",
+    "difficulty": "intermediate",
+    "prompt": "Which refinement was made to Project Loom features in Java 24?",
+    "options": [
+      "Removal of Virtual Threads",
+      "Improved Structured Concurrency APIs",
+      "Replacement of ForkJoinPool",
+      "Blocking I/O removed"
+    ],
+    "answerIndex": 1,
+    "explanation": "Java 24 continues refining Loom APIs like Structured Concurrency."
+  },
+  {
+    "id": "java-i-047",
+    "version": "java-24",
+    "topic": "string-templates",
+    "difficulty": "intermediate",
+    "prompt": "What is a primary goal of string templates refinements in Java 24?",
+    "options": [
+      "Performance optimizations and stability",
+      "Deprecating text blocks",
+      "Allowing templates in annotations",
+      "Integrating templates into GC"
+    ],
+    "answerIndex": 0,
+    "explanation": "Java 24 focused on stabilizing and optimizing string templates."
+  },
+  {
+    "id": "java-i-048",
+    "version": "java-8",
+    "topic": "threads",
+    "difficulty": "intermediate",
+    "prompt": "Which interface is implemented to define a task executed by a thread?",
+    "options": [
+      "Callable<T>",
+      "Runnable",
+      "Executor",
+      "Future"
+    ],
+    "answerIndex": 1,
+    "explanation": "Runnable represents a task with no return value."
+  },
+  {
+    "id": "java-i-049",
+    "version": "java-8",
+    "topic": "threads",
+    "difficulty": "intermediate",
+    "prompt": "What does Callable<T> provide that Runnable does not?",
+    "options": [
+      "Ability to stop threads",
+      "Return a value and throw checked exceptions",
+      "Faster execution",
+      "Parallel streams integration"
+    ],
+    "answerIndex": 1,
+    "explanation": "Callable allows returning results and checked exceptions."
+  },
+  {
+    "id": "java-i-050",
+    "version": "java-8",
+    "topic": "synchronization",
+    "difficulty": "intermediate",
+    "prompt": "What happens if two threads call a synchronized method on the same object?",
+    "options": [
+      "Both run concurrently",
+      "One waits until the other finishes",
+      "The JVM crashes",
+      "They execute in reverse order"
+    ],
+    "answerIndex": 1,
+    "explanation": "The intrinsic lock ensures only one thread executes the synchronized block at a time."
+  }
+]

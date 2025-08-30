@@ -21,5 +21,397 @@
     "options": ["@RestController", "@Service", "@Repository", "@ControllerAdvice"],
     "answerIndex": 0,
     "explanation": "@RestController combines @Controller and @ResponseBody for REST endpoints."
+  },
+  {
+    "id": "spring-b-003",
+    "topic": "spring-core",
+    "difficulty": "basic",
+    "prompt": "What is the ApplicationContext in Spring?",
+    "options": [
+      "Central interface for accessing the Spring container.",
+      "Database configuration tool.",
+      "A security filter chain.",
+      "A Spring Boot starter dependency."
+    ],
+    "answerIndex": 0,
+    "explanation": "ApplicationContext is the main container interface providing configuration and bean management."
+  },
+  {
+    "id": "spring-b-004",
+    "topic": "spring-core",
+    "difficulty": "basic",
+    "prompt": "What does @Component do?",
+    "options": [
+      "Marks a class as a Spring-managed bean.",
+      "Marks a method as transactional.",
+      "Creates a REST endpoint.",
+      "Enables caching for a method."
+    ],
+    "answerIndex": 0,
+    "explanation": "@Component is a generic stereotype annotation for any Spring-managed bean."
+  },
+  {
+    "id": "spring-b-005",
+    "topic": "spring-di",
+    "difficulty": "basic",
+    "prompt": "What is dependency injection in Spring?",
+    "options": [
+      "Providing an object’s dependencies externally instead of creating them inside.",
+      "The process of encrypting bean definitions.",
+      "Compiling beans into bytecode.",
+      "A mechanism for scheduling tasks."
+    ],
+    "answerIndex": 0,
+    "explanation": "Dependency Injection is a design pattern used by Spring to manage bean lifecycles and reduce coupling."
+  },
+  {
+    "id": "spring-b-006",
+    "topic": "spring-annotations",
+    "difficulty": "basic",
+    "prompt": "What is the difference between @Controller and @RestController?",
+    "options": [
+      "@Controller is used for web MVC views, @RestController is for REST APIs.",
+      "@Controller is only for tests, @RestController is for production.",
+      "@Controller autowires beans, @RestController registers services.",
+      "They are completely identical."
+    ],
+    "answerIndex": 0,
+    "explanation": "@RestController adds @ResponseBody by default, making it more suitable for REST APIs."
+  },
+  {
+    "id": "spring-b-007",
+    "topic": "spring-boot",
+    "difficulty": "basic",
+    "prompt": "What does the @SpringBootApplication annotation include?",
+    "options": [
+      "@Configuration, @EnableAutoConfiguration, and @ComponentScan",
+      "@RestController and @RequestMapping",
+      "@Repository and @Service",
+      "@Bean and @Primary"
+    ],
+    "answerIndex": 0,
+    "explanation": "@SpringBootApplication is a meta-annotation that bundles three essential annotations."
+  },
+  {
+    "id": "spring-b-008",
+    "topic": "spring-boot",
+    "difficulty": "basic",
+    "prompt": "Where is application configuration typically stored in Spring Boot?",
+    "options": [
+      "application.properties or application.yml",
+      "beans.xml",
+      "pom.xml",
+      "AppConfig.java"
+    ],
+    "answerIndex": 0,
+    "explanation": "Spring Boot loads configuration from application.properties or application.yml files by default."
+  },
+  {
+    "id": "spring-b-009",
+    "topic": "spring-mvc",
+    "difficulty": "basic",
+    "prompt": "Which annotation maps HTTP requests to handler methods?",
+    "options": [
+      "@RequestMapping",
+      "@Autowired",
+      "@Configuration",
+      "@Entity"
+    ],
+    "answerIndex": 0,
+    "explanation": "@RequestMapping maps web requests to specific controller methods."
+  },
+  {
+    "id": "spring-b-010",
+    "topic": "spring-mvc",
+    "difficulty": "basic",
+    "prompt": "What does @PathVariable do in Spring MVC?",
+    "options": [
+      "Binds a URI template variable to a method parameter.",
+      "Injects configuration properties.",
+      "Validates user input.",
+      "Creates a new Spring bean."
+    ],
+    "answerIndex": 0,
+    "explanation": "@PathVariable extracts values from the URI and binds them to controller method parameters."
+  },
+  {
+    "id": "spring-b-011",
+    "topic": "spring-data",
+    "difficulty": "basic",
+    "prompt": "Which interface is commonly extended for Spring Data JPA repositories?",
+    "options": [
+      "JpaRepository",
+      "CrudManager",
+      "DataAccess",
+      "EntityRepository"
+    ],
+    "answerIndex": 0,
+    "explanation": "JpaRepository provides CRUD operations and JPA-specific methods."
+  },
+  {
+    "id": "spring-b-012",
+    "topic": "spring-data",
+    "difficulty": "basic",
+    "prompt": "What does the @Entity annotation do?",
+    "options": [
+      "Marks a class as a JPA entity to be mapped to a database table.",
+      "Creates a new Spring service.",
+      "Maps a class to a REST endpoint.",
+      "Declares a bean inside Spring context."
+    ],
+    "answerIndex": 0,
+    "explanation": "@Entity indicates that a class is a JPA entity mapped to a database table."
+  },
+  {
+    "id": "spring-b-013",
+    "topic": "spring-config",
+    "difficulty": "basic",
+    "prompt": "What does the @Configuration annotation indicate?",
+    "options": [
+      "That the class has @Bean methods for Spring container.",
+      "That the class is a REST endpoint.",
+      "That the class is a database entity.",
+      "That the class should be ignored by Spring."
+    ],
+    "answerIndex": 0,
+    "explanation": "@Configuration marks a class as a source of Spring bean definitions."
+  },
+  {
+    "id": "spring-b-014",
+    "topic": "spring-config",
+    "difficulty": "basic",
+    "prompt": "How are external properties injected into Spring beans?",
+    "options": [
+      "Using @Value or @ConfigurationProperties",
+      "Using @Autowired",
+      "Using @InjectMocks",
+      "Using @Qualifier"
+    ],
+    "answerIndex": 0,
+    "explanation": "External properties can be injected with @Value or bound as objects using @ConfigurationProperties."
+  },
+  {
+    "id": "spring-b-015",
+    "topic": "spring-security",
+    "difficulty": "basic",
+    "prompt": "What does Spring Security primarily provide?",
+    "options": [
+      "Authentication and Authorization",
+      "Database migrations",
+      "Bean lifecycle management",
+      "REST endpoint mapping"
+    ],
+    "answerIndex": 0,
+    "explanation": "Spring Security handles authentication and authorization for applications."
+  },
+  {
+    "id": "spring-b-016",
+    "topic": "spring-security",
+    "difficulty": "basic",
+    "prompt": "Which class configures Spring Security in modern Spring Boot?",
+    "options": [
+      "SecurityFilterChain with @Bean",
+      "WebSecurityConfigurerAdapter",
+      "SecurityContextHolder",
+      "AuthenticationProvider"
+    ],
+    "answerIndex": 0,
+    "explanation": "Since Spring Security 5.7, SecurityFilterChain with @Bean is the recommended approach."
+  },
+  {
+    "id": "spring-b-017",
+    "topic": "spring-di",
+    "difficulty": "basic",
+    "prompt": "What does the @Qualifier annotation do?",
+    "options": [
+      "Specifies which bean to inject when multiple candidates exist.",
+      "Marks a method as transactional.",
+      "Configures a REST endpoint.",
+      "Defines the bean lifecycle."
+    ],
+    "answerIndex": 0,
+    "explanation": "@Qualifier resolves conflicts when more than one bean of the same type exists."
+  },
+  {
+    "id": "spring-b-018",
+    "topic": "spring-annotations",
+    "difficulty": "basic",
+    "prompt": "What does @Transactional do?",
+    "options": [
+      "Wraps a method or class in a database transaction.",
+      "Creates a singleton bean.",
+      "Marks a REST controller.",
+      "Starts the Spring Boot context."
+    ],
+    "answerIndex": 0,
+    "explanation": "@Transactional provides declarative transaction management for methods or classes."
+  },
+  {
+    "id": "spring-b-019",
+    "topic": "spring-mvc",
+    "difficulty": "basic",
+    "prompt": "Which annotation binds request body JSON to a method parameter?",
+    "options": [
+      "@RequestBody",
+      "@PathVariable",
+      "@Autowired",
+      "@ModelAttribute"
+    ],
+    "answerIndex": 0,
+    "explanation": "@RequestBody maps the HTTP request body to a method parameter."
+  },
+  {
+    "id": "spring-b-020",
+    "topic": "spring-mvc",
+    "difficulty": "basic",
+    "prompt": "What does @ResponseBody do?",
+    "options": [
+      "Indicates that a method’s return value should be bound to the web response body.",
+      "Marks a bean for autowiring.",
+      "Configures database connections.",
+      "Specifies the primary bean."
+    ],
+    "answerIndex": 0,
+    "explanation": "@ResponseBody tells Spring to return the object directly as HTTP response."
+  },
+  {
+    "id": "spring-b-021",
+    "topic": "spring-core",
+    "difficulty": "basic",
+    "prompt": "What is the default scope of a Spring bean?",
+    "options": [
+      "singleton",
+      "prototype",
+      "request",
+      "session"
+    ],
+    "answerIndex": 0,
+    "explanation": "By default, Spring beans are singleton-scoped."
+  },
+  {
+    "id": "spring-b-022",
+    "topic": "spring-data",
+    "difficulty": "basic",
+    "prompt": "What does @Repository do?",
+    "options": [
+      "Marks a class as a DAO component.",
+      "Defines a REST endpoint.",
+      "Configures security filters.",
+      "Starts the Spring Boot application."
+    ],
+    "answerIndex": 0,
+    "explanation": "@Repository is a stereotype annotation indicating persistence layer components."
+  },
+  {
+    "id": "spring-b-023",
+    "topic": "spring-data",
+    "difficulty": "basic",
+    "prompt": "What is the purpose of @Id in JPA?",
+    "options": [
+      "Marks the primary key of the entity.",
+      "Marks the bean as injectable.",
+      "Configures caching.",
+      "Specifies validation constraints."
+    ],
+    "answerIndex": 0,
+    "explanation": "@Id identifies the primary key field of a JPA entity."
+  },
+  {
+    "id": "spring-b-024",
+    "topic": "spring-boot",
+    "difficulty": "basic",
+    "prompt": "What command starts a Spring Boot application packaged as a jar?",
+    "options": [
+      "java -jar myapp.jar",
+      "spring run myapp",
+      "boot myapp",
+      "mvn compile exec"
+    ],
+    "answerIndex": 0,
+    "explanation": "Spring Boot jars can be started with the command `java -jar`."
+  },
+  {
+    "id": "spring-b-025",
+    "topic": "spring-boot",
+    "difficulty": "basic",
+    "prompt": "Which annotation loads test context in Spring Boot tests?",
+    "options": [
+      "@SpringBootTest",
+      "@Test",
+      "@Context",
+      "@Configuration"
+    ],
+    "answerIndex": 0,
+    "explanation": "@SpringBootTest loads the full application context for integration testing."
+  },
+  {
+    "id": "spring-b-026",
+    "topic": "spring-annotations",
+    "difficulty": "basic",
+    "prompt": "What does @Bean do in Spring?",
+    "options": [
+      "Declares a method that returns a bean to be managed by Spring.",
+      "Marks a class as a REST controller.",
+      "Enables scheduling for methods.",
+      "Specifies a transactional boundary."
+    ],
+    "answerIndex": 0,
+    "explanation": "@Bean tells Spring to register the return value of a method as a bean."
+  },
+  {
+    "id": "spring-b-027",
+    "topic": "spring-config",
+    "difficulty": "basic",
+    "prompt": "What does application.properties configure in Spring Boot?",
+    "options": [
+      "Various settings like server port, datasource, and logging.",
+      "Only database entities.",
+      "Only REST endpoints.",
+      "Only MVC controllers."
+    ],
+    "answerIndex": 0,
+    "explanation": "application.properties allows configuration of many aspects of a Spring Boot app."
+  },
+  {
+    "id": "spring-b-028",
+    "topic": "spring-core",
+    "difficulty": "basic",
+    "prompt": "What does the @Primary annotation do?",
+    "options": [
+      "Marks a bean as the default choice when multiple beans of the same type exist.",
+      "Marks a class as REST controller.",
+      "Marks an entity as persistent.",
+      "Marks a service as transactional."
+    ],
+    "answerIndex": 0,
+    "explanation": "@Primary indicates preference in autowiring when multiple candidates exist."
+  },
+  {
+    "id": "spring-b-029",
+    "topic": "spring-security",
+    "difficulty": "basic",
+    "prompt": "What is stored in the SecurityContext?",
+    "options": [
+      "Authentication and security-related details of the current user.",
+      "All application beans.",
+      "All database connections.",
+      "Spring Boot configuration."
+    ],
+    "answerIndex": 0,
+    "explanation": "SecurityContext holds the authentication information for the current user."
+  },
+  {
+    "id": "spring-b-030",
+    "topic": "spring-mvc",
+    "difficulty": "basic",
+    "prompt": "Which annotation is used to handle exceptions in controllers globally?",
+    "options": [
+      "@ControllerAdvice",
+      "@Exception",
+      "@Catch",
+      "@ErrorHandler"
+    ],
+    "answerIndex": 0,
+    "explanation": "@ControllerAdvice allows global exception handling across multiple controllers."
   }
 ]

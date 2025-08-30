@@ -1,25 +1,537 @@
 [
   {
     "id": "java-b-001",
-    "topic": "java",
+    "version": "java-8",
+    "topic": "basics-syntax",
     "difficulty": "basic",
-    "prompt": "What is the main difference between '==' and '.equals()' in Java?",
-    "options": [
-      "'==' compares references; '.equals()' compares content by default.",
-      "Both always compare content.",
-      "'==' compares content; '.equals()' compares references.",
-      "They are interchangeable."
-    ],
-    "answerIndex": 0,
-    "explanation": "'==' compares primitive values or object references; '.equals()' (usually overridden) compares logical equality/content."
+    "prompt": "Which keyword prevents a class from being subclassed in Java?",
+    "options": ["abstract", "sealed", "final", "static"],
+    "answerIndex": 2,
+    "explanation": "A class marked as 'final' cannot be extended."
   },
   {
     "id": "java-b-002",
-    "topic": "java",
+    "version": "java-8",
+    "topic": "basics-types",
     "difficulty": "basic",
-    "prompt": "Which keyword is used for inheritance in Java?",
-    "options": ["extends", "implements", "inherits", "derive"],
+    "prompt": "What is the size of a byte in Java?",
+    "options": ["8 bits", "4 bits", "16 bits", "32 bits"],
     "answerIndex": 0,
-    "explanation": "Use 'extends' for class inheritance; 'implements' is for interfaces."
+    "explanation": "A Java byte is always 8 bits."
+  },
+  {
+    "id": "java-b-003",
+    "version": "java-8",
+    "topic": "basics-entrypoint",
+    "difficulty": "basic",
+    "prompt": "What is the standard entry point of a Java application?",
+    "options": [
+      "public static void main(String[] args)",
+      "void start()",
+      "public void main()",
+      "int main(String[] args)"
+    ],
+    "answerIndex": 0,
+    "explanation": "The JVM looks for 'public static void main(String[] args)'."
+  },
+  {
+    "id": "java-b-004",
+    "version": "java-8",
+    "topic": "oop-inheritance",
+    "difficulty": "basic",
+    "prompt": "Which keyword is used to inherit a class?",
+    "options": ["extends", "inherits", "implements", "super"],
+    "answerIndex": 0,
+    "explanation": "'extends' creates a subclass of a superclass."
+  },
+  {
+    "id": "java-b-005",
+    "version": "java-8",
+    "topic": "oop-interfaces",
+    "difficulty": "basic",
+    "prompt": "Which feature for interfaces was introduced in Java 8?",
+    "options": ["Text blocks", "Default methods", "Modules", "Records"],
+    "answerIndex": 1,
+    "explanation": "Java 8 added 'default' methods to interfaces."
+  },
+  {
+    "id": "java-b-006",
+    "version": "java-8",
+    "topic": "lambdas",
+    "difficulty": "basic",
+    "prompt": "Which feature enables concise anonymous functions?",
+    "options": ["Annotations", "Lambdas", "Modules", "Var handles"],
+    "answerIndex": 1,
+    "explanation": "Lambdas let you pass behavior as data."
+  },
+  {
+    "id": "java-b-007",
+    "version": "java-8",
+    "topic": "method-references",
+    "difficulty": "basic",
+    "prompt": "What is the correct syntax for a method reference?",
+    "options": ["Class#method()", "Class::method", "method->ref", "object.method()"],
+    "answerIndex": 1,
+    "explanation": "Method references use '::'."
+  },
+  {
+    "id": "java-b-008",
+    "version": "java-8",
+    "topic": "streams-basics",
+    "difficulty": "basic",
+    "prompt": "Which package contains the Stream API?",
+    "options": ["java.util.stream", "java.stream", "java.io.stream", "java.util.concurrent.stream"],
+    "answerIndex": 0,
+    "explanation": "Streams live in java.util.stream."
+  },
+  {
+    "id": "java-b-009",
+    "version": "java-8",
+    "topic": "streams-ops",
+    "difficulty": "basic",
+    "prompt": "Which is a terminal operation in streams?",
+    "options": ["map", "filter", "peek", "collect"],
+    "answerIndex": 3,
+    "explanation": "collect() terminates a stream pipeline."
+  },
+  {
+    "id": "java-b-010",
+    "version": "java-8",
+    "topic": "optional",
+    "difficulty": "basic",
+    "prompt": "Optional primarily helps reduce which problem?",
+    "options": ["Type erasure", "NPEs (NullPointerException)", "Deadlocks", "Runtime linking"],
+    "answerIndex": 1,
+    "explanation": "Optional models absence to avoid NPEs."
+  },
+  {
+    "id": "java-b-011",
+    "version": "java-8",
+    "topic": "datetime-api",
+    "difficulty": "basic",
+    "prompt": "Which class represents a date without time-zone?",
+    "options": ["LocalDate", "Date", "Instant", "Calendar"],
+    "answerIndex": 0,
+    "explanation": "LocalDate stores Y-M-D without time-zone."
+  },
+  {
+    "id": "java-b-012",
+    "version": "java-8",
+    "topic": "exceptions",
+    "difficulty": "basic",
+    "prompt": "What happens when dividing an int by zero?",
+    "options": ["Returns 0", "Throws ArithmeticException", "Returns Infinity", "Program compiles but JVM crashes"],
+    "answerIndex": 1,
+    "explanation": "Integer division by zero throws ArithmeticException."
+  },
+  {
+    "id": "java-b-013",
+    "version": "java-8",
+    "topic": "collections",
+    "difficulty": "basic",
+    "prompt": "Which collection does not allow duplicates?",
+    "options": ["List", "Queue", "Set", "Deque"],
+    "answerIndex": 2,
+    "explanation": "Set disallows duplicate elements."
+  },
+  {
+    "id": "java-b-014",
+    "version": "java-8",
+    "topic": "generics",
+    "difficulty": "basic",
+    "prompt": "Generics in Java are implemented using which technique?",
+    "options": ["Templates", "Type erasure", "Monomorphization", "Runtime specialization"],
+    "answerIndex": 1,
+    "explanation": "Java uses type erasure for generics."
+  },
+  {
+    "id": "java-b-015",
+    "version": "java-8",
+    "topic": "oop-polymorphism",
+    "difficulty": "basic",
+    "prompt": "Polymorphism allows what?",
+    "options": [
+      "Multiple inheritance of classes",
+      "Method overloading only",
+      "Different implementations via a common type",
+      "Only static binding"
+    ],
+    "answerIndex": 2,
+    "explanation": "Polymorphism enables substituting implementations via shared interfaces/superclasses."
+  },
+  {
+    "id": "java-b-016",
+    "version": "java-9",
+    "topic": "modules-jpms",
+    "difficulty": "basic",
+    "prompt": "Which file declares a module in JPMS?",
+    "options": ["module-info.java", "module.json", "module.xml", "modules.properties"],
+    "answerIndex": 0,
+    "explanation": "JPMS uses module-info.java."
+  },
+  {
+    "id": "java-b-017",
+    "version": "java-9",
+    "topic": "jshell",
+    "difficulty": "basic",
+    "prompt": "What is JShell?",
+    "options": ["A REPL for Java", "A test framework", "A profiler", "A packaging tool"],
+    "answerIndex": 0,
+    "explanation": "JShell is Java's interactive REPL."
+  },
+  {
+    "id": "java-b-018",
+    "version": "java-9",
+    "topic": "interfaces",
+    "difficulty": "basic",
+    "prompt": "Which interface feature arrived in Java 9?",
+    "options": ["Sealed interfaces", "Private methods", "Records", "Text blocks"],
+    "answerIndex": 1,
+    "explanation": "Java 9 allows private helper methods in interfaces."
+  },
+  {
+    "id": "java-b-019",
+    "version": "java-9",
+    "topic": "gc",
+    "difficulty": "basic",
+    "prompt": "Which GC became the default in Java 9?",
+    "options": ["G1 GC", "ZGC", "Parallel", "Shenandoah"],
+    "answerIndex": 0,
+    "explanation": "G1 GC became the default in Java 9."
+  },
+  {
+    "id": "java-b-020",
+    "version": "java-10",
+    "topic": "var-local",
+    "difficulty": "basic",
+    "prompt": "What does 'var' introduce in Java 10?",
+    "options": ["Dynamic typing", "Local variable type inference", "Global variables", "Template types"],
+    "answerIndex": 1,
+    "explanation": "The compiler infers the local variable type with 'var'."
+  },
+  {
+    "id": "java-b-021",
+    "version": "java-11",
+    "topic": "httpclient",
+    "difficulty": "basic",
+    "prompt": "Which HTTP client became standard in Java 11?",
+    "options": [
+      "java.net.http.HttpClient",
+      "Apache HttpClient",
+      "URLConnection",
+      "OkHttp"
+    ],
+    "answerIndex": 0,
+    "explanation": "java.net.http.HttpClient was standardized in Java 11."
+  },
+  {
+    "id": "java-b-022",
+    "version": "java-11",
+    "topic": "strings",
+    "difficulty": "basic",
+    "prompt": "Which new String method was added in Java 11?",
+    "options": ["strip()", "format()", "join()", "matches()"],
+    "answerIndex": 0,
+    "explanation": "strip(), stripLeading(), stripTrailing() were added in Java 11."
+  },
+  {
+    "id": "java-b-023",
+    "version": "java-12",
+    "topic": "switch-preview",
+    "difficulty": "basic",
+    "prompt": "Java 12 introduced switch as a preview to allow what?",
+    "options": ["Multiple defaults", "Labeled continues", "Returning values", "Pattern variables"],
+    "answerIndex": 2,
+    "explanation": "Switch expressions that return values started as preview."
+  },
+  {
+    "id": "java-b-024",
+    "version": "java-13",
+    "topic": "switch-yield",
+    "difficulty": "basic",
+    "prompt": "In switch expressions, which keyword returns a value for a case?",
+    "options": ["break", "return", "yield", "continue"],
+    "answerIndex": 2,
+    "explanation": "'yield' is used inside switch expressions."
+  },
+  {
+    "id": "java-b-025",
+    "version": "java-14",
+    "topic": "switch-expressions",
+    "difficulty": "basic",
+    "prompt": "Java 14 finalized which switch feature?",
+    "options": ["Switch becomes async", "Switch expressions", "Multiple defaults", "Switch with lambdas"],
+    "answerIndex": 1,
+    "explanation": "Switch expressions became a standard feature."
+  },
+  {
+    "id": "java-b-026",
+    "version": "java-14",
+    "topic": "helpful-npe",
+    "difficulty": "basic",
+    "prompt": "Java 14 added helpful NullPointerException messages to:",
+    "options": ["Clarify which variable was null", "Auto-fix nulls", "Disable NPE", "Convert nulls to Optional"],
+    "answerIndex": 0,
+    "explanation": "NPE messages now indicate the exact null dereference."
+  },
+  {
+    "id": "java-b-027",
+    "version": "java-15",
+    "topic": "text-blocks",
+    "difficulty": "basic",
+    "prompt": "Which feature simplifies multi-line string literals?",
+    "options": ["Raw strings", "Text Blocks (\"\"\"...\"\"\")", "StringBuilder", "Template strings"],
+    "answerIndex": 1,
+    "explanation": "Text Blocks became a standard feature."
+  },
+  {
+    "id": "java-b-028",
+    "version": "java-16",
+    "topic": "records",
+    "difficulty": "basic",
+    "prompt": "Records in Java 16 are primarily used for:",
+    "options": ["Mutable data carriers", "Compact immutable data carriers", "Thread control", "Module metadata"],
+    "answerIndex": 1,
+    "explanation": "Records provide concise syntax for immutable data."
+  },
+  {
+    "id": "java-b-029",
+    "version": "java-16",
+    "topic": "pattern-instanceof",
+    "difficulty": "basic",
+    "prompt": "Pattern matching for instanceof allows:",
+    "options": [
+      "Auto-casting with a binding variable",
+      "Multiple inheritance",
+      "Checked exceptions removal",
+      "Runtime pattern compilation"
+    ],
+    "answerIndex": 0,
+    "explanation": "It lets you bind and use the casted variable inline."
+  },
+  {
+    "id": "java-b-030",
+    "version": "java-17",
+    "topic": "sealed-classes",
+    "difficulty": "basic",
+    "prompt": "Sealed classes restrict:",
+    "options": ["Which packages can import", "Which classes can extend/implement", "Reflection access", "Serialization"],
+    "answerIndex": 1,
+    "explanation": "They declare permitted subclasses."
+  },
+  {
+    "id": "java-b-031",
+    "version": "java-17",
+    "topic": "lts",
+    "difficulty": "basic",
+    "prompt": "Java 17 is notable for being:",
+    "options": ["A short-term release", "An LTS release", "The first JPMS release", "The last with Applets"],
+    "answerIndex": 1,
+    "explanation": "Java 17 is a Long-Term Support release."
+  },
+  {
+    "id": "java-b-032",
+    "version": "java-18",
+    "topic": "simple-web-server",
+    "difficulty": "basic",
+    "prompt": "Java 18 added a simple web server via:",
+    "options": ["A new module 'java.webserver'", "An incubator tool 'jwebserver'", "java.net.http.Server", "A Maven plugin"],
+    "answerIndex": 1,
+    "explanation": "The 'jwebserver' tool serves static content for dev."
+  },
+  {
+    "id": "java-b-033",
+    "version": "java-19",
+    "topic": "virtual-threads-preview",
+    "difficulty": "basic",
+    "prompt": "Virtual Threads first appeared as a preview in:",
+    "options": ["Java 17", "Java 19", "Java 21", "Java 23"],
+    "answerIndex": 1,
+    "explanation": "They were previewed in Java 19 as part of Loom."
+  },
+  {
+    "id": "java-b-034",
+    "version": "java-19",
+    "topic": "record-patterns-preview",
+    "difficulty": "basic",
+    "prompt": "Record Patterns (preview) allow:",
+    "options": [
+      "Destructuring record components",
+      "Mutable records",
+      "Multiple inheritance",
+      "Dynamic records at runtime"
+    ],
+    "answerIndex": 0,
+    "explanation": "They enable pattern matching over record components."
+  },
+  {
+    "id": "java-b-035",
+    "version": "java-20",
+    "topic": "scoped-values-preview",
+    "difficulty": "basic",
+    "prompt": "Scoped values (preview) are for:",
+    "options": [
+      "Global mutable variables",
+      "Thread-local-like immutable data",
+      "Module-wide constants",
+      "Runtime class redefinition"
+    ],
+    "answerIndex": 1,
+    "explanation": "They provide immutable, inheritable, thread-local-like values."
+  },
+  {
+    "id": "java-b-036",
+    "version": "java-21",
+    "topic": "virtual-threads",
+    "difficulty": "basic",
+    "prompt": "Java 21 made which Loom feature standard?",
+    "options": ["Green threads", "Virtual Threads", "Async/await", "Reactive streams"],
+    "answerIndex": 1,
+    "explanation": "Virtual Threads are now a standard feature."
+  },
+  {
+    "id": "java-b-037",
+    "version": "java-21",
+    "topic": "sequenced-collections",
+    "difficulty": "basic",
+    "prompt": "Sequenced Collections add APIs primarily for:",
+    "options": ["Parallel iteration", "First/last element access", "Lock-free stacks", "Distributed maps"],
+    "answerIndex": 1,
+    "explanation": "They provide consistent first/last operations across collections."
+  },
+  {
+    "id": "java-b-038",
+    "version": "java-21",
+    "topic": "pattern-switch",
+    "difficulty": "basic",
+    "prompt": "Pattern matching for 'switch' allows:",
+    "options": ["Default fall-through only", "Guards and type patterns", "Multiple defaults", "Switch over methods"],
+    "answerIndex": 1,
+    "explanation": "You can match by type and use 'when' guards."
+  },
+  {
+    "id": "java-b-039",
+    "version": "java-21",
+    "topic": "string-templates-preview",
+    "difficulty": "basic",
+    "prompt": "String Templates (preview) provide:",
+    "options": ["Compile-time macros", "Safer interpolation syntax", "Raw strings", "Regex templates only"],
+    "answerIndex": 1,
+    "explanation": "They add template processors for safer interpolation."
+  },
+  {
+    "id": "java-b-040",
+    "version": "java-21",
+    "topic": "structured-concurrency",
+    "difficulty": "basic",
+    "prompt": "Structured Concurrency (preview) focuses on:",
+    "options": ["Global executors", "COBOL interop", "Managing lifecycles of concurrent tasks", "Replacing synchronized"],
+    "answerIndex": 2,
+    "explanation": "It treats groups of concurrent tasks as a single unit."
+  },
+  {
+    "id": "java-b-041",
+    "version": "java-22",
+    "topic": "ffm-api",
+    "difficulty": "basic",
+    "prompt": "The Foreign Function & Memory (FFM) API enables:",
+    "options": ["Java-to-C interop without JNI", "HotSwap of classes", "New GC algorithms", "A new I/O stream type"],
+    "answerIndex": 0,
+    "explanation": "FFM provides safer native interop and memory access."
+  },
+  {
+    "id": "java-b-042",
+    "version": "java-22",
+    "topic": "unnamed-classes-preview",
+    "difficulty": "basic",
+    "prompt": "Unnamed Classes and Instance Main (preview) aim to:",
+    "options": [
+      "Simplify small programs' entry point",
+      "Remove public classes",
+      "Replace modules",
+      "Enable multiple mains per class"
+    ],
+    "answerIndex": 0,
+    "explanation": "They reduce boilerplate for tiny programs."
+  },
+  {
+    "id": "java-b-043",
+    "version": "java-22",
+    "topic": "string-templates-preview",
+    "difficulty": "basic",
+    "prompt": "String Templates (preview) are processed by:",
+    "options": ["Template processors", "Annotation processors", "The garbage collector", "JIT compiler only"],
+    "answerIndex": 0,
+    "explanation": "Templates are expanded via pluggable processors."
+  },
+  {
+    "id": "java-b-044",
+    "version": "java-23",
+    "topic": "ffm-api-std",
+    "difficulty": "basic",
+    "prompt": "In Java 23+, FFM API status is:",
+    "options": ["Removed", "Incubator", "Standardized", "Obsolete"],
+    "answerIndex": 2,
+    "explanation": "FFM has been promoted from incubator to standard."
+  },
+  {
+    "id": "java-b-045",
+    "version": "java-23",
+    "topic": "vector-api-incubator",
+    "difficulty": "basic",
+    "prompt": "Vector API (still incubating) is for:",
+    "options": ["GPU shaders", "SIMD computation on CPUs", "Database indexing", "UI rendering"],
+    "answerIndex": 1,
+    "explanation": "It exposes explicit SIMD operations for performance."
+  },
+  {
+    "id": "java-b-046",
+    "version": "java-24",
+    "topic": "pattern-switch-refinements",
+    "difficulty": "basic",
+    "prompt": "Pattern Matching for switch in Java 24 focuses on:",
+    "options": ["Dropping guards", "Refinements and stability", "Removing switch statements", "Making switch async"],
+    "answerIndex": 1,
+    "explanation": "Recent releases refine and stabilize pattern switch."
+  },
+  {
+    "id": "java-b-047",
+    "version": "java-24",
+    "topic": "records-enhancements",
+    "difficulty": "basic",
+    "prompt": "Records enhancements mainly target:",
+    "options": ["Mutable fields", "Better pattern matching/destructuring", "Dynamic record generation", "Record inheritance"],
+    "answerIndex": 1,
+    "explanation": "Newer releases integrate records with pattern matching."
+  },
+  {
+    "id": "java-b-048",
+    "version": "java-8",
+    "topic": "exceptions-checked",
+    "difficulty": "basic",
+    "prompt": "Checked exceptions must be:",
+    "options": ["Ignored by the JVM", "Documented only", "Caught or declared", "Converted to RuntimeException"],
+    "answerIndex": 2,
+    "explanation": "Use try/catch or declare with 'throws'."
+  },
+  {
+    "id": "java-b-049",
+    "version": "java-8",
+    "topic": "threads-basics",
+    "difficulty": "basic",
+    "prompt": "Which method starts a new thread of execution?",
+    "options": ["execute()", "init()", "run()", "start()"],
+    "answerIndex": 3,
+    "explanation": "Calling start() schedules and then invokes run() in a new thread."
+  },
+  {
+    "id": "java-b-050",
+    "version": "java-8",
+    "topic": "memory-model",
+    "difficulty": "basic",
+    "prompt": "The 'volatile' keyword guarantees:",
+    "options": ["Atomicity of all ops", "Visibility of writes across threads", "Locks around fields", "GC pauses removed"],
+    "answerIndex": 1,
+    "explanation": "volatile ensures visibility and ordering, not atomicity for compound ops."
   }
 ]
