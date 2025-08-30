@@ -13,7 +13,6 @@ import { RouterLink } from '@angular/router';
 
     <div class="d-flex gap-3 justify-content-center">
       <a routerLink="/settings" class="btn btn-primary btn-lg px-4">Start Practicing</a>
-      <a routerLink="/play" class="btn btn-outline-light btn-lg px-4">Quick Start</a>
     </div>
   </div>
 </div>

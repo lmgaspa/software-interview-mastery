@@ -12,42 +12,40 @@ import { Difficulty, Topic } from '../../../../models/question.model';
   imports: [FormsModule, RouterLink],
   template: `
     <div class="container py-4" style="max-width:720px">
-      <!-- Header com botão voltar -->
-      <div class="page-header d-flex justify-content-between align-items-center mb-4">
-        <a routerLink="/" class="btn btn-light btn-icon" aria-label="Back to menu">
-          <!-- Ícone seta -->
+      <!-- Header -->
+      <div class="page-header d-flex align-items-center justify-content-between mb-3">
+        <!-- Botão Menu -->
+        <a routerLink="/home" class="btn btn-light btn-icon" aria-label="Back to Home">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
           </svg>
           <span class="d-none d-sm-inline ms-2 fw-semibold">Menu</span>
         </a>
+
+        <!-- Título alinhado à direita -->
         <h2 class="mb-0">Quiz Settings</h2>
-        <div></div>
-        <!-- espaço para balancear -->
       </div>
 
       <!-- Form -->
-      <form (ngSubmit)="start()" class="settings-form vstack gap-4">
-        <div class="row g-4">
-          <div class="col-12 col-md-6">
-            <label class="form-label">Topic</label>
-            <select class="form-select" [(ngModel)]="topic" name="topic">
-              <option value="java">Java</option>
-              <option value="spring">Spring</option>
-            </select>
-          </div>
-
-          <div class="col-12 col-md-6">
-            <label class="form-label">Difficulty</label>
-            <select class="form-select" [(ngModel)]="difficulty" name="difficulty">
-              <option value="basic">Basic</option>
-              <option value="intermediate">Intermediate</option>
-              <option value="advanced">Advanced</option>
-            </select>
-          </div>
+      <form (ngSubmit)="start()" class="vstack gap-4">
+        <div>
+          <label class="form-label">Topic</label>
+          <select class="form-select" [(ngModel)]="topic" name="topic">
+            <option value="java">Java</option>
+            <option value="spring">Spring</option>
+          </select>
         </div>
 
-        <button class="btn btn-primary align-self-start" [disabled]="loading">
+        <div>
+          <label class="form-label">Difficulty</label>
+          <select class="form-select" [(ngModel)]="difficulty" name="difficulty">
+            <option value="basic">Basic</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+        </div>
+
+        <button class="btn btn-primary" [disabled]="loading">
           {{ loading ? 'Loading...' : 'Start Quiz' }}
         </button>
       </form>

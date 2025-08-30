@@ -1,0 +1,752 @@
+[
+  {
+    "id": "spring-a-001",
+    "version": "spring-6",
+    "topic": "core-di",
+    "difficulty": "advanced",
+    "prompt": "What is the primary difference between @Bean and @Component?",
+    "options": [
+      "@Bean is for component scanning; @Component is for explicit factory methods.",
+      "@Bean defines a bean via a factory method; @Component marks a class for component scanning.",
+      "They are identical and interchangeable.",
+      "@Component can only be used in XML-based configuration."
+    ],
+    "answerIndex": 1,
+    "explanation": "@Bean declares a bean from a method inside a @Configuration class; @Component is a stereotype for scanning."
+  },
+  {
+    "id": "spring-a-002",
+    "version": "spring-6",
+    "topic": "core-proxies",
+    "difficulty": "advanced",
+    "prompt": "By default, how does Spring create proxies for @Transactional classes?",
+    "options": [
+      "Always using JDK dynamic proxies.",
+      "Always using CGLIB subclass proxies.",
+      "JDK proxies for interfaces; CGLIB if class-based proxying is needed.",
+      "No proxy; it instruments bytecode with ASM."
+    ],
+    "answerIndex": 2,
+    "explanation": "Spring prefers JDK proxies when interfaces exist; otherwise it falls back to CGLIB."
+  },
+  {
+    "id": "spring-a-003",
+    "version": "spring-6",
+    "topic": "tx-propagation",
+    "difficulty": "advanced",
+    "prompt": "Which propagation starts a new, independent transaction if one exists?",
+    "options": [
+      "REQUIRED",
+      "REQUIRES_NEW",
+      "SUPPORTS",
+      "NESTED"
+    ],
+    "answerIndex": 1,
+    "explanation": "REQUIRES_NEW suspends the current transaction and starts a new one."
+  },
+  {
+    "id": "spring-a-004",
+    "version": "spring-6",
+    "topic": "tx-nested",
+    "difficulty": "advanced",
+    "prompt": "What is TRUE about Propagation.NESTED?",
+    "options": [
+      "It is identical to REQUIRES_NEW.",
+      "It uses savepoints within the existing transaction if the platform supports it.",
+      "It never joins an existing transaction.",
+      "It disables rollback-only markers."
+    ],
+    "answerIndex": 1,
+    "explanation": "NESTED creates a savepoint under the same outer transaction if supported."
+  },
+  {
+    "id": "spring-a-005",
+    "version": "spring-6",
+    "topic": "aop-order",
+    "difficulty": "advanced",
+    "prompt": "How do you define execution order among multiple aspects?",
+    "options": [
+      "Order is random and not configurable.",
+      "Use @Order or implement Ordered to set precedence.",
+      "Use @Priority on pointcuts only.",
+      "Aspects always execute in declaration order."
+    ],
+    "answerIndex": 1,
+    "explanation": "@Order/Ordered controls aspect precedence (lower value = higher priority)."
+  },
+  {
+    "id": "spring-a-006",
+    "version": "spring-6",
+    "topic": "mvc-handler-method",
+    "difficulty": "advanced",
+    "prompt": "Which argument resolver injects the authenticated user in Spring MVC?",
+    "options": [
+      "@RequestBody",
+      "@AuthenticationPrincipal",
+      "@CookieValue",
+      "@SessionAttribute"
+    ],
+    "answerIndex": 1,
+    "explanation": "Use @AuthenticationPrincipal to access the current principal."
+  },
+  {
+    "id": "spring-a-007",
+    "version": "boot-3",
+    "topic": "boot-autoconfig",
+    "difficulty": "advanced",
+    "prompt": "How does Boot 3 discover auto-configurations at runtime?",
+    "options": [
+      "META-INF/spring.factories only.",
+      "META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports",
+      "application.yml entries.",
+      "Scanning all @Configuration classes."
+    ],
+    "answerIndex": 1,
+    "explanation": "Boot 3 uses the new AutoConfiguration imports file instead of spring.factories."
+  },
+  {
+    "id": "spring-a-008",
+    "version": "boot-3",
+    "topic": "boot-conditions",
+    "difficulty": "advanced",
+    "prompt": "Which annotation conditionally creates a bean if a class is on the classpath?",
+    "options": [
+      "@ConditionalOnProperty",
+      "@ConditionalOnMissingBean",
+      "@ConditionalOnClass",
+      "@Profile"
+    ],
+    "answerIndex": 2,
+    "explanation": "@ConditionalOnClass gates beans on the presence of a type."
+  },
+  {
+    "id": "spring-a-009",
+    "version": "spring-6",
+    "topic": "mvc-exception",
+    "difficulty": "advanced",
+    "prompt": "What is the recommended way to centralize MVC exception handling?",
+    "options": [
+      "Custom Filter",
+      "@ControllerAdvice + @ExceptionHandler",
+      "Wrapping all controllers with proxies",
+      "Using HandlerInterceptor for exceptions"
+    ],
+    "answerIndex": 1,
+    "explanation": "@ControllerAdvice with @ExceptionHandler centralizes error handling."
+  },
+  {
+    "id": "spring-a-010",
+    "version": "spring-6",
+    "topic": "validation",
+    "difficulty": "advanced",
+    "prompt": "In Boot 3 / Spring 6, which module provides Bean Validation?",
+    "options": [
+      "javax.validation (Jakarta EE 8)",
+      "jakarta.validation (Jakarta EE 9+)",
+      "org.hibernate.validator javax package",
+      "spring.validation"
+    ],
+    "answerIndex": 1,
+    "explanation": "Spring 6 migrated to the jakarta.* namespace."
+  },
+  {
+    "id": "spring-a-011",
+    "version": "spring-6",
+    "topic": "webflux-vs-mvc",
+    "difficulty": "advanced",
+    "prompt": "Key difference between Spring MVC and WebFlux:",
+    "options": [
+      "MVC is reactive; WebFlux is blocking.",
+      "MVC is servlet-based blocking I/O; WebFlux is reactive non-blocking (Reactor).",
+      "Both are purely reactive.",
+      "WebFlux requires Tomcat exclusively."
+    ],
+    "answerIndex": 1,
+    "explanation": "WebFlux uses Reactor (non-blocking); MVC is servlet and typically blocking."
+  },
+  {
+    "id": "spring-a-012",
+    "version": "spring-6",
+    "topic": "reactor-backpressure",
+    "difficulty": "advanced",
+    "prompt": "How is backpressure signaled in Project Reactor?",
+    "options": [
+      "Using CompletableFuture APIs",
+      "Through Reactive Streams request(n) protocol",
+      "HTTP status codes only",
+      "Thread-local counters"
+    ],
+    "answerIndex": 1,
+    "explanation": "Reactor implements Reactive Streams with request-demand based backpressure."
+  },
+  {
+    "id": "spring-a-013",
+    "version": "spring-6",
+    "topic": "webclient",
+    "difficulty": "advanced",
+    "prompt": "What is TRUE about WebClient?",
+    "options": [
+      "It is blocking by design.",
+      "It’s the reactive, non-blocking HTTP client alternative to RestTemplate.",
+      "It cannot do streaming responses.",
+      "It doesn’t support filters."
+    ],
+    "answerIndex": 1,
+    "explanation": "WebClient is reactive and supports filters/exchange strategies."
+  },
+  {
+    "id": "spring-a-014",
+    "version": "spring-6",
+    "topic": "cache",
+    "difficulty": "advanced",
+    "prompt": "Which pair correctly describes caching annotations?",
+    "options": [
+      "@Cacheable updates cache after method; @CachePut skips cache write.",
+      "@Cacheable caches method result; @CachePut forces cache update; @CacheEvict removes entries.",
+      "@CacheEvict caches exceptions; @CachePut clears all caches.",
+      "Only @Cacheable is supported."
+    ],
+    "answerIndex": 1,
+    "explanation": "Spring Cache provides @Cacheable, @CachePut, and @CacheEvict."
+  },
+  {
+    "id": "spring-a-015",
+    "version": "spring-6",
+    "topic": "events",
+    "difficulty": "advanced",
+    "prompt": "What does @TransactionalEventListener do by default?",
+    "options": [
+      "Listens outside transactions only.",
+      "Publishes events to Kafka.",
+      "Defers event handling until after successful transaction commit.",
+      "Starts a new transaction for the event handler."
+    ],
+    "answerIndex": 2,
+    "explanation": "By default phase is AFTER_COMMIT."
+  },
+  {
+    "id": "spring-a-016",
+    "version": "spring-6",
+    "topic": "bean-lifecycle",
+    "difficulty": "advanced",
+    "prompt": "Which callbacks belong to the bean lifecycle?",
+    "options": [
+      "afterPropertiesSet/destroy (InitializingBean/DisposableBean), @PostConstruct/@PreDestroy",
+      "@Before/@After",
+      "@Setup/@TearDown",
+      "@Open/@Close"
+    ],
+    "answerIndex": 0,
+    "explanation": "Spring supports interfaces and annotations for lifecycle hooks."
+  },
+  {
+    "id": "spring-a-017",
+    "version": "spring-6",
+    "topic": "profiles",
+    "difficulty": "advanced",
+    "prompt": "How to activate a Spring profile at runtime?",
+    "options": [
+      "Only by recompilation.",
+      "Using -Dspring.profiles.active=prod or env variables.",
+      "Using @ActiveProfiles on main class.",
+      "Profiles are deprecated."
+    ],
+    "answerIndex": 1,
+    "explanation": "Use system properties or env vars to activate profiles."
+  },
+  {
+    "id": "spring-a-018",
+    "version": "boot-3",
+    "topic": "actuator",
+    "difficulty": "advanced",
+    "prompt": "How do you expose all Actuator endpoints over HTTP in Boot 3 (dev only)?",
+    "options": [
+      "management.endpoints.web.exposure.include=*",
+      "endpoints.enabled=true",
+      "actuator.http.all=true",
+      "management.expose=all"
+    ],
+    "answerIndex": 0,
+    "explanation": "Use management.endpoints.web.exposure.include with caution."
+  },
+  {
+    "id": "spring-a-019",
+    "version": "spring-6",
+    "topic": "security-auth",
+    "difficulty": "advanced",
+    "prompt": "Which component performs authentication in Spring Security 6?",
+    "options": [
+      "AuthenticationProvider",
+      "AccessDecisionVoter",
+      "SecurityFilterChain only",
+      "GrantedAuthorityMapper"
+    ],
+    "answerIndex": 0,
+    "explanation": "AuthenticationProvider authenticates and returns Authentication."
+  },
+  {
+    "id": "spring-a-020",
+    "version": "spring-6",
+    "topic": "security-authorization",
+    "difficulty": "advanced",
+    "prompt": "How is authorization typically enforced at method level?",
+    "options": [
+      "Using @PermitAll on beans",
+      "Using @PreAuthorize/@PostAuthorize with method security enabled",
+      "Only through web filters",
+      "With BeanFactoryPostProcessor"
+    ],
+    "answerIndex": 1,
+    "explanation": "Enable method security and use pre/post annotations."
+  },
+  {
+    "id": "spring-a-021",
+    "version": "spring-6",
+    "topic": "data-jpa-entitygraph",
+    "difficulty": "advanced",
+    "prompt": "What does @EntityGraph help with in Spring Data JPA?",
+    "options": [
+      "Optimistic locking",
+      "Fetch strategies to avoid N+1 queries",
+      "Transaction propagation",
+      "Second-level cache only"
+    ],
+    "answerIndex": 1,
+    "explanation": "EntityGraph can define fetch plans to reduce extra queries."
+  },
+  {
+    "id": "spring-a-022",
+    "version": "spring-6",
+    "topic": "data-jpa-projections",
+    "difficulty": "advanced",
+    "prompt": "Interface-based projections in Spring Data JPA:",
+    "options": [
+      "Require native queries.",
+      "Map selected columns to interfaces without loading full entities.",
+      "Are slower than entities always.",
+      "Cannot be nested."
+    ],
+    "answerIndex": 1,
+    "explanation": "Projections can reduce fetching and map directly to interfaces."
+  },
+  {
+    "id": "spring-a-023",
+    "version": "spring-6",
+    "topic": "r2dbc",
+    "difficulty": "advanced",
+    "prompt": "What is TRUE about Spring Data R2DBC?",
+    "options": [
+      "It provides reactive SQL access without JDBC blocking I/O.",
+      "It’s a wrapper over JPA.",
+      "It requires Hibernate.",
+      "It is synchronous."
+    ],
+    "answerIndex": 0,
+    "explanation": "R2DBC is reactive relational DB access; JDBC is blocking."
+  },
+  {
+    "id": "spring-a-024",
+    "version": "spring-6",
+    "topic": "messaging-kafka",
+    "difficulty": "advanced",
+    "prompt": "What does @KafkaListener do?",
+    "options": [
+      "Publishes messages to Kafka topics.",
+      "Consumes messages from Kafka topics and dispatches to methods.",
+      "Creates broker topics.",
+      "Configures transactional outbox."
+    ],
+    "answerIndex": 1,
+    "explanation": "@KafkaListener methods are invoked for consumed records."
+  },
+  {
+    "id": "spring-a-025",
+    "version": "spring-6",
+    "topic": "messaging-tx",
+    "difficulty": "advanced",
+    "prompt": "How to ensure consuming a message and DB update are atomic across boundaries?",
+    "options": [
+      "Two-phase XA transactions are the only option.",
+      "Use @Transactional on both and pray.",
+      "Use the outbox pattern with transactional writes and separate publisher.",
+      "It is impossible in Spring."
+    ],
+    "answerIndex": 2,
+    "explanation": "Outbox provides reliable integration without XA."
+  },
+  {
+    "id": "spring-a-026",
+    "version": "spring-6",
+    "topic": "retry-resilience4j",
+    "difficulty": "advanced",
+    "prompt": "Which library is commonly used with Spring for circuit breakers?",
+    "options": [
+      "Hystrix (deprecated)",
+      "Resilience4j",
+      "Archaius",
+      "RxJava"
+    ],
+    "answerIndex": 1,
+    "explanation": "Resilience4j integrates with Spring for CB/Retry/Bulkhead."
+  },
+  {
+    "id": "spring-a-027",
+    "version": "boot-3",
+    "topic": "observability-micrometer",
+    "difficulty": "advanced",
+    "prompt": "Micrometer in Boot 3 provides:",
+    "options": [
+      "Only logging features.",
+      "Metrics and observation APIs vendor-neutral, integrated with Actuator.",
+      "Exclusive Prometheus support only.",
+      "AOP for transactions."
+    ],
+    "answerIndex": 1,
+    "explanation": "Micrometer is the facade for metrics/observations in Spring Boot."
+  },
+  {
+    "id": "spring-a-028",
+    "version": "boot-3",
+    "topic": "native-aot",
+    "difficulty": "advanced",
+    "prompt": "What improves Spring Native/GraalVM AOT compatibility?",
+    "options": [
+      "Dynamic classpath scanning at runtime.",
+      "AOT processing that generates metadata and hints at build time.",
+      "Disabling reflection entirely.",
+      "Replacing DI with manual factories."
+    ],
+    "answerIndex": 1,
+    "explanation": "AOT generates configuration and reduces reflection for native images."
+  },
+  {
+    "id": "spring-a-029",
+    "version": "spring-6",
+    "topic": "functional-endpoints",
+    "difficulty": "advanced",
+    "prompt": "What are Spring WebFlux functional endpoints?",
+    "options": [
+      "XML descriptors for routing.",
+      "RouterFunction/HandlerFunction Java DSL instead of @Controller.",
+      "AOP pointcuts for HTTP.",
+      "Deprecated annotation style."
+    ],
+    "answerIndex": 1,
+    "explanation": "Functional endpoints define routes/handlers programmatically."
+  },
+  {
+    "id": "spring-a-030",
+    "version": "spring-6",
+    "topic": "http-interfaces",
+    "difficulty": "advanced",
+    "prompt": "Spring 6 HTTP Interfaces provide:",
+    "options": [
+      "JAX-WS bindings.",
+      "Declarative HTTP clients via annotated interfaces backed by WebClient.",
+      "Only server-side features.",
+      "Replacement for RestTemplate with blocking I/O."
+    ],
+    "answerIndex": 1,
+    "explanation": "HTTP Interfaces are declarative clients powered by WebClient."
+  },
+  {
+    "id": "spring-a-031",
+    "version": "spring-6",
+    "topic": "mvc-cors",
+    "difficulty": "advanced",
+    "prompt": "How do you configure global CORS for MVC?",
+    "options": [
+      "Through @CrossOrigin on every method only.",
+      "WebMvcConfigurer#addCorsMappings",
+      "In application.yml exclusively",
+      "Not supported."
+    ],
+    "answerIndex": 1,
+    "explanation": "Implement WebMvcConfigurer to add global CORS mappings."
+  },
+  {
+    "id": "spring-a-032",
+    "version": "spring-6",
+    "topic": "mvc-async",
+    "difficulty": "advanced",
+    "prompt": "DeferredResult vs Callable in Spring MVC:",
+    "options": [
+      "Callable gives background execution; DeferredResult lets you complete later (e.g., from another thread).",
+      "Both are identical.",
+      "DeferredResult is blocking.",
+      "Callable is reactive."
+    ],
+    "answerIndex": 0,
+    "explanation": "Callable executes in an async task; DeferredResult can be completed later."
+  },
+  {
+    "id": "spring-a-033",
+    "version": "spring-6",
+    "topic": "security-csrf",
+    "difficulty": "advanced",
+    "prompt": "When is CSRF protection typically needed?",
+    "options": [
+      "For stateless APIs using only Bearer tokens.",
+      "For cookie-based sessions and browser forms to prevent cross-site requests.",
+      "Only on GET requests.",
+      "Never with Spring Security."
+    ],
+    "answerIndex": 1,
+    "explanation": "CSRF primarily targets stateful, browser-based interactions."
+  },
+  {
+    "id": "spring-a-034",
+    "version": "spring-6",
+    "topic": "security-filterchain",
+    "difficulty": "advanced",
+    "prompt": "In Security 6, configuration entry point is:",
+    "options": [
+      "WebSecurityConfigurerAdapter",
+      "SecurityFilterChain bean",
+      "security.xml",
+      "Only annotations"
+    ],
+    "answerIndex": 1,
+    "explanation": "SecurityFilterChain replaces the old adapter class."
+  },
+  {
+    "id": "spring-a-035",
+    "version": "spring-6",
+    "topic": "tx-readonly",
+    "difficulty": "advanced",
+    "prompt": "What does @Transactional(readOnly = true) hint?",
+    "options": [
+      "Prevents any writes at DB level always.",
+      "Optimizes (e.g., skip dirty checking) and hints to the driver; behavior depends on the DB/driver.",
+      "Disables caching.",
+      "Forces REQUIRES_NEW."
+    ],
+    "answerIndex": 1,
+    "explanation": "It’s an optimization hint; actual enforcement varies by technology."
+  },
+  {
+    "id": "spring-a-036",
+    "version": "spring-6",
+    "topic": "conversion",
+    "difficulty": "advanced",
+    "prompt": "Which component handles type conversion in Spring?",
+    "options": [
+      "PropertyEditors only",
+      "ConversionService with Converter/Formatter",
+      "Jackson only",
+      "BeanPostProcessor"
+    ],
+    "answerIndex": 1,
+    "explanation": "ConversionService centralizes type conversion throughout the framework."
+  },
+  {
+    "id": "spring-a-037",
+    "version": "spring-6",
+    "topic": "bean-scopes",
+    "difficulty": "advanced",
+    "prompt": "Which scope creates a new bean instance per HTTP request?",
+    "options": [
+      "singleton",
+      "prototype",
+      "request",
+      "session"
+    ],
+    "answerIndex": 2,
+    "explanation": "Request scope ties bean lifecycle to an HTTP request."
+  },
+  {
+    "id": "spring-a-038",
+    "version": "spring-6",
+    "topic": "conditional",
+    "difficulty": "advanced",
+    "prompt": "What does @ConditionalOnMissingBean do?",
+    "options": [
+      "Creates a bean only if no bean of the type/name already exists.",
+      "Disables bean creation.",
+      "Creates bean if the property is set.",
+      "Requires a specific profile."
+    ],
+    "answerIndex": 0,
+    "explanation": "It avoids duplicate bean definitions when a user bean is provided."
+  },
+  {
+    "id": "spring-a-039",
+    "version": "boot-3",
+    "topic": "configuration-props",
+    "difficulty": "advanced",
+    "prompt": "Best practice to bind hierarchical properties?",
+    "options": [
+      "Use @Value on each field.",
+      "Use @ConfigurationProperties with a dedicated POJO and validation.",
+      "Use System.getenv calls.",
+      "Parse YAML manually."
+    ],
+    "answerIndex": 1,
+    "explanation": "@ConfigurationProperties provides type-safe binding and validation."
+  },
+  {
+    "id": "spring-a-040",
+    "version": "spring-6",
+    "topic": "testing-slices",
+    "difficulty": "advanced",
+    "prompt": "What does @WebMvcTest load?",
+    "options": [
+      "Full application context including DB.",
+      "Only MVC components (controllers, MVC infra), not service/repo beans by default.",
+      "Only repositories.",
+      "Security only."
+    ],
+    "answerIndex": 1,
+    "explanation": "It’s a test slice focused on MVC."
+  },
+  {
+    "id": "spring-a-041",
+    "version": "spring-6",
+    "topic": "testing-datajpa",
+    "difficulty": "advanced",
+    "prompt": "@DataJpaTest does what by default?",
+    "options": [
+      "Loads web controllers.",
+      "Configures JPA, an embedded database (if available), and scans repositories.",
+      "Starts Kafka.",
+      "Disables transactions."
+    ],
+    "answerIndex": 1,
+    "explanation": "It configures a minimal JPA-focused test context, transactional by default."
+  },
+  {
+    "id": "spring-a-042",
+    "version": "spring-6",
+    "topic": "kafka-dlt",
+    "difficulty": "advanced",
+    "prompt": "How to handle poison messages in Kafka consumers?",
+    "options": [
+      "Ignore errors silently.",
+      "Use Dead Letter Topic (DLT) with error handling strategies.",
+      "Disable retries.",
+      "Restart the application."
+    ],
+    "answerIndex": 1,
+    "explanation": "DLT preserves failed records for later analysis/reprocessing."
+  },
+  {
+    "id": "spring-a-043",
+    "version": "spring-6",
+    "topic": "webflux-schedulers",
+    "difficulty": "advanced",
+    "prompt": "In WebFlux, blocking operations should run on:",
+    "options": [
+      "boundedElastic Scheduler via publishOn/subscribeOn",
+      "immediate Scheduler",
+      "parallel Scheduler always",
+      "the event loop"
+    ],
+    "answerIndex": 0,
+    "explanation": "Use boundedElastic for short blocking calls to avoid blocking event loops."
+  },
+  {
+    "id": "spring-a-044",
+    "version": "spring-6",
+    "topic": "multipart",
+    "difficulty": "advanced",
+    "prompt": "How to handle file uploads in Spring MVC?",
+    "options": [
+      "Use @RequestParam MultipartFile",
+      "Use @RequestBody String",
+      "Use @CookieValue File",
+      "Only WebFlux supports uploads"
+    ],
+    "answerIndex": 0,
+    "explanation": "Multipart support binds to MultipartFile parameters."
+  },
+  {
+    "id": "spring-a-045",
+    "version": "boot-3",
+    "topic": "problem-details",
+    "difficulty": "advanced",
+    "prompt": "Boot 3 adopts RFC 7807 Problem Details. How to leverage it?",
+    "options": [
+      "Enable legacy error pages.",
+      "Use ProblemDetail and handle exceptions with @ExceptionHandler/@ControllerAdvice.",
+      "It’s automatic and unconfigurable.",
+      "Only available in WebFlux."
+    ],
+    "answerIndex": 1,
+    "explanation": "You can return ProblemDetail objects from handlers or exception mappers."
+  },
+  {
+    "id": "spring-a-046",
+    "version": "spring-6",
+    "topic": "declarative-http",
+    "difficulty": "advanced",
+    "prompt": "How do Spring 6 HTTP interfaces map methods to HTTP calls?",
+    "options": [
+      "Using Retrofit annotations.",
+      "Using Spring’s @GetExchange/@PostExchange annotations.",
+      "Through RestTemplate interceptors.",
+      "Via Feign exclusively."
+    ],
+    "answerIndex": 1,
+    "explanation": "Spring provides @*Exchange annotations backed by WebClient."
+  },
+  {
+    "id": "spring-a-047",
+    "version": "spring-6",
+    "topic": "sse",
+    "difficulty": "advanced",
+    "prompt": "How to stream server-sent events (SSE) with MVC?",
+    "options": [
+      "Return Flux<ServerSentEvent<T>> or use ResponseBodyEmitter/SseEmitter.",
+      "Only WebFlux supports SSE.",
+      "Use WebSocket only.",
+      "Return byte[] always."
+    ],
+    "answerIndex": 0,
+    "explanation": "MVC supports SSE with SseEmitter; WebFlux supports Flux<ServerSentEvent>."
+  },
+  {
+    "id": "spring-a-048",
+    "version": "spring-6",
+    "topic": "context-hierarchy",
+    "difficulty": "advanced",
+    "prompt": "What is a context hierarchy used for?",
+    "options": [
+      "To share parent beans across child web contexts (e.g., MVC root vs servlet dispatcher).",
+      "To enable multi-tenant DBs only.",
+      "To manage Kafka topics.",
+      "To disable component scanning."
+    ],
+    "answerIndex": 0,
+    "explanation": "Parent/child contexts let you share common beans across multiple child contexts."
+  },
+  {
+    "id": "spring-a-049",
+    "version": "boot-3",
+    "topic": "liquibase-flyway",
+    "difficulty": "advanced",
+    "prompt": "Boot auto-runs migrations if:",
+    "options": [
+      "Schema is empty only.",
+      "Flyway or Liquibase is on the classpath and enabled in config.",
+      "You annotate @EnableMigrations.",
+      "You add scripts to /db/manual."
+    ],
+    "answerIndex": 1,
+    "explanation": "Boot detects the tool and executes migrations automatically by default."
+  },
+  {
+    "id": "spring-a-050",
+    "version": "spring-6",
+    "topic": "openfeign-vs-http-interfaces",
+    "difficulty": "advanced",
+    "prompt": "Difference between Spring Cloud OpenFeign and Spring 6 HTTP interfaces?",
+    "options": [
+      "They are the same implementation.",
+      "OpenFeign is a separate client library with its own annotations; HTTP interfaces are core Spring, backed by WebClient.",
+      "OpenFeign is only for server-side.",
+      "HTTP interfaces require Feign under the hood."
+    ],
+    "answerIndex": 1,
+    "explanation": "OpenFeign is part of Spring Cloud; Spring HTTP Interfaces are framework-native clients."
+  }
+]

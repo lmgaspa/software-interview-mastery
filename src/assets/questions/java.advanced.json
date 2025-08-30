@@ -1,0 +1,752 @@
+[
+  {
+    "id": "java-a-001",
+    "version": "java-8",
+    "topic": "memory-model-hb",
+    "difficulty": "advanced",
+    "prompt": "Which statement best describes the Java Memory Model 'happens-before' relation?",
+    "options": [
+      "It guarantees both visibility and ordering between actions.",
+      "It guarantees atomicity for any composite operation.",
+      "It determines OS-level thread scheduling.",
+      "It prevents instruction reordering by the JIT compiler."
+    ],
+    "answerIndex": 0,
+    "explanation": "Happens-before provides visibility and ordering guarantees across threads."
+  },
+  {
+    "id": "java-a-002",
+    "version": "java-8",
+    "topic": "concurrency-atomic",
+    "difficulty": "advanced",
+    "prompt": "Why are Atomic* classes typically faster than synchronized blocks for simple counters?",
+    "options": [
+      "They avoid cache coherence traffic entirely.",
+      "They use non-blocking CAS operations.",
+      "They run on a separate GC thread.",
+      "They disable safepoints during updates."
+    ],
+    "answerIndex": 1,
+    "explanation": "Atomic classes rely on lock-free CAS rather than monitor locks."
+  },
+  {
+    "id": "java-a-003",
+    "version": "java-9",
+    "topic": "jpms-deep-reflection",
+    "difficulty": "advanced",
+    "prompt": "In JPMS, which directive allows runtime reflective access without exporting APIs at compile time?",
+    "options": [
+      "exports",
+      "requires transitive",
+      "opens",
+      "provides ... with ..."
+    ],
+    "answerIndex": 2,
+    "explanation": "opens grants deep reflection access at runtime only."
+  },
+  {
+    "id": "java-a-004",
+    "version": "java-8",
+    "topic": "classloading",
+    "difficulty": "advanced",
+    "prompt": "Which class loader typically loads application classes on the classpath?",
+    "options": [
+      "Bootstrap class loader",
+      "Platform (extension) class loader",
+      "Application (system) class loader",
+      "Context class loader only"
+    ],
+    "answerIndex": 2,
+    "explanation": "The system/application loader loads classes from the application classpath."
+  },
+  {
+    "id": "java-a-005",
+    "version": "java-11",
+    "topic": "gc-g1-tuning",
+    "difficulty": "advanced",
+    "prompt": "G1 GC primarily aims to:",
+    "options": [
+      "Eliminate all pauses regardless of heap size",
+      "Meet pause-time goals via region-based collection",
+      "Replace reference counting with mark-sweep",
+      "Avoid compaction to improve throughput"
+    ],
+    "answerIndex": 1,
+    "explanation": "G1 targets predictable pauses using regions and incremental evacuation."
+  },
+  {
+    "id": "java-a-006",
+    "version": "java-14",
+    "topic": "npe-diagnostics",
+    "difficulty": "advanced",
+    "prompt": "Helpful NullPointerException messages rely on:",
+    "options": [
+      "Bytecode rewriting at runtime",
+      "Extra metadata from the compiler/JIT",
+      "JVMTI breakpoints for nulls",
+      "Stack trace post-processing only"
+    ],
+    "answerIndex": 1,
+    "explanation": "The VM and compiler cooperate to emit detailed null-dereference info."
+  },
+  {
+    "id": "java-a-007",
+    "version": "java-16",
+    "topic": "records-semantics",
+    "difficulty": "advanced",
+    "prompt": "Which statement about records is TRUE?",
+    "options": [
+      "They are always mutable data carriers.",
+      "They canonically define equals/hashCode/toString.",
+      "They cannot have custom constructors.",
+      "They cannot implement interfaces."
+    ],
+    "answerIndex": 1,
+    "explanation": "Records are concise, primarily immutable carriers with generated members."
+  },
+  {
+    "id": "java-a-008",
+    "version": "java-8",
+    "topic": "streams-side-effects",
+    "difficulty": "advanced",
+    "prompt": "Why are side effects discouraged in parallel stream pipelines?",
+    "options": [
+      "They disable the JIT entirely.",
+      "They can break associativity/ordering and cause data races.",
+      "They prevent short-circuiting operations.",
+      "They force streams to run sequentially."
+    ],
+    "answerIndex": 1,
+    "explanation": "Non-thread-safe side effects can corrupt shared state under parallelism."
+  },
+  {
+    "id": "java-a-009",
+    "version": "java-10",
+    "topic": "var-type-inference",
+    "difficulty": "advanced",
+    "prompt": "Which is a subtle pitfall of 'var'?",
+    "options": [
+      "It infers wider types than declared generics.",
+      "It can silently infer 'var' as Object in lambdas, reducing type safety.",
+      "It disallows diamond operators.",
+      "It changes bytecode signatures to 'var'."
+    ],
+    "answerIndex": 1,
+    "explanation": "Poorly chosen 'var' sites can degrade readability or inference in lambdas."
+  },
+  {
+    "id": "java-a-010",
+    "version": "java-11",
+    "topic": "httpclient-advanced",
+    "difficulty": "advanced",
+    "prompt": "What is TRUE about java.net.http.HttpClient’s async API?",
+    "options": [
+      "sendAsync returns CompletableFuture enabling pipelining and composition.",
+      "It is tied to ForkJoinPool.commonPool and not configurable.",
+      "It requires server push to be enabled.",
+      "TLS is unsupported in async mode."
+    ],
+    "answerIndex": 0,
+    "explanation": "sendAsync integrates with CompletableFuture for non-blocking flows."
+  },
+  {
+    "id": "java-a-011",
+    "version": "java-8",
+    "topic": "forkjoin",
+    "difficulty": "advanced",
+    "prompt": "ForkJoinPool is most effective when tasks are:",
+    "options": [
+      "I/O-bound and blocking",
+      "Long-lived and stateful",
+      "Small, CPU-bound, with work-stealing benefits",
+      "Single-threaded and sequential"
+    ],
+    "answerIndex": 2,
+    "explanation": "ForkJoin uses work-stealing for fine-grained CPU-bound tasks."
+  },
+  {
+    "id": "java-a-012",
+    "version": "java-9",
+    "topic": "jpms-services",
+    "difficulty": "advanced",
+    "prompt": "Which pair wires service usage and provision in JPMS?",
+    "options": [
+      "requires ... with ...",
+      "uses / provides ... with ...",
+      "opens / exports",
+      "exports / uses"
+    ],
+    "answerIndex": 1,
+    "explanation": "A consumer module declares 'uses'; a provider declares 'provides ... with ...'."
+  },
+  {
+    "id": "java-a-013",
+    "version": "java-8",
+    "topic": "classloader-context",
+    "difficulty": "advanced",
+    "prompt": "The thread context class loader is commonly used to:",
+    "options": [
+      "Bypass the bootstrap loader",
+      "Load resources across module boundaries",
+      "Let frameworks load classes from the caller’s loader",
+      "Disable JPMS checks"
+    ],
+    "answerIndex": 2,
+    "explanation": "Frameworks often rely on TCCL to locate application classes."
+  },
+  {
+    "id": "java-a-014",
+    "version": "java-8",
+    "topic": "unsafe-vs-varhandle",
+    "difficulty": "advanced",
+    "prompt": "VarHandle was introduced to:",
+    "options": [
+      "Replace Unsafe with a supported, safer API for memory/field access",
+      "Provide reflection-only access to fields",
+      "Remove CAS semantics",
+      "Manage heap compaction"
+    ],
+    "answerIndex": 0,
+    "explanation": "VarHandle is the supported alternative to many Unsafe use cases."
+  },
+  {
+    "id": "java-a-015",
+    "version": "java-9",
+    "topic": "compact-strings",
+    "difficulty": "advanced",
+    "prompt": "Compact Strings optimize String storage by:",
+    "options": [
+      "Using char[] with 16-bit always",
+      "Storing bytes with a coder flag when Latin-1 fits",
+      "Interning all strings by default",
+      "Compressing via GZIP in the heap"
+    ],
+    "answerIndex": 1,
+    "explanation": "Strings can use a byte[] for Latin-1 to save memory."
+  },
+  {
+    "id": "java-a-016",
+    "version": "java-17",
+    "topic": "sealed-hierarchy",
+    "difficulty": "advanced",
+    "prompt": "A sealed class must declare permitted subclasses where?",
+    "options": [
+      "In a permits clause or implicitly in the same file",
+      "Only in module-info.java",
+      "Via @Permits annotation",
+      "It is inferred at runtime"
+    ],
+    "answerIndex": 0,
+    "explanation": "Permitted subclasses are explicit via 'permits' or co-located."
+  },
+  {
+    "id": "java-a-017",
+    "version": "java-21",
+    "topic": "virtual-threads-scheduler",
+    "difficulty": "advanced",
+    "prompt": "Virtual Threads are scheduled by:",
+    "options": [
+      "A user-mode green-thread scheduler unrelated to OS threads",
+      "The JVM on a small pool of carrier platform threads",
+      "Dedicated thread per task model",
+      "A single global event loop"
+    ],
+    "answerIndex": 1,
+    "explanation": "Many virtual threads multiplex over a few carrier threads."
+  },
+  {
+    "id": "java-a-018",
+    "version": "java-21",
+    "topic": "structured-concurrency-scope",
+    "difficulty": "advanced",
+    "prompt": "Structured Concurrency’s main benefit is:",
+    "options": [
+      "Eliminating synchronization primitives",
+      "Treating a set of tasks as a unit for cancellation and error handling",
+      "Replacing executor services entirely",
+      "Deterministic scheduling"
+    ],
+    "answerIndex": 1,
+    "explanation": "It manages task lifecycles collectively for safer concurrency."
+  },
+  {
+    "id": "java-a-019",
+    "version": "java-23",
+    "topic": "ffm-api",
+    "difficulty": "advanced",
+    "prompt": "The FFM API provides:",
+    "options": [
+      "JNI code generation at compile time",
+      "A safe, pure-Java way to access native memory and call foreign functions",
+      "Automatic vectorization",
+      "Kernel-bypass networking"
+    ],
+    "answerIndex": 1,
+    "explanation": "FFM enables native interop without JNI, with safety abstractions."
+  },
+  {
+    "id": "java-a-020",
+    "version": "java-17",
+    "topic": "randomgenerator",
+    "difficulty": "advanced",
+    "prompt": "RandomGenerator in Java 17 enables:",
+    "options": [
+      "Hardware RNG only",
+      "Pluggable families of PRNG algorithms via a common interface",
+      "Removal of SecureRandom",
+      "Deterministic seeds only"
+    ],
+    "answerIndex": 1,
+    "explanation": "RandomGenerator provides a unified API over multiple PRNGs."
+  },
+  {
+    "id": "java-a-021",
+    "version": "java-8",
+    "topic": "executor-pool-sizing",
+    "difficulty": "advanced",
+    "prompt": "For CPU-bound tasks, a typical fixed thread pool size heuristic is:",
+    "options": [
+      "Cores × 2",
+      "Cores − 1 or ≈ number of cores",
+      "Always 1",
+      "100 × cores"
+    ],
+    "answerIndex": 1,
+    "explanation": "CPU-bound work benefits from pool sizes near the number of cores."
+  },
+  {
+    "id": "java-a-022",
+    "version": "java-21",
+    "topic": "virtual-threads-blocking",
+    "difficulty": "advanced",
+    "prompt": "Blocking I/O in a Virtual Thread:",
+    "options": [
+      "Blocks the carrier thread",
+      "Is automatically parked; the carrier can run other virtual threads",
+      "Is prohibited by the JVM",
+      "Requires NIO only"
+    ],
+    "answerIndex": 1,
+    "explanation": "The JVM parks virtual threads on blocking I/O to free carriers."
+  },
+  {
+    "id": "java-a-023",
+    "version": "java-8",
+    "topic": "completablefuture",
+    "difficulty": "advanced",
+    "prompt": "CompletableFuture.thenCompose vs thenApply:",
+    "options": [
+      "thenCompose flattens nested futures; thenApply maps value",
+      "Both flatten futures",
+      "thenApply blocks the thread",
+      "thenCompose disables chaining"
+    ],
+    "answerIndex": 0,
+    "explanation": "thenCompose(A->CF<B>) avoids Future<Future<B>>."
+  },
+  {
+    "id": "java-a-024",
+    "version": "java-8",
+    "topic": "locks-fairness",
+    "difficulty": "advanced",
+    "prompt": "A fair ReentrantLock:",
+    "options": [
+      "Guarantees no deadlocks",
+      "Grants access in roughly FIFO order, reducing throughput",
+      "Spins instead of parking",
+      "Uses biased locking"
+    ],
+    "answerIndex": 1,
+    "explanation": "Fair locks prefer queue order but can be slower."
+  },
+  {
+    "id": "java-a-025",
+    "version": "java-11",
+    "topic": "string-interning",
+    "difficulty": "advanced",
+    "prompt": "String.intern() stores the string in:",
+    "options": [
+      "Permanent generation",
+      "A dedicated intern pool on the heap",
+      "Direct memory",
+      "Thread-local storage"
+    ],
+    "answerIndex": 1,
+    "explanation": "Since Java 7, interned strings reside in the heap’s string pool."
+  },
+  {
+    "id": "java-a-026",
+    "version": "java-17",
+    "topic": "pattern-instanceof",
+    "difficulty": "advanced",
+    "prompt": "Pattern matching for instanceof primarily:",
+    "options": [
+      "Removes null checks",
+      "Introduces a binding variable that avoids explicit casts",
+      "Enables structural typing",
+      "Changes bytecode format"
+    ],
+    "answerIndex": 1,
+    "explanation": "It binds a typed variable on successful match."
+  },
+  {
+    "id": "java-a-027",
+    "version": "java-21",
+    "topic": "pattern-switch",
+    "difficulty": "advanced",
+    "prompt": "Pattern matching for switch adds:",
+    "options": [
+      "Only primitive switching",
+      "Type patterns and guarded cases with 'when'",
+      "Multiple default labels",
+      "Fall-through by default"
+    ],
+    "answerIndex": 1,
+    "explanation": "You can match by type and add guards."
+  },
+  {
+    "id": "java-a-028",
+    "version": "java-8",
+    "topic": "nio2-async",
+    "difficulty": "advanced",
+    "prompt": "AsynchronousFileChannel differs from FileChannel by:",
+    "options": [
+      "Requiring memory mapping",
+      "Non-blocking operations with completion handlers/Futures",
+      "Forbidding direct buffers",
+      "Using only heap buffers"
+    ],
+    "answerIndex": 1,
+    "explanation": "AsynchronousFileChannel provides async read/write with callbacks or Futures."
+  },
+  {
+    "id": "java-a-029",
+    "version": "java-8",
+    "topic": "finalizer-cleaner",
+    "difficulty": "advanced",
+    "prompt": "Why are finalizers discouraged and Cleaner preferred?",
+    "options": [
+      "Finalizers run faster",
+      "Finalizers are unpredictable and problematic; Cleaner is safer",
+      "Cleaner uses JNI directly",
+      "Cleaner disables GC for objects"
+    ],
+    "answerIndex": 1,
+    "explanation": "Finalizers have ordering/safety issues; Cleaner is controlled and safer."
+  },
+  {
+    "id": "java-a-030",
+    "version": "java-9",
+    "topic": "string-concat-factory",
+    "difficulty": "advanced",
+    "prompt": "String concatenation since Java 9 uses:",
+    "options": [
+      "StringBuilder always",
+      "invokedynamic (StringConcatFactory) to choose strategies",
+      "Unsafe.putObject",
+      "Compile-time folding only"
+    ],
+    "answerIndex": 1,
+    "explanation": "The JVM can choose optimal concat strategies via indy."
+  },
+  {
+    "id": "java-a-031",
+    "version": "java-21",
+    "topic": "scoped-values",
+    "difficulty": "advanced",
+    "prompt": "Scoped values are best described as:",
+    "options": [
+      "Global mutable variables",
+      "Immutable, inheritable thread-local-like values",
+      "Heap-allocated constants",
+      "Module-wide static fields"
+    ],
+    "answerIndex": 1,
+    "explanation": "They provide immutable per-scope values that can be inherited."
+  },
+  {
+    "id": "java-a-032",
+    "version": "java-21",
+    "topic": "sequenced-collections",
+    "difficulty": "advanced",
+    "prompt": "SequencedCollection adds:",
+    "options": [
+      "Randomized iteration order",
+      "First/last operations with consistent semantics",
+      "Lock-free stacks",
+      "GPU-backed lists"
+    ],
+    "answerIndex": 1,
+    "explanation": "New APIs to access ends consistently across collections."
+  },
+  {
+    "id": "java-a-033",
+    "version": "java-23",
+    "topic": "vector-api",
+    "difficulty": "advanced",
+    "prompt": "Vector API enables:",
+    "options": [
+      "GPU shader programming",
+      "Explicit SIMD on CPUs for data-parallel operations",
+      "Replacing streams",
+      "Eliminating bounds checks"
+    ],
+    "answerIndex": 1,
+    "explanation": "It exposes CPU SIMD lanes for high-performance math."
+  },
+  {
+    "id": "java-a-034",
+    "version": "java-8",
+    "topic": "gc-tuning",
+    "difficulty": "advanced",
+    "prompt": "Large object allocation often benefits from:",
+    "options": [
+      "Stack allocation only",
+      "Direct allocation into old generation with tuned thresholds",
+      "Interning the object",
+      "Disabling write barriers"
+    ],
+    "answerIndex": 1,
+    "explanation": "Tuning can promote large objects to avoid copying costs."
+  },
+  {
+    "id": "java-a-035",
+    "version": "java-11",
+    "topic": "flight-recorder",
+    "difficulty": "advanced",
+    "prompt": "Java Flight Recorder (JFR) is:",
+    "options": [
+      "A bytecode obfuscator",
+      "A low-overhead, always-on profiling/diagnostics tool in the JVM",
+      "A GC-only visualizer",
+      "A debugger replacement"
+    ],
+    "answerIndex": 1,
+    "explanation": "JFR captures events with minimal overhead in production."
+  },
+  {
+    "id": "java-a-036",
+    "version": "java-8",
+    "topic": "annotation-processing",
+    "difficulty": "advanced",
+    "prompt": "Annotation Processors run during:",
+    "options": [
+      "Class loading",
+      "Compile time, generating sources or resources",
+      "JIT compilation",
+      "Runtime reflection"
+    ],
+    "answerIndex": 1,
+    "explanation": "APT operates at compile time via javax.annotation.processing."
+  },
+  {
+    "id": "java-a-037",
+    "version": "java-9",
+    "topic": "modules-layer",
+    "difficulty": "advanced",
+    "prompt": "A ModuleLayer is used to:",
+    "options": [
+      "Control GC phases per module",
+      "Define dynamic module graphs at runtime",
+      "Replace class loaders",
+      "Pin threads to CPUs"
+    ],
+    "answerIndex": 1,
+    "explanation": "Layers enable dynamic composition of modules beyond the boot layer."
+  },
+  {
+    "id": "java-a-038",
+    "version": "java-17",
+    "topic": "sealed-patterns",
+    "difficulty": "advanced",
+    "prompt": "Pattern matching with sealed hierarchies can allow:",
+    "options": [
+      "Exhaustive type checks in switch expressions",
+      "Multiple inheritance of classes",
+      "Open world assumptions",
+      "Bypassing access checks"
+    ],
+    "answerIndex": 0,
+    "explanation": "Sealed sets enable the compiler to check exhaustiveness."
+  },
+  {
+    "id": "java-a-039",
+    "version": "java-8",
+    "topic": "tlab",
+    "difficulty": "advanced",
+    "prompt": "Thread-Local Allocation Buffers (TLABs) improve performance by:",
+    "options": [
+      "Allocating large objects off-heap",
+      "Reducing synchronization during object allocation",
+      "Pretenuring all objects",
+      "Skipping card marking"
+    ],
+    "answerIndex": 1,
+    "explanation": "TLABs let threads allocate in private regions cheaply."
+  },
+  {
+    "id": "java-a-040",
+    "version": "java-8",
+    "topic": "volatile-semantics",
+    "difficulty": "advanced",
+    "prompt": "volatile guarantees:",
+    "options": [
+      "Atomicity of ++ on longs",
+      "Visibility and ordering of reads/writes",
+      "Lock ownership transfer",
+      "Faster execution than CAS"
+    ],
+    "answerIndex": 1,
+    "explanation": "volatile provides visibility/ordering, not compound atomicity."
+  },
+  {
+    "id": "java-a-041",
+    "version": "java-11",
+    "topic": "string-methods",
+    "difficulty": "advanced",
+    "prompt": "String.lines() returns:",
+    "options": [
+      "List<String>",
+      "Stream<String>",
+      "Iterator<String>",
+      "Spliterator<String>"
+    ],
+    "answerIndex": 1,
+    "explanation": "lines() produces a Stream split on line terminators."
+  },
+  {
+    "id": "java-a-042",
+    "version": "java-21",
+    "topic": "virtual-threads-pinning",
+    "difficulty": "advanced",
+    "prompt": "A Virtual Thread can temporarily pin its carrier when:",
+    "options": [
+      "Running any Java code",
+      "Executing synchronized blocks or native calls",
+      "Performing heap allocation",
+      "Using CompletableFuture"
+    ],
+    "answerIndex": 1,
+    "explanation": "Monitors and native calls can pin carriers; avoid long critical sections."
+  },
+  {
+    "id": "java-a-043",
+    "version": "java-23",
+    "topic": "ffm-downcall",
+    "difficulty": "advanced",
+    "prompt": "A 'downcall' handle in FFM is used to:",
+    "options": [
+      "Invoke Java from native",
+      "Invoke native functions from Java",
+      "Pin heap objects",
+      "Allocate Panama arenas"
+    ],
+    "answerIndex": 1,
+    "explanation": "Downcalls call foreign (native) functions from Java."
+  },
+  {
+    "id": "java-a-044",
+    "version": "java-23",
+    "topic": "ffm-memory-segments",
+    "difficulty": "advanced",
+    "prompt": "MemorySegment lifetimes are controlled by:",
+    "options": [
+      "GC finalization",
+      "Explicit scopes/arenas (try-with-resources)",
+      "Thread locals",
+      "Module descriptors"
+    ],
+    "answerIndex": 1,
+    "explanation": "Arenas/scopes govern segment ownership and deallocation."
+  },
+  {
+    "id": "java-a-045",
+    "version": "java-8",
+    "topic": "method-handles",
+    "difficulty": "advanced",
+    "prompt": "MethodHandle differs from reflection Method by:",
+    "options": [
+      "Being resolved at compile time only",
+      "Offering typed, often JIT-inlinable invocation",
+      "Disallowing access control",
+      "Requiring JNI stubs"
+    ],
+    "answerIndex": 1,
+    "explanation": "MethodHandles are strongly typed and can be optimized by the JIT."
+  },
+  {
+    "id": "java-a-046",
+    "version": "java-9",
+    "topic": "stack-walking",
+    "difficulty": "advanced",
+    "prompt": "StackWalker API provides:",
+    "options": [
+      "Heap walking",
+      "Efficient, filtered stack frame access",
+      "JVMTI breakpoint control",
+      "GC roots enumeration"
+    ],
+    "answerIndex": 1,
+    "explanation": "StackWalker offers performant, lazy frame traversal."
+  },
+  {
+    "id": "java-a-047",
+    "version": "java-14",
+    "topic": "switch-expressions-yield",
+    "difficulty": "advanced",
+    "prompt": "Inside a switch expression, 'yield' is used to:",
+    "options": [
+      "Break out without value",
+      "Return a value from a case block",
+      "Inline a lambda",
+      "Mark default branch"
+    ],
+    "answerIndex": 1,
+    "explanation": "yield supplies a value for the switch expression."
+  },
+  {
+    "id": "java-a-048",
+    "version": "java-17",
+    "topic": "record-serialization",
+    "difficulty": "advanced",
+    "prompt": "Records and serialization:",
+    "options": [
+      "Cannot be serialized",
+      "Support serialization but should preserve invariants via canonical ctor",
+      "Require custom writeObject only",
+      "Force externalizable"
+    ],
+    "answerIndex": 1,
+    "explanation": "Records are serializable; use canonical constructors to enforce invariants."
+  },
+  {
+    "id": "java-a-049",
+    "version": "java-21",
+    "topic": "loom-structured-cancellation",
+    "difficulty": "advanced",
+    "prompt": "In structured concurrency, failure in a subtask typically:",
+    "options": [
+      "Is ignored by design",
+      "Cancels sibling tasks within the scope",
+      "Crashes the JVM",
+      "Promotes the task to daemon"
+    ],
+    "answerIndex": 1,
+    "explanation": "Scopes propagate cancellation and failures across sibling tasks."
+  },
+  {
+    "id": "java-a-050",
+    "version": "java-24",
+    "topic": "pattern-switch-stability",
+    "difficulty": "advanced",
+    "prompt": "Recent refinements to pattern switch focus on:",
+    "options": [
+      "Removing guards",
+      "Stabilizing semantics and performance across edge cases",
+      "Allowing multiple defaults",
+      "Deprecating instanceof"
+    ],
+    "answerIndex": 1,
+    "explanation": "Later releases refine semantics and performance of pattern switch."
+  }
+]

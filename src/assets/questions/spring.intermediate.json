@@ -1,0 +1,637 @@
+[
+  {
+    "id": "spring-i-001",
+    "version": "spring-5",
+    "topic": "core-beans",
+    "difficulty": "intermediate",
+    "prompt": "What is the default bean scope in Spring?",
+    "options": ["prototype", "singleton", "request", "session"],
+    "answerIndex": 1,
+    "explanation": "By default, beans are singletons per ApplicationContext."
+  },
+  {
+    "id": "spring-i-002",
+    "version": "spring-5",
+    "topic": "core-scopes",
+    "difficulty": "intermediate",
+    "prompt": "Which scope creates a new bean instance per HTTP session?",
+    "options": ["request", "session", "prototype", "global-session"],
+    "answerIndex": 1,
+    "explanation": "Session scope ties bean lifecycle to the HTTP session."
+  },
+  {
+    "id": "spring-i-003",
+    "version": "spring-6",
+    "topic": "core-config",
+    "difficulty": "intermediate",
+    "prompt": "What does @Configuration indicate?",
+    "options": [
+      "A class with @Bean factory methods",
+      "A REST controller",
+      "A JPA repository",
+      "Aop proxy configuration only"
+    ],
+    "answerIndex": 0,
+    "explanation": "@Configuration marks classes that declare @Bean methods."
+  },
+  {
+    "id": "spring-i-004",
+    "version": "spring-6",
+    "topic": "core-import",
+    "difficulty": "intermediate",
+    "prompt": "What is the role of @Import?",
+    "options": [
+      "Import other @Configuration classes",
+      "Import database schemas",
+      "Import static resources",
+      "Import environment variables automatically"
+    ],
+    "answerIndex": 0,
+    "explanation": "@Import adds additional configuration into the context."
+  },
+  {
+    "id": "spring-i-005",
+    "version": "spring-5",
+    "topic": "core-bpp",
+    "difficulty": "intermediate",
+    "prompt": "BeanPostProcessor allows you to:",
+    "options": [
+      "Modify beans before and after initialization",
+      "Modify classpath scanning rules",
+      "Generate controllers at runtime",
+      "Reload properties without restart"
+    ],
+    "answerIndex": 0,
+    "explanation": "Hooks around bean initialization for customization."
+  },
+  {
+    "id": "spring-i-006",
+    "version": "boot-2",
+    "topic": "boot-entry",
+    "difficulty": "intermediate",
+    "prompt": "Which annotation marks a Spring Boot application's entry class?",
+    "options": ["@BootApplication", "@SpringBootApplication", "@EnableBoot", "@SpringApp"],
+    "answerIndex": 1,
+    "explanation": "@SpringBootApplication aggregates core Boot annotations."
+  },
+  {
+    "id": "spring-i-007",
+    "version": "boot-2",
+    "topic": "boot-run",
+    "difficulty": "intermediate",
+    "prompt": "SpringApplication.run(...) returns:",
+    "options": [
+      "DispatcherServlet",
+      "ConfigurableApplicationContext",
+      "Environment",
+      "ApplicationEventPublisher"
+    ],
+    "answerIndex": 1,
+    "explanation": "It boots the app and returns the context."
+  },
+  {
+    "id": "spring-i-008",
+    "version": "spring-6",
+    "topic": "profiles",
+    "difficulty": "intermediate",
+    "prompt": "How do you activate a profile in Spring Boot?",
+    "options": [
+      "Set spring.profiles.active property",
+      "Annotate main class with @Profile",
+      "Rename application.yml",
+      "Use @ActiveProfiles in production"
+    ],
+    "answerIndex": 0,
+    "explanation": "Use properties/env var: spring.profiles.active=dev,prod,..."
+  },
+  {
+    "id": "spring-i-009",
+    "version": "boot-3",
+    "topic": "config-props",
+    "difficulty": "intermediate",
+    "prompt": "What does @ConfigurationProperties enable?",
+    "options": [
+      "Binding hierarchical properties to POJOs",
+      "XML-only configuration",
+      "Environment post-processing",
+      "Overriding @Value bindings"
+    ],
+    "answerIndex": 0,
+    "explanation": "Type-safe binding from properties/YAML into beans."
+  },
+  {
+    "id": "spring-i-010",
+    "version": "spring-6",
+    "topic": "value",
+    "difficulty": "intermediate",
+    "prompt": "Which annotation injects a simple property value?",
+    "options": ["@Autowired", "@Value", "@Inject", "@Qualifier"],
+    "answerIndex": 1,
+    "explanation": "@Value reads from PropertySources."
+  },
+  {
+    "id": "spring-i-011",
+    "version": "spring-5",
+    "topic": "mvc-mapping",
+    "difficulty": "intermediate",
+    "prompt": "Which maps HTTP GET requests?",
+    "options": ["@GetMapping", "@PostMapping", "@RequestBody", "@ResponseBody"],
+    "answerIndex": 0,
+    "explanation": "@GetMapping is a composed @RequestMapping for GET."
+  },
+  {
+    "id": "spring-i-012",
+    "version": "spring-5",
+    "topic": "mvc-requestbody",
+    "difficulty": "intermediate",
+    "prompt": "What does @RequestBody do?",
+    "options": [
+      "Binds request body to parameter",
+      "Binds path variables",
+      "Binds query parameters",
+      "Renders a view"
+    ],
+    "answerIndex": 0,
+    "explanation": "Deserializes body via HttpMessageConverters."
+  },
+  {
+    "id": "spring-i-013",
+    "version": "spring-5",
+    "topic": "mvc-responsebody",
+    "difficulty": "intermediate",
+    "prompt": "What does @ResponseBody do?",
+    "options": [
+      "Writes return value to response body",
+      "Selects view template",
+      "Starts async processing",
+      "Sets HTTP status only"
+    ],
+    "answerIndex": 0,
+    "explanation": "Serializes return value via HttpMessageConverters."
+  },
+  {
+    "id": "spring-i-014",
+    "version": "spring-5",
+    "topic": "mvc-pathvar",
+    "difficulty": "intermediate",
+    "prompt": "Which extracts values from URI templates?",
+    "options": ["@PathVariable", "@RequestParam", "@CookieValue", "@RequestHeader"],
+    "answerIndex": 0,
+    "explanation": "Binds path segments to parameters."
+  },
+  {
+    "id": "spring-i-015",
+    "version": "spring-6",
+    "topic": "mvc-params",
+    "difficulty": "intermediate",
+    "prompt": "Which maps query parameters?",
+    "options": ["@PathVariable", "@RequestParam", "@ModelAttribute", "@MatrixVariable"],
+    "answerIndex": 1,
+    "explanation": "@RequestParam handles query/form parameters."
+  },
+  {
+    "id": "spring-i-016",
+    "version": "spring-5",
+    "topic": "mvc-validation",
+    "difficulty": "intermediate",
+    "prompt": "What does @Valid on a controller method parameter trigger?",
+    "options": [
+      "JSR-380 bean validation",
+      "Schema migration",
+      "Transaction start",
+      "Cache eviction"
+    ],
+    "answerIndex": 0,
+    "explanation": "Performs constraint validation and fills BindingResult."
+  },
+  {
+    "id": "spring-i-017",
+    "version": "spring-6",
+    "topic": "mvc-bindingresult",
+    "difficulty": "intermediate",
+    "prompt": "BindingResult is used to:",
+    "options": [
+      "Hold validation and binding errors",
+      "Store DB results",
+      "Schedule tasks",
+      "Configure interceptors"
+    ],
+    "answerIndex": 0,
+    "explanation": "Accompanies validated parameters to expose errors."
+  },
+  {
+    "id": "spring-i-018",
+    "version": "spring-6",
+    "topic": "restcontroller",
+    "difficulty": "intermediate",
+    "prompt": "@RestController equals:",
+    "options": [
+      "@Controller + @ResponseBody",
+      "@Controller + @ResponseStatus",
+      "@Component + @RequestMapping",
+      "@Service + @ResponseBody"
+    ],
+    "answerIndex": 0,
+    "explanation": "All handler methods write to body by default."
+  },
+  {
+    "id": "spring-i-019",
+    "version": "boot-3",
+    "topic": "actuator-health",
+    "difficulty": "intermediate",
+    "prompt": "Which Actuator endpoint reports application health?",
+    "options": ["/actuator/info", "/actuator/metrics", "/actuator/health", "/actuator/beans"],
+    "answerIndex": 2,
+    "explanation": "Health endpoint aggregates health indicators."
+  },
+  {
+    "id": "spring-i-020",
+    "version": "boot-3",
+    "topic": "actuator-metrics",
+    "difficulty": "intermediate",
+    "prompt": "Micrometer is used for:",
+    "options": [
+      "Structured logging",
+      "Vendor-neutral metrics facade",
+      "Database migrations",
+      "Distributed locks"
+    ],
+    "answerIndex": 1,
+    "explanation": "Boot Actuator exposes metrics through Micrometer."
+  },
+  {
+    "id": "spring-i-021",
+    "version": "spring-6",
+    "topic": "security-starter",
+    "difficulty": "intermediate",
+    "prompt": "Which starter enables Spring Security defaults?",
+    "options": [
+      "spring-boot-starter-security",
+      "spring-boot-starter-auth",
+      "spring-security-core",
+      "spring-boot-security"
+    ],
+    "answerIndex": 0,
+    "explanation": "The official Boot starter is spring-boot-starter-security."
+  },
+  {
+    "id": "spring-i-022",
+    "version": "spring-6",
+    "topic": "security-method",
+    "difficulty": "intermediate",
+    "prompt": "Which annotation enables method security in Spring 6?",
+    "options": ["@EnableMethodSecurity", "@EnableGlobalMethodSecurity", "@EnableWebSecurity", "@EnableAuthZ"],
+    "answerIndex": 0,
+    "explanation": "Spring 6 consolidated method security under @EnableMethodSecurity."
+  },
+  {
+    "id": "spring-i-023",
+    "version": "spring-6",
+    "topic": "security-userdetails",
+    "difficulty": "intermediate",
+    "prompt": "Which interface represents user information for authentication?",
+    "options": ["Authentication", "GrantedAuthority", "UserDetails", "Principal"],
+    "answerIndex": 2,
+    "explanation": "UserDetails encapsulates username, password, authorities, etc."
+  },
+  {
+    "id": "spring-i-024",
+    "version": "spring-6",
+    "topic": "security-authprovider",
+    "difficulty": "intermediate",
+    "prompt": "AuthenticationProvider is responsible for:",
+    "options": [
+      "Securing static resources",
+      "Generating CSRF tokens",
+      "Verifying credentials producing Authentication",
+      "Configuring session management"
+    ],
+    "answerIndex": 2,
+    "explanation": "It authenticates and returns an Authentication object."
+  },
+  {
+    "id": "spring-i-025",
+    "version": "spring-6",
+    "topic": "security-filterchain",
+    "difficulty": "intermediate",
+    "prompt": "What replaced WebSecurityConfigurerAdapter in Spring Security 6?",
+    "options": [
+      "SecurityConfigurer",
+      "SecurityFilterChain bean with HttpSecurity",
+      "WebSecurityManager",
+      "GlobalSecurityConfigurer"
+    ],
+    "answerIndex": 1,
+    "explanation": "Define a @Bean SecurityFilterChain and customize HttpSecurity."
+  },
+  {
+    "id": "spring-i-026",
+    "version": "spring-5",
+    "topic": "data-jpa-root",
+    "difficulty": "intermediate",
+    "prompt": "Which interface is the root for Spring Data repositories?",
+    "options": ["JpaRepository", "CrudRepository", "PagingAndSortingRepository", "EntityRepository"],
+    "answerIndex": 1,
+    "explanation": "CrudRepository is the root; others extend it."
+  },
+  {
+    "id": "spring-i-027",
+    "version": "spring-5",
+    "topic": "data-jpa-derived",
+    "difficulty": "intermediate",
+    "prompt": "How are many queries defined in Spring Data JPA?",
+    "options": [
+      "Only via @Query",
+      "By method name parsing",
+      "Only native SQL files",
+      "XML mapping"
+    ],
+    "answerIndex": 1,
+    "explanation": "Method names are parsed into derived queries."
+  },
+  {
+    "id": "spring-i-028",
+    "version": "spring-6",
+    "topic": "data-jpa-custom",
+    "difficulty": "intermediate",
+    "prompt": "How to add custom behavior to a Spring Data repository?",
+    "options": [
+      "Create {RepoName}Impl class",
+      "Extend RepositoryBase",
+      "Use @Repository on entities",
+      "Register in web.xml"
+    ],
+    "answerIndex": 0,
+    "explanation": "A suffix Impl class is picked up to extend repository behavior."
+  },
+  {
+    "id": "spring-i-029",
+    "version": "spring-6",
+    "topic": "data-jpa-nplus1",
+    "difficulty": "intermediate",
+    "prompt": "Which helps mitigate N+1 queries in JPA?",
+    "options": ["@EntityGraph", "@JoinColumn", "@GeneratedValue", "@Embeddable"],
+    "answerIndex": 0,
+    "explanation": "@EntityGraph can force eager fetch of associations."
+  },
+  {
+    "id": "spring-i-030",
+    "version": "spring-6",
+    "topic": "tx-enable",
+    "difficulty": "intermediate",
+    "prompt": "What does @EnableTransactionManagement enable?",
+    "options": [
+      "Declarative @Transactional proxies",
+      "Only JDBC transactions",
+      "Global rollback rules",
+      "XA-only coordination"
+    ],
+    "answerIndex": 0,
+    "explanation": "Activates processing of @Transactional annotations."
+  },
+  {
+    "id": "spring-i-031",
+    "version": "spring-6",
+    "topic": "webflux-types",
+    "difficulty": "intermediate",
+    "prompt": "In WebFlux, which type represents 0..N values?",
+    "options": ["Mono", "Flux", "Future", "Optional"],
+    "answerIndex": 1,
+    "explanation": "Flux is a reactive Publisher of many values."
+  },
+  {
+    "id": "spring-i-032",
+    "version": "spring-6",
+    "topic": "webflux-types",
+    "difficulty": "intermediate",
+    "prompt": "In WebFlux, which type represents 0..1 values?",
+    "options": ["Flux", "Mono", "CompletableFuture", "Promise"],
+    "answerIndex": 1,
+    "explanation": "Mono is a single-value (or empty) reactive Publisher."
+  },
+  {
+    "id": "spring-i-033",
+    "version": "spring-6",
+    "topic": "webflux-router",
+    "difficulty": "intermediate",
+    "prompt": "RouterFunction is used to:",
+    "options": [
+      "Define functional routes instead of annotations",
+      "Manage sessions",
+      "Persist data",
+      "Render views"
+    ],
+    "answerIndex": 0,
+    "explanation": "Functional routing via RouterFunction/HandlerFunction."
+  },
+  {
+    "id": "spring-i-034",
+    "version": "spring-6",
+    "topic": "webflux-client",
+    "difficulty": "intermediate",
+    "prompt": "WebClient is:",
+    "options": [
+      "Blocking HTTP client",
+      "Reactive non-blocking HTTP client",
+      "JPA client",
+      "gRPC server"
+    ],
+    "answerIndex": 1,
+    "explanation": "WebClient is reactive and non-blocking."
+  },
+  {
+    "id": "spring-i-035",
+    "version": "spring-6",
+    "topic": "webflux-backpressure",
+    "difficulty": "intermediate",
+    "prompt": "Backpressure in WebFlux is handled by:",
+    "options": [
+      "Thread pools",
+      "Reactive Streams demand",
+      "Servlet filters",
+      "HTTP/2 only"
+    ],
+    "answerIndex": 1,
+    "explanation": "Demand signals control flow between Publisher and Subscriber."
+  },
+  {
+    "id": "spring-i-036",
+    "version": "spring-5",
+    "topic": "events",
+    "difficulty": "intermediate",
+    "prompt": "ApplicationEvent is used to:",
+    "options": [
+      "Represent framework or custom events",
+      "Represent JMS messages",
+      "Represent DB triggers",
+      "Represent HTTP requests"
+    ],
+    "answerIndex": 0,
+    "explanation": "Base class for app events."
+  },
+  {
+    "id": "spring-i-037",
+    "version": "spring-5",
+    "topic": "events-listener",
+    "difficulty": "intermediate",
+    "prompt": "ApplicationListener<T> does what?",
+    "options": [
+      "Listens to events of type T",
+      "Schedules events",
+      "Persists events",
+      "Serializes events"
+    ],
+    "answerIndex": 0,
+    "explanation": "Event listeners consume ApplicationEvents."
+  },
+  {
+    "id": "spring-i-038",
+    "version": "spring-5",
+    "topic": "events-annotation",
+    "difficulty": "intermediate",
+    "prompt": "Which annotation registers an event listener method?",
+    "options": ["@Subscribe", "@EventListener", "@OnEvent", "@Listener"],
+    "answerIndex": 1,
+    "explanation": "@EventListener marks methods to handle events."
+  },
+  {
+    "id": "spring-i-039",
+    "version": "boot-3",
+    "topic": "bootstrap",
+    "difficulty": "intermediate",
+    "prompt": "What is SpringApplicationBuilder used for?",
+    "options": [
+      "Fluent API to build and run the application",
+      "Build Gradle projects",
+      "Build Docker images",
+      "Build JAR only"
+    ],
+    "answerIndex": 0,
+    "explanation": "Alternative bootstrapping with fluent configuration."
+  },
+  {
+    "id": "spring-i-040",
+    "version": "boot-3",
+    "topic": "lazy-init",
+    "difficulty": "intermediate",
+    "prompt": "How to enable global lazy initialization in Boot?",
+    "options": [
+      "spring.main.lazy-initialization=true",
+      "spring.lazy=true",
+      "spring.context.lazy=true",
+      "spring.beans.lazy=true"
+    ],
+    "answerIndex": 0,
+    "explanation": "Boot property toggles lazy bean init globally."
+  },
+  {
+    "id": "spring-i-041",
+    "version": "boot-3",
+    "topic": "devtools",
+    "difficulty": "intermediate",
+    "prompt": "What does spring-boot-devtools provide?",
+    "options": [
+      "Live reload and restart support",
+      "Production tracing only",
+      "Zero configuration security",
+      "Automatic schema migration"
+    ],
+    "answerIndex": 0,
+    "explanation": "Devtools helps developer experience with restarts and livereload."
+  },
+  {
+    "id": "spring-i-042",
+    "version": "spring-6",
+    "topic": "aop",
+    "difficulty": "intermediate",
+    "prompt": "Which annotation defines a pointcut expression?",
+    "options": ["@Pointcut", "@Around", "@Before", "@AfterReturning"],
+    "answerIndex": 0,
+    "explanation": "@Pointcut declares reusable pointcut expressions."
+  },
+  {
+    "id": "spring-i-043",
+    "version": "spring-6",
+    "topic": "aop-proxy",
+    "difficulty": "intermediate",
+    "prompt": "Spring AOP by default uses:",
+    "options": [
+      "Bytecode weaving at load time only",
+      "Proxy-based AOP (JDK dynamic or CGLIB)",
+      "AspectJ compile-time weaving only",
+      "No proxies"
+    ],
+    "answerIndex": 1,
+    "explanation": "Proxy-based AOP is the default approach."
+  },
+  {
+    "id": "spring-i-044",
+    "version": "spring-6",
+    "topic": "cache",
+    "difficulty": "intermediate",
+    "prompt": "Which annotation caches method results?",
+    "options": ["@CachePut", "@CacheEvict", "@Cacheable", "@Cachable"],
+    "answerIndex": 2,
+    "explanation": "@Cacheable stores method results in a cache."
+  },
+  {
+    "id": "spring-i-045",
+    "version": "spring-6",
+    "topic": "cache-evict",
+    "difficulty": "intermediate",
+    "prompt": "Which annotation removes entries from the cache?",
+    "options": ["@CacheRemove", "@CacheEvict", "@CacheWipe", "@CacheClear"],
+    "answerIndex": 1,
+    "explanation": "@CacheEvict invalidates cache entries."
+  },
+  {
+    "id": "spring-i-046",
+    "version": "spring-6",
+    "topic": "scheduling",
+    "difficulty": "intermediate",
+    "prompt": "Which enables @Scheduled annotations?",
+    "options": ["@EnableAsync", "@EnableScheduling", "@EnableTimer", "@EnableTasks"],
+    "answerIndex": 1,
+    "explanation": "@EnableScheduling turns on scheduled task processing."
+  },
+  {
+    "id": "spring-i-047",
+    "version": "spring-6",
+    "topic": "async",
+    "difficulty": "intermediate",
+    "prompt": "Which enables @Async method execution?",
+    "options": ["@EnableAsync", "@EnableScheduling", "@EnableTasks", "@EnableThreads"],
+    "answerIndex": 0,
+    "explanation": "Enables async proxies for @Async methods."
+  },
+  {
+    "id": "spring-i-048",
+    "version": "spring-6",
+    "topic": "rest-exception",
+    "difficulty": "intermediate",
+    "prompt": "Which handles exceptions across multiple controllers?",
+    "options": ["@RestController", "@ControllerAdvice", "@Exception", "@Advice"],
+    "answerIndex": 1,
+    "explanation": "@ControllerAdvice provides global exception handling."
+  },
+  {
+    "id": "spring-i-049",
+    "version": "spring-6",
+    "topic": "rest-exception",
+    "difficulty": "intermediate",
+    "prompt": "Which annotation maps a method to handle a specific exception?",
+    "options": ["@OnError", "@ExceptionHandler", "@HandleException", "@Catch"],
+    "answerIndex": 1,
+    "explanation": "@ExceptionHandler(ExceptionType.class) handles exceptions."
+  },
+  {
+    "id": "spring-i-050",
+    "version": "boot-3",
+    "topic": "test",
+    "difficulty": "intermediate",
+    "prompt": "Which annotation boots a full Spring Boot test context?",
+    "options": ["@SpringJUnitConfig", "@SpringBootTest", "@WebMvcTest", "@DataJpaTest"],
+    "answerIndex": 1,
+    "explanation": "@SpringBootTest loads the full application context for integration tests."
+  }
+]

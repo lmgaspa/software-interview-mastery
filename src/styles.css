@@ -9,8 +9,8 @@ html, body {
 }
 
 :root {
-  --grad-start: #ff4b2b; /* vermelho */
-  --grad-end:   #8e2de2; /* roxo */
+  --grad-start: #f0adad;
+  --grad-end:   #795eaed9;
   --glass-bg:   rgba(255, 255, 255, 0.14);
   --glass-brd:  rgba(255, 255, 255, 0.22);
   --shadow:     0 20px 40px rgba(0,0,0,.25);
@@ -27,7 +27,7 @@ body {
   min-height: 100vh;
   color: #fff;
   line-height: 1.6;
-  background: linear-gradient(135deg, var(--grad-start), var(--grad-end)) fixed;
+  background: linear-gradient(95deg, var(--grad-start), var(--grad-end)) fixed;
 }
 
 /* O <app-root> é o shell da app; use-o como flex container */
@@ -89,7 +89,7 @@ a.btn { text-decoration: none !important; }
   padding: .6rem 1.5rem;
 }
 .btn-outline-light:hover {
-  background: rgba(255,255,255,.12) !important;
+  background: rgba(250, 119, 119, 0.936) !important;
 }
 
 /* Ghost button custom */
@@ -108,6 +108,30 @@ a.btn { text-decoration: none !important; }
   opacity: .45;
   cursor: not-allowed;
   transform: none;
+}
+
+/* Ghost escuro para fundos coloridos */
+.btn-ghost-dark {
+  color: #fff !important;
+  border: 2px solid #5b0aff !important;
+  background: linear-gradient(90deg, #5b0aff, #37137f) !important;
+  padding: .55rem 1.25rem;
+  border-radius: 999px;
+  transition: background .2s ease, border-color .2s ease;
+}
+
+.btn-ghost-dark:hover:not(:disabled) {
+  background: linear-gradient(90deg, #37137f, #5b0aff,) !important;
+}
+
+/* Estado desabilitado bem óbvio */
+.btn-ghost-dark:disabled {
+  background: linear-gradient(90deg, #5b0aff, #37137f) !important;
+  border-color: rgba(91, 10, 255, 0.35) !important;
+  color: rgba(255,255,255,0.7) !important;
+  opacity: 1;              /* evita ficar “lavado demais” */
+  transform: none;         /* não sobe no :hover */
+  cursor: not-allowed;
 }
 
 /* Botão com ícone (seta, menu, etc.) */

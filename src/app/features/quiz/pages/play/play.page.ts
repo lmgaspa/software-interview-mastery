@@ -13,11 +13,11 @@ import { QuestionCardComponent } from '../../components/question-card/question-c
     <div class="container py-4" style="max-width:820px; width:100%;">
       <!-- Header -->
       <div class="page-header d-flex justify-content-between align-items-center mb-3">
-        <a routerLink="/" class="btn btn-light btn-icon" aria-label="Back to menu">
+        <a routerLink="/settings" class="btn btn-light btn-icon" aria-label="Back">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
           </svg>
-          <span class="d-none d-sm-inline ms-2 fw-semibold">Menu</span>
+          <span class="d-none d-sm-inline ms-2 fw-semibold">Back</span>
         </a>
 
         <div>
@@ -45,7 +45,7 @@ import { QuestionCardComponent } from '../../components/question-card/question-c
         <!-- Footer -->
         <div class="d-flex justify-content-between mt-3">
           <button
-            class="btn btn-ghost-strong"
+            class="btn btn-ghost-dark"
             (click)="prev()"
             [disabled]="store.currentIndex() === 0"
           >
